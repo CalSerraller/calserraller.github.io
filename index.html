@@ -3,13 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cal Serraller | Casa Rural a Miravet (Ribera d'Ebre)</title>
+  <meta name="description" content="Casa rural de 3 plantes a Miravet per a 6 persones. Gran entrada diàfana, cuina-menjador, 3 habitacions, 2 banys, barbacoa, bicicletes i check-in autònom.">
   
-  <!-- SEO Meta Tags Primaris -->
-  <title>Cal Serraller | Casa Rural a Miravet (Ribera d'Ebre i Terra Alta)</title>
-  <meta name="description" content="Reserva casa rural de 3 plantes a Miravet per a 6 persones. La teva base per recórrer la Ribera d'Ebre, la Via Verda, les gorgues de la Fontcalda i enotourisme a la Terra Alta.">
-  <meta name="keywords" content="casa rural miravet, allotjament ribera debre, via verda terra alta, fontcalda allotjament, turisme enoturisme terra alta, lloguer casa integra miravet">
-  
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -32,52 +28,19 @@
     .hero-img-adjust { object-fit: cover; object-position: 15% center; }
     .day-busy { background-color: #fecdd3; color: #9f1239; text-decoration: line-through; cursor: not-allowed; }
     .day-free { background-color: #ecfdf5; color: #065f46; font-weight: 600; }
-    .tab-active { border-color: #8c5e34; color: #8c5e34; background-color: #f7f2e8; }
   </style>
-
-  <!-- DADES ESTRUCTURADES JSON-LD (SEO Rich Snippets) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "VacationRental",
-    "name": "Cal Serraller",
-    "description": "Casa rural acolledora de 3 plantes a Miravet per a 6 persones. Equipada amb cuina, barbacoa, check-in autònom i bicicletes gratuïtes. Base ideal per visitar la Ribera d'Ebre i la Terra Alta.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Miravet",
-      "addressRegion": "Tarragona",
-      "addressCountry": "ES"
-    },
-    "containsPlace": {
-      "@type": "Accommodation",
-      "numberOfRooms": 3,
-      "occupancy": {
-        "@type": "QuantitativeValue",
-        "value": 6
-      }
-    },
-    "amenityFeature": [
-      {"@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true},
-      {"@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true},
-      {"@type": "LocationFeatureSpecification", "name": "Free Bikes", "value": true},
-      {"@type": "LocationFeatureSpecification", "name": "BBQ Facilities", "value": true}
-    ]
-  }
-  </script>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans antialiased">
 
-  <!-- NAVEGACIÓ ACCESSIBLE -->
+  <!-- NAVEGACIÓ -->
   <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-stone-200/80">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="text-2xl font-serif font-bold text-stone-900 tracking-tight" aria-label="Cal Serraller Inici">
+      <a href="#" class="text-2xl font-serif font-bold text-stone-900 tracking-tight">
         Cal Serraller<span class="text-amber-800">.</span>
       </a>
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-600">
         <a href="#plantes" class="hover:text-amber-800 transition-colors">Distribució</a>
         <a href="#serveis" class="hover:text-amber-800 transition-colors">Equipament</a>
-        <a href="#entorn" class="hover:text-amber-800 transition-colors">Entorn i Rutes</a>
-        <a href="#faq" class="hover:text-amber-800 transition-colors">PMF / FAQ</a>
         <a href="#disponibilitat" class="hover:text-amber-800 transition-colors">Disponibilitat</a>
         <a href="#reserva" class="bg-amber-800 text-white px-5 py-2.5 rounded-lg hover:bg-amber-900 transition-colors font-semibold shadow-sm">
           Reserva Directa
@@ -86,359 +49,243 @@
     </div>
   </header>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section class="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden bg-stone-100">
-      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <!-- HERO SECTION -->
+  <section class="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden bg-stone-100">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <div class="lg:col-span-6 space-y-6">
+        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">
+          Casa Rural Sencera · 3 Plantes · Fins a 6 persones
+        </span>
         
-        <div class="lg:col-span-6 space-y-6">
-          <span class="inline-block text-xs font-semibold uppercase tracking-widest text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">
-            Casa Rural de Lloguer Sencer · Miravet & Ribera d'Ebre
-          </span>
-          
-          <h1 class="text-4xl sm:text-5xl font-serif font-bold text-stone-900 leading-tight">
-            Descobreix la Ribera d'Ebre i la Terra Alta des de Miravet
-          </h1>
-          <p class="text-lg text-stone-600 leading-relaxed">
-            Casa acollidora de 3 plantes fins a 6 persones. El camp de base perfecte per explorar la Via Verda, refrescar-te a la Fontcalda, gaudir de l'enoturisme i viure la màgia del riu Ebre.
-          </p>
-
-          <div class="pt-4 flex flex-col sm:flex-row gap-4">
-            <a href="#disponibilitat" class="inline-flex justify-center items-center bg-amber-800 text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-amber-900 transition-all text-center">
-              Consultar Disponibilitat
-            </a>
-            <a href="#entorn" class="inline-flex justify-center items-center border border-stone-300 text-stone-700 px-6 py-4 rounded-xl font-semibold hover:bg-stone-200/60 transition-all text-center">
-              Descobrir Rutes i Entorn
-            </a>
-          </div>
-        </div>
-
-        <!-- FOTO HERO PRINCIPAL -->
-        <div class="lg:col-span-6">
-          <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-stone-200">
-            <img 
-              src="cal-serraller-menjador-principal.jpg" 
-              alt="Interior acollidor de la casa rural Cal Serraller a Miravet, Ribera d'Ebre" 
-              class="w-full h-full hero-img-adjust"
-              fetchpriority="high"
-            >
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- DISTRIBUCIÓ PER PLANTES -->
-    <section id="plantes" class="py-24 bg-white">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <h2 class="text-xs uppercase tracking-widest text-amber-800 font-semibold mb-2">Estructura i Espais</h2>
-          <p class="text-3xl font-serif font-bold text-stone-900">Una casa sencera de 3 plantes pensada pel teu confort</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm">
-            <div class="aspect-[4/3] overflow-hidden bg-stone-200 relative">
-              <img src="cal-serraller-planta-baixa.jpg" alt="Gran sala d'entrada a la planta baixa de Cal Serraller" class="w-full h-full object-cover" loading="lazy">
-              <span class="absolute top-4 left-4 bg-stone-900/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm font-medium">Planta Baixa</span>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Gran Sala d'Entrada</h3>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                Rebedor ampli i diàfan ideal per guardar equipatges, equips d'excursió o les bicicletes per recórrer la Via Verda.
-              </p>
-            </div>
-          </article>
-
-          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm">
-            <div class="aspect-[4/3] overflow-hidden bg-stone-200 relative">
-              <img src="cal-serraller-cuina-equipada.jpg" alt="Cuina i saló menjador completament equipats" class="w-full h-full object-cover" loading="lazy">
-              <span class="absolute top-4 left-4 bg-amber-800 text-white text-xs px-3 py-1 rounded-full font-medium">Primera Planta</span>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Cuina i Saló Menjador</h3>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                Espai integrat amb cuina oberta totalment equipada (Nespresso, microones, fogons, rentadora), zona de menjador i saló acollidor amb TV.
-              </p>
-            </div>
-          </article>
-
-          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm">
-            <div class="aspect-[4/3] overflow-hidden bg-stone-200 relative">
-              <img src="cal-serraller-dormitori-principal.jpg" alt="Dormitoris acollidors a la segona planta" class="w-full h-full object-cover" loading="lazy">
-              <span class="absolute top-4 left-4 bg-stone-900/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm font-medium">Segona Planta</span>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">3 Dormitoris i 2 Banys</h3>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                3 habitacions amples (1 llit doble, 4 llits individuals) per a un màxim de 6 persones, i 2 banys complets amb dutxa i tovalloles.
-              </p>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓ DE SERVEIS I EQUIPAMENT -->
-    <section id="serveis" class="py-20 bg-stone-100 border-t border-stone-200">
-      <div class="max-w-6xl mx-auto px-6">
-        
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs uppercase tracking-widest text-amber-800 font-semibold">Comoditats Incloses</span>
-          <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Tot el necessari per a la teva estada</h2>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-            <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Check-in Autònom</h3>
-            <p class="text-stone-600 text-sm">Entrada senzilla amb codi digital per a una màxima flexibilitat horària.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-            <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Barbacoa i Jardí</h3>
-            <p class="text-stone-600 text-sm">Zona d'exterior ideal per preparar àpats a la brasa en un entorn tranquil.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-            <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Bicicletes Gratuïtes</h3>
-            <p class="text-stone-600 text-sm">Bicis a la teva disposició per passejar per Miravet i acostar-te al riu.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-            <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Cuina Equipada</h3>
-            <p class="text-stone-600 text-sm">Amb cafetera Nespresso, utilatges de cuina, nevera, forn i rentadora.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-            <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Climatització i Wi-Fi</h3>
-            <p class="text-stone-600 text-sm">Aire condicionat, calefacció regulable i Wi-Fi d'alta velocitat gratis.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm">
-            <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Parament de Llit i Bany</h3>
-            <p class="text-stone-600 text-sm">Llençols de cotó i tovalloles de qualitat incloses per a tots els hostes.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECCIÓ SEO REGIONAL: ENTORN I EXPERIÈNCIES -->
-    <section id="entorn" class="py-24 bg-white border-t border-stone-200">
-      <div class="max-w-6xl mx-auto px-6">
-        
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <span class="text-xs uppercase tracking-widest text-amber-800 font-semibold">Turisme actiu i de natura</span>
-          <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Explora la Ribera d'Ebre i la Terra Alta</h2>
-          <p class="text-stone-600 text-sm mt-3 leading-relaxed">
-            Miravet és el punt de partida ideal per gaudir d'experiències naturals, culturals i enològiques a pocs minuts de distància.
-          </p>
-        </div>
-
-        <!-- FILTRES INTERACTIUS (UX) -->
-        <div class="flex flex-wrap justify-center gap-3 mb-12">
-          <button onclick="filterRoutes('all')" id="btn-all" class="route-tab tab-active border border-stone-300 px-5 py-2.5 rounded-full text-xs font-semibold transition-all">Totes les Experiències</button>
-          <button onclick="filterRoutes('enoturisme')" id="btn-enoturisme" class="route-tab border border-stone-300 px-5 py-2.5 rounded-full text-xs font-semibold text-stone-600 hover:border-amber-800 transition-all">Enoturisme (DO Terra Alta)</button>
-          <button onclick="filterRoutes('natura')" id="btn-natura" class="route-tab border border-stone-300 px-5 py-2.5 rounded-full text-xs font-semibold text-stone-600 hover:border-amber-800 transition-all">Natura i Bany (La Fontcalda)</button>
-          <button onclick="filterRoutes('bici')" id="btn-bici" class="route-tab border border-stone-300 px-5 py-2.5 rounded-full text-xs font-semibold text-stone-600 hover:border-amber-800 transition-all">Via Verda de la Vall de Zafán</button>
-          <button onclick="filterRoutes('miravet')" id="btn-miravet" class="route-tab border border-stone-300 px-5 py-2.5 rounded-full text-xs font-semibold text-stone-600 hover:border-amber-800 transition-all">Miravet i Riu Ebre</button>
-        </div>
-
-        <!-- CARDS REGIONALS PER CATEGORIES SEO -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="routes-container">
-          
-          <div class="route-card natura bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 flex flex-col justify-between">
-            <div>
-              <div class="aspect-[4/3] bg-stone-200 relative overflow-hidden">
-                <img src="fontcalda-terres-ebre.jpg" alt="Santuari i font d'aigües termals de la Fontcalda" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-                <span class="absolute top-3 left-3 bg-emerald-800 text-white text-[10px] uppercase font-bold px-2.5 py-1 rounded">Aigües Termals</span>
-              </div>
-              <div class="p-5">
-                <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">La Fontcalda i Gorgues</h3>
-                <p class="text-xs font-medium text-amber-800 mb-2">Prat de Comte · Terra Alta</p>
-                <p class="text-stone-600 text-xs leading-relaxed">
-                  Santuari natural situat entre muntanyes amb una font medicinal d'aigua a 28ºC i piscines naturals al riu Canaletes.
-                </p>
-              </div>
-            </div>
-            <div class="p-5 pt-0 border-t border-stone-200/50 mt-4">
-              <span class="text-[11px] text-stone-500 font-medium">📍 A 25 min en cotxe o en bici</span>
-            </div>
-          </div>
-
-          <div class="route-card bici bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 flex flex-col justify-between">
-            <div>
-              <div class="aspect-[4/3] bg-stone-200 relative overflow-hidden">
-                <img src="via-verda-terra-alta.jpg" alt="Ruta cicloturista de la Via Verda de la Vall de Zafan" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-                <span class="absolute top-3 left-3 bg-sky-800 text-white text-[10px] uppercase font-bold px-2.5 py-1 rounded">Cicloturisme</span>
-              </div>
-              <div class="p-5">
-                <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Via Verda de la Vall de Zafán</h3>
-                <p class="text-xs font-medium text-amber-800 mb-2">Pinell de Brai - Bot - Horta</p>
-                <p class="text-stone-600 text-xs leading-relaxed">
-                  Recorregut adaptat, accessible i asfaltet que creua túnels, viaductes i paisatges espectaculars. Ideal per a tota la família.
-                </p>
-              </div>
-            </div>
-            <div class="p-5 pt-0 border-t border-stone-200/50 mt-4">
-              <span class="text-[11px] text-stone-500 font-medium">🚲 Accessible per a tots els nivells</span>
-            </div>
-          </div>
-
-          <div class="route-card enoturisme bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 flex flex-col justify-between">
-            <div>
-              <div class="aspect-[4/3] bg-stone-200 relative overflow-hidden">
-                <img src="enoturisme-terra-alta.jpg" alt="Cellers modernistes i tast de vins de la DO Terra Alta" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-                <span class="absolute top-3 left-3 bg-purple-900 text-white text-[10px] uppercase font-bold px-2.5 py-1 rounded">Catedral del Vi</span>
-              </div>
-              <div class="p-5">
-                <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Rutes Enoturístiques DO Terra Alta</h3>
-                <p class="text-xs font-medium text-amber-800 mb-2">Gandesa & Pinell de Brai</p>
-                <p class="text-stone-600 text-xs leading-relaxed">
-                  Gaudeix del vi de Garnatxa Blanca visitant els cellers modernistes coneguts com "Les Catedrals del Vi", dissenyats per Cèsar Martinell.
-                </p>
-              </div>
-            </div>
-            <div class="p-5 pt-0 border-t border-stone-200/50 mt-4">
-              <span class="text-[11px] text-stone-500 font-medium">🍷 Tast de vins i visites guiades</span>
-            </div>
-          </div>
-
-          <div class="route-card miravet bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 flex flex-col justify-between">
-            <div>
-              <div class="aspect-[4/3] bg-stone-200 relative overflow-hidden">
-                <img src="castell-miravet-ebre.jpg" alt="Castell de Miravet i passeig en caiac pel riu Ebre" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-                <span class="absolute top-3 left-3 bg-amber-800 text-white text-[10px] uppercase font-bold px-2.5 py-1 rounded">Patrimoni & Riu</span>
-              </div>
-              <div class="p-5">
-                <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Castell, Caiac i Pas de Barca</h3>
-                <p class="text-xs font-medium text-amber-800 mb-2">Miravet · Ribera d'Ebre</p>
-                <p class="text-stone-600 text-xs leading-relaxed">
-                  Visita el Castell Templer del s. XII, el barri vell, l'últim Pas de Barca sense motor de l'Ebre i gaudeix de rutes en piragua.
-                </p>
-              </div>
-            </div>
-            <div class="p-5 pt-0 border-t border-stone-200/50 mt-4">
-              <span class="text-[11px] text-stone-500 font-medium">🏰 A 5 minuts a peu de la casa</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓ DE FAQ / PREGUNTES FREQÜENTS (SEO RICH SNIPPET) -->
-    <section id="faq" class="py-20 bg-stone-100 border-t border-stone-200">
-      <div class="max-w-4xl mx-auto px-6">
-        
-        <div class="text-center max-w-xl mx-auto mb-12">
-          <span class="text-xs uppercase tracking-widest text-amber-800 font-semibold">Resolució de Dubtes</span>
-          <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Preguntes Freqüents</h2>
-          <p class="text-stone-600 text-sm mt-2">Tot el que necessites saber sobre la casa i les activitats a la Ribera d'Ebre.</p>
-        </div>
-
-        <div class="space-y-4">
-          
-          <details class="bg-white p-6 rounded-2xl border border-stone-200/80 group">
-            <summary class="font-serif font-bold text-stone-900 text-base cursor-pointer flex justify-between items-center">
-              Com funciona el check-in autònom?
-              <span class="text-amber-800 transition-transform group-open:rotate-180">▼</span>
-            </summary>
-            <p class="text-stone-600 text-sm mt-3 leading-relaxed">
-              El check-in es realitza mitjançant una panell numèric digital a la porta d'entrada. Un cop confirmada la reserva, et facilitarem el teu codi únic d'accés per poder entrar a qualsevol hora a partir de l'horari establert, sense necessitat d'esperar a ningú.
-            </p>
-          </details>
-
-          <details class="bg-white p-6 rounded-2xl border border-stone-200/80 group">
-            <summary class="font-serif font-bold text-stone-900 text-base cursor-pointer flex justify-between items-center">
-              A quina distància queda la Via Verda i la Fontcalda?
-              <span class="text-amber-800 transition-transform group-open:rotate-180">▼</span>
-            </summary>
-            <p class="text-stone-600 text-sm mt-3 leading-relaxed">
-              El tram de la Via Verda de la Terra Alta comença a uns 15-20 minuts en cotxe des de la casa (a Pinell de Brai o Prat de Comte). Les gorgues i el Santuari de la Fontcalda es troben a uns 25 minuts, essent accessibles tant en cotxe com fent la ruta en bicicleta.
-            </p>
-          </details>
-
-          <details class="bg-white p-6 rounded-2xl border border-stone-200/80 group">
-            <summary class="font-serif font-bold text-stone-900 text-base cursor-pointer flex justify-between items-center">
-              Hi ha lloc per aparcar i guardar les nostres pròpies bicicletes?
-              <span class="text-amber-800 transition-transform group-open:rotate-180">▼</span>
-            </summary>
-            <p class="text-stone-600 text-sm mt-3 leading-relaxed">
-              Sí. A la gran sala d'entrada de la planta baixa podeu guardar les vostres bicicletes de forma totalment segura. Als voltants de la casa hi ha aparcament públic i gratuït per al vostre vehicle.
-            </p>
-          </details>
-
-          <details class="bg-white p-6 rounded-2xl border border-stone-200/80 group">
-            <summary class="font-serif font-bold text-stone-900 text-base cursor-pointer flex justify-between items-center">
-              Acepten animals de companyia?
-              <span class="text-amber-800 transition-transform group-open:rotate-180">▼</span>
-            </summary>
-            <p class="text-stone-600 text-sm mt-3 leading-relaxed">
-              Sí, Cal Serraller és un allotjament que permet la presència de la teva mascota sota petició prèvia.
-            </p>
-          </details>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- DISPONIBILITAT -->
-    <section id="disponibilitat" class="py-20 bg-white border-t border-stone-200">
-      <div class="max-w-4xl mx-auto px-6">
-        
-        <div class="text-center max-w-xl mx-auto mb-10">
-          <span class="text-xs uppercase tracking-widest text-amber-800 font-semibold">Calendari d'Ocupació</span>
-          <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Consulta les dates lliures</h2>
-        </div>
-
-        <div class="bg-stone-50 rounded-2xl p-6 sm:p-8 shadow-sm border border-stone-200/80 max-w-md mx-auto">
-          <div class="flex items-center justify-between mb-6">
-            <h3 id="calendar-month-year" class="text-lg font-serif font-bold text-stone-900"></h3>
-            <div class="flex space-x-2">
-              <span class="inline-flex items-center text-xs text-emerald-800 bg-emerald-100 px-2 py-1 rounded">● Lliure</span>
-              <span class="inline-flex items-center text-xs text-rose-800 bg-rose-100 px-2 py-1 rounded">● Ocupat</span>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-7 gap-2 text-center text-xs font-bold text-stone-400 mb-2">
-            <div>Dl</div><div>Dt</div><div>Dc</div><div>Dj</div><div>Dv</div><div>Ds</div><div>Dg</div>
-          </div>
-
-          <div id="calendar-days" class="grid grid-cols-7 gap-2 text-center text-sm"></div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONVERSIÓ DIRECTA: RESERVA VIA WHATSAPP -->
-    <section id="reserva" class="py-20 bg-stone-900 text-white">
-      <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
-        <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Reserva Directa sense Comissions</span>
-        <h2 class="text-3xl sm:text-4xl font-serif font-bold">Reserva la teva escapada a Cal Serraller</h2>
-        <p class="text-stone-300 max-w-xl mx-auto text-sm leading-relaxed">
-          Garanteix el millor preu reservant directament amb nosaltres via WhatsApp. Atenció immediata i sense comissions d'intermediaris.
+        <h1 class="text-4xl sm:text-5xl font-serif font-bold text-stone-900 leading-tight">
+          Un espai de tradició i confort a Miravet
+        </h1>
+        <p class="text-lg text-stone-600 leading-relaxed">
+          Casa tradicional distribuïda en 3 plantes. Disposa d'una gran sala d'entrada diàfana, cuina i menjador acollidor, 3 dormitoris, 2 banys, jardí amb barbacoa i entrada autònoma.
         </p>
 
-        <div class="pt-4">
-          <a 
-            href="https://wa.me/34600000000?text=Hola!%20M'agradaria%20consultar%20disponibilitat%20per%20a%20Cal%20Serraller%20a%20Miravet." 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-all"
-          >
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-            Sol·licitar Reserva per WhatsApp
+        <div class="pt-4 flex flex-col sm:flex-row gap-4">
+          <a href="#disponibilitat" class="inline-flex justify-center items-center bg-amber-800 text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-amber-900 transition-all text-center">
+            Consultar Disponibilitat
+          </a>
+          <a href="#plantes" class="inline-flex justify-center items-center border border-stone-300 text-stone-700 px-6 py-4 rounded-xl font-semibold hover:bg-stone-200/60 transition-all text-center">
+            Descobrir les 3 Plantes
           </a>
         </div>
       </div>
-    </section>
-  </main>
+
+      <!-- FOTO PRINCIPAL -->
+      <div class="lg:col-span-6">
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-stone-200">
+          <img 
+            src="cal-serraller-menjador-principal.jpg" 
+            alt="Interior acolledor de Cal Serraller a Miravet" 
+            class="w-full h-full hero-img-adjust"
+            fetchpriority="high"
+          >
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DISTRIBUCIÓ PER PLANTES -->
+  <section id="plantes" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-amber-800 font-semibold mb-2">L'Estructura de la Casa</h2>
+        <p class="text-3xl font-serif font-bold text-stone-900">Distribuïda en 3 plantes pensades pel teu confort</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Planta Baixa -->
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden bg-stone-200 relative">
+            <img src="cal-serraller-planta-baixa.jpg" alt="Gran sala d'entrada diàfana a Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 bg-stone-900/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm font-medium">Planta Baixa</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Gran Sala d'Entrada</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Un espai diàfan, ampli i acollidor que et dóna la benvinguda a la casa. Ideal per deixar equipatge, bicicletes o relaxar-se en un entorn fresc i espaiós.
+            </p>
+          </div>
+        </article>
+
+        <!-- Primera Planta -->
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden bg-stone-200 relative">
+            <img src="cal-serraller-cuina-equipada.jpg" alt="Cuina i menjador de Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 bg-amber-800 text-white text-xs px-3 py-1 rounded-full font-medium">Primera Planta</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Cuina i Saló Menjador</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              El cor de la casa. Cuina totalment equipada amb cafetera Nespresso, zona de menjador i saló acollidor amb televisió de pantalla plana.
+            </p>
+          </div>
+        </article>
+
+        <!-- Segona Planta -->
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden bg-stone-200 relative">
+            <img src="cal-serraller-dormitori-principal.jpg" alt="Habitacions i banys a la segona planta" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 bg-stone-900/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm font-medium">Segona Planta</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Zona de Descans i Banys</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              3 dormitoris espaiosos (1 llit doble i 2 individuals) dissenyats per garantir un descans silenciós, i 2 banys complets equipats amb tovalloles de cotó.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓ DE SERVEIS I EQUIPAMENT REAL -->
+  <section id="serveis" class="py-20 bg-stone-100 border-t border-stone-200">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-widest text-amber-800 font-semibold">Instal·lacions i Comoditats</span>
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Equipament Pensat per a Tu</h2>
+        <p class="text-stone-600 text-sm mt-2">Tot el necessari per gaudir d'una estada d'absolut confort a Miravet.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Entrada autònoma -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Check-in Autònom</h3>
+            <p class="text-stone-600 text-sm mt-1">Accés fàcil i flexible a la casa mitjançant codi digital sense necessitat d'esperes.</p>
+          </div>
+        </div>
+
+        <!-- Barbacoa i Jardí -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 1-4 4-4 3 3 2 5 2 7 1-1 2-2 2.657-1.343z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Jardí amb Barbacoa</h3>
+            <p class="text-stone-600 text-sm mt-1">Zona d'exterior amb barbacoa equipada per preparar dinars i sopars a la brasa.</p>
+          </div>
+        </div>
+
+        <!-- Bicicletes Gratuïtes -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Bicicletes Gratuïtes</h3>
+            <p class="text-stone-600 text-sm mt-1">Inclosa la utilització de bicicletes per recórrer el poble i les rutes al voltant del riu Ebre.</p>
+          </div>
+        </div>
+
+        <!-- Cafetera Nespresso i Cuina -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 8A6 6 0 106 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Cafetera Nespresso</h3>
+            <p class="text-stone-600 text-sm mt-1">Cuina completa amb cafetera Nespresso de càpsules, fogons, microones, nevera i rentadora.</p>
+          </div>
+        </div>
+
+        <!-- Tovalloles i Roba de Llit -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Tovalloles i Parament</h3>
+            <p class="text-stone-600 text-sm mt-1">Inclou jocs de tovalloles de cotó de qualitat i llençols preparats per a tots els hostes.</p>
+          </div>
+        </div>
+
+        <!-- Climatització i Wi-Fi -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Climatització i Wi-Fi</h3>
+            <p class="text-stone-600 text-sm mt-1">Aire condicionat, calefacció regulable i connexió Wi-Fi gratuïta a tota la casa.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DISPONIBILITAT -->
+  <section id="disponibilitat" class="py-20 bg-white border-t border-stone-200">
+    <div class="max-w-4xl mx-auto px-6">
+      
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <span class="text-xs uppercase tracking-widest text-amber-800 font-semibold">Calendari d'Ocupació</span>
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Consulta les dates lliures</h2>
+        <p class="text-stone-600 text-sm mt-2">Estat actualitzat de la casa per planificar la teva escapada.</p>
+      </div>
+
+      <div class="bg-stone-50 rounded-2xl p-6 sm:p-8 shadow-md border border-stone-200/80 max-w-md mx-auto">
+        <div class="flex items-center justify-between mb-6">
+          <h3 id="calendar-month-year" class="text-lg font-serif font-bold text-stone-900"></h3>
+          <div class="flex space-x-2">
+            <span class="inline-flex items-center text-xs text-emerald-800 bg-emerald-100 px-2 py-1 rounded">● Lliure</span>
+            <span class="inline-flex items-center text-xs text-rose-800 bg-rose-100 px-2 py-1 rounded">● Ocupat</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-7 gap-2 text-center text-xs font-bold text-stone-400 mb-2">
+          <div>Dl</div><div>Dt</div><div>Dc</div><div>Dj</div><div>Dv</div><div>Ds</div><div>Dg</div>
+        </div>
+
+        <div id="calendar-days" class="grid grid-cols-7 gap-2 text-center text-sm"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MOTOR DE RESERVA DIRECTA -->
+  <section id="reserva" class="py-20 bg-stone-900 text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+      <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Reserva Directa sense Comissions</span>
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold">Reserva la teva estada a Cal Serraller</h2>
+      <p class="text-stone-300 max-w-xl mx-auto text-sm leading-relaxed">
+        Garanteix el millor preu reservant directament amb nosaltres via WhatsApp. Atenció immediata i confirmació al moment.
+      </p>
+
+      <div class="pt-4">
+        <a 
+          href="https://wa.me/34600000000?text=Hola!%20M'agradaria%20consultar%20disponibilitat%20per%20a%20Cal%20Serraller." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-all"
+        >
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          Sol·licitar Reserva per WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- PEU DE PÀGINA -->
   <footer class="bg-stone-950 text-stone-400 py-12 border-t border-stone-800">
     <div class="max-w-6xl mx-auto px-6 text-center md:text-left md:flex md:justify-between md:items-center">
       <div class="mb-6 md:mb-0">
         <p class="text-xl font-serif font-bold text-white">Cal Serraller</p>
-        <p class="text-xs text-stone-500 mt-1">Miravet · Ribera d'Ebre · Terres de l'Ebre.</p>
+        <p class="text-xs text-stone-500 mt-1">Miravet, Terres de l'Ebre.</p>
       </div>
       <p class="text-xs text-stone-500">
         &copy; 2026 Cal Serraller. Tots els drets reservats.
@@ -447,7 +294,6 @@
   </footer>
 
   <script>
-    // SCRIPT DE CALENDARI D'OCUPACIÓ
     const busyDates = ["2026-08-21", "2026-08-22", "2026-08-23", "2026-08-28", "2026-08-29"];
 
     function renderCalendar() {
@@ -480,30 +326,7 @@
       }
     }
 
-    // FILTRATGE DINÀMIC DE RUTES I EXPERIÈNCIES (UX)
-    function filterRoutes(category) {
-      const cards = document.querySelectorAll('.route-card');
-      const tabs = document.querySelectorAll('.route-tab');
-
-      tabs.forEach(tab => {
-        tab.classList.remove('tab-active', 'text-amber-800');
-        tab.classList.add('text-stone-600');
-      });
-
-      document.getElementById(`btn-${category}`).classList.add('tab-active');
-
-      cards.forEach(card => {
-        if (category === 'all' || card.classList.contains(category)) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      renderCalendar();
-    });
+    document.addEventListener('DOMContentLoaded', renderCalendar);
   </script>
 
 </body>
