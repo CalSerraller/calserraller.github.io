@@ -3,175 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cal Serraller | Allotjament Rural a Miravet (Ribera d'Ebre)</title>
-  <meta name="description" content="Un espai per viure, sentir i gaudir com a casa a Miravet. Allotjament rural càlid i acollidor amb tracte directe i personalitzat.">
+  <title>Cal Serraller | Casa Rural a Miravet (Ribera d'Ebre)</title>
+  <meta name="description" content="Desconnecta a Cal Serraller, allotjament rural amb encant a Miravet. Tradició, fusta, pedra i confort vora el riu Ebre. Reserva directa al millor preu.">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            fusta: '#8C5A3C',
-            fustaFosc: '#5A3825',
-            pedra: '#F5F2EB',
-            pedraFosc: '#1C1917'
+            brand: {
+              50: '#fdfbf7',
+              100: '#f7f2e8',
+              800: '#8c5e34',
+              900: '#5c3d21',
+            }
           }
         }
       }
     }
   </script>
+  <style>
+    .hero-img-adjust {
+      object-fit: cover;
+      object-position: 15% center;
+    }
+  </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans antialiased">
 
   <!-- NAVEGACIÓ -->
-  <header class="sticky top-0 z-50 bg-stone-900/90 backdrop-blur-md border-b border-stone-800 text-white">
+  <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-stone-200/80">
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="text-2xl font-serif font-bold tracking-wide text-amber-100">Cal Serraller</a>
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-300">
-        <a href="#espais" class="hover:text-amber-200 transition-colors">Els Espais</a>
-        <a href="#reserva" class="hover:text-amber-200 transition-colors">Disponibilitat</a>
-        <a href="#contacte" class="hover:text-amber-200 transition-colors">Contacte Directe</a>
-      </nav>
-      <a href="#reserva" class="px-5 py-2.5 bg-amber-700 hover:bg-amber-600 text-white text-sm font-medium rounded-lg transition-colors shadow-md">
-        Reserva Directa
+      <a href="#" class="text-2xl font-serif font-bold text-stone-900 tracking-tight">
+        Cal Serraller<span class="text-amber-800">.</span>
       </a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-600">
+        <a href="#la-casa" class="hover:text-amber-800 transition-colors">La Casa</a>
+        <a href="#espais" class="hover:text-amber-800 transition-colors">Espais</a>
+        <a href="#entorn" class="hover:text-amber-800 transition-colors">Miravet i Entorn</a>
+        <a href="#reserva" class="bg-amber-800 text-white px-5 py-2.5 rounded-lg hover:bg-amber-900 transition-colors font-semibold shadow-sm">
+          Reserva Directa
+        </a>
+      </nav>
     </div>
   </header>
 
-  <!-- 1. HERO SECTION -->
-  <section class="relative min-h-[85vh] w-full flex items-center justify-center bg-stone-900 text-white overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <img 
-        src="IMG_20230924_152747.webp" 
-        alt="Menjador càlid i acollidor de Cal Serraller a Miravet" 
-        class="w-full h-full object-cover object-center transform scale-105"
-        fetchpriority="high"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-900/50 to-stone-950/40" aria-hidden="true"></div>
-    </div>
-
-    <div class="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center flex flex-col items-center">
-      <span class="inline-block px-4 py-1.5 mb-6 text-xs sm:text-sm font-medium tracking-wider text-amber-200 uppercase bg-stone-900/60 backdrop-blur-md rounded-full border border-amber-200/20">
-        Miravet · Ribera d'Ebre
-      </span>
-      <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-stone-100 leading-tight mb-6">
-        Un espai per viure, sentir i gaudir com a casa
-      </h1>
-      <p class="text-base sm:text-xl text-stone-200 max-w-2xl font-light leading-relaxed mb-10">
-        Ens impliquem en cada detall perquè la teva experiència sigui inoblidable.
-      </p>
+  <!-- HERO SECTION -->
+  <section class="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden bg-stone-100">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       
-      <!-- Cercador ràpid de dates -->
-      <div class="w-full max-w-3xl bg-white/95 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-2xl text-stone-800 border border-stone-200/50">
-        <form action="#reserva" method="GET" class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
-          <div class="text-left">
-            <label for="hero-in" class="block text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">Entrada</label>
-            <input type="date" id="hero-in" class="w-full px-3 py-2.5 bg-stone-100 border border-stone-300 rounded-lg text-sm text-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-700">
-          </div>
-          <div class="text-left">
-            <label for="hero-out" class="block text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">Eixida</label>
-            <input type="date" id="hero-out" class="w-full px-3 py-2.5 bg-stone-100 border border-stone-300 rounded-lg text-sm text-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-700">
-          </div>
-          <button type="submit" class="w-full py-3 bg-amber-700 hover:bg-amber-600 text-white font-medium rounded-lg shadow-md transition-colors text-sm uppercase tracking-wider">
-            Comprovar disponibilitat
-          </button>
-        </form>
+      <div class="lg:col-span-6 space-y-6">
+        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">
+          Allotjament Rural a Miravet
+        </span>
+        <h1 class="text-4xl sm:text-5xl font-serif font-bold text-stone-900 leading-tight">
+          Un espai per viure, sentir i gaudir com a casa.
+        </h1>
+        <p class="text-lg text-stone-600 leading-relaxed">
+          Història, pau i confort a la Ribera d'Ebre. Gaudeix d'una estada autèntica envoltat de fusta, pedra i el ritme tranquil del riu.
+        </p>
+        <div class="pt-4 flex flex-col sm:flex-row gap-4">
+          <a href="#reserva" class="inline-flex justify-center items-center bg-amber-800 text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-amber-900 transition-all text-center">
+            Consultar Disponibilitat
+          </a>
+          <a href="#espais" class="inline-flex justify-center items-center border border-stone-300 text-stone-700 px-6 py-4 rounded-xl font-semibold hover:bg-stone-200/60 transition-all text-center">
+            Descobrir la casa
+          </a>
+        </div>
       </div>
+
+      <!-- FOTO PRINCIPAL -->
+      <div class="lg:col-span-6">
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-stone-200">
+          <img 
+            src="cal-serraller-menjador-principal.jpg" 
+            alt="Menjador acollidor amb taula de fusta i pedra natural a la casa rural Cal Serraller, Miravet" 
+            class="w-full h-full hero-img-adjust"
+            fetchpriority="high"
+          >
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- 2. GALERIA I ESPAIS -->
-  <section id="espais" class="py-20 bg-stone-50 text-stone-800">
+  <!-- GALERIA D'ESPAIS -->
+  <section id="espais" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-xs uppercase tracking-widest text-amber-800 font-semibold mb-3">La casa</h2>
-        <p class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 leading-tight">
-          Llum natural, fusta i pedra en un entorn tranquil
-        </p>
-        <div class="w-16 h-0.5 bg-amber-700/40 mx-auto mt-6"></div>
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-amber-800 font-semibold mb-2">Els Nostres Espais</h2>
+        <p class="text-3xl font-serif font-bold text-stone-900">Cuidat al detall per al teu descans</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <article class="bg-white rounded-xl overflow-hidden shadow-sm border border-stone-200/60">
-          <img src="IMG_20230924_125248.webp" alt="Cuina de Cal Serraller" class="w-full h-64 object-cover" loading="lazy">
-          <div class="p-6">
-            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Cuina i espais comuns</h3>
-            <p class="text-stone-600 text-sm leading-relaxed">Illa de cuina equipada i integrada per compartir àpats i moments sense pressió.</p>
-          </div>
-        </article>
         
-        <article class="bg-white rounded-xl overflow-hidden shadow-sm border border-stone-200/60">
-          <img src="IMG_20230924_151746.webp" alt="Dormitori acollidor" class="w-full h-64 object-cover" loading="lazy">
+        <!-- CUINA -->
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden bg-stone-200">
+            <img 
+              src="cal-serraller-cuina-equipada.jpg" 
+              alt="Cuina equipada i espaiosa integrada al menjador de Cal Serraller a Miravet" 
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
           <div class="p-6">
-            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Dormitoris acollidors</h3>
-            <p class="text-stone-600 text-sm leading-relaxed">Habitacions aïllades del soroll amb acabats naturals per a un descans reconfortant.</p>
+            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Cuina i Espais Comuns</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Equipada amb tot el necessari per compartir àpats sense pressa, integrant la calidesa de la fusta i el confort modern.
+            </p>
           </div>
         </article>
 
-        <article class="bg-white rounded-xl overflow-hidden shadow-sm border border-stone-200/60">
-          <img src="IMG_20230924_150706.webp" alt="Banyera i zona de benestar" class="w-full h-64 object-cover" loading="lazy">
+        <!-- DORMITORI -->
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden bg-stone-200">
+            <img 
+              src="cal-serraller-dormitori-principal.jpg" 
+              alt="Habitació doble acollidora amb acabats de fusta a la Ribera d'Ebre" 
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
           <div class="p-6">
-            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Zona de relaxació</h3>
-            <p class="text-stone-600 text-sm leading-relaxed">Detalls pensats per desconnectar de la rutina diària i gaudir del teu temps.</p>
+            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Dormitoris de Descans</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Habitacions silencioses i acollidores, dissenyades amb textures naturals per a un descans profund i reparador.
+            </p>
           </div>
         </article>
+
+        <!-- BANY -->
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden bg-stone-200">
+            <img 
+              src="cal-serraller-bany-detalls.jpg" 
+              alt="Bany complet i detalls de benestar a l'allotjament rural Cal Serraller" 
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            >
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Benestar i Detalls</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Espais funcionals i de línies netes pensats perquè no et falti de res durant la teva escapada rural.
+            </p>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- 3. MOTOR DE DISPONIBILITAT (SINCRONITZAT AMB BOOKING / ICAL) -->
-  <section id="reserva" class="py-20 bg-stone-100 border-t border-stone-200">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-serif font-bold text-stone-900 mb-4">Consulta de Disponibilitat Directa</h2>
-        <p class="text-stone-600 text-sm max-w-xl mx-auto">
-          Calendari actualitzat en temps real. Reserva sense intermediaris amb atenció personalitzada.
-        </p>
-      </div>
+  <!-- MOTOR DE RESERVA DIRECTA -->
+  <section id="reserva" class="py-20 bg-stone-900 text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+      <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Reserva Directa sense Comissions</span>
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold">Planifica la teva escapada a Cal Serraller</h2>
+      <p class="text-stone-300 max-w-xl mx-auto text-sm leading-relaxed">
+        Contacta directament amb nosaltres per confirmar les teves dates amb el millor preu garantit i atenció personalitzada.
+      </p>
 
-      <div class="bg-white p-8 rounded-2xl shadow-md border border-stone-200/80">
-        <form class="space-y-6">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-              <label for="checkin" class="block text-xs font-semibold uppercase tracking-wider text-stone-600 mb-2">Data d'Entrada</label>
-              <input type="date" id="checkin" class="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg text-sm text-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-700">
-            </div>
-            <div>
-              <label for="checkout" class="block text-xs font-semibold uppercase tracking-wider text-stone-600 mb-2">Data d'Eixida</label>
-              <input type="date" id="checkout" class="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg text-sm text-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-700">
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-              <label for="nom" class="block text-xs font-semibold uppercase tracking-wider text-stone-600 mb-2">Nom i Cognoms</label>
-              <input type="text" id="nom" placeholder="El teu nom" class="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg text-sm text-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-700">
-            </div>
-            <div>
-              <label for="telefon" class="block text-xs font-semibold uppercase tracking-wider text-stone-600 mb-2">Telèfon de Contacte</label>
-              <input type="tel" id="telefon" placeholder="+34 600 000 000" class="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg text-sm text-stone-800 focus:outline-none focus:ring-2 focus:ring-amber-700">
-            </div>
-          </div>
-
-          <button type="submit" class="w-full py-4 bg-amber-700 hover:bg-amber-600 text-white font-medium rounded-lg text-base shadow-md transition-colors uppercase tracking-wider">
-            Sol·licitar reserva amb tracte directe
-          </button>
-        </form>
+      <div class="pt-4">
+        <a 
+          href="https://wa.me/34600000000?text=Hola!%20M'agradaria%20consultar%20disponibilitat%20per%20a%20Cal%20Serraller." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-all"
+        >
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          Sol·licitar Reserva per WhatsApp
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer id="contacte" class="bg-stone-950 text-stone-400 py-12 border-t border-stone-800">
-    <div class="max-w-6xl mx-auto px-6 text-center sm:text-left sm:flex sm:justify-between sm:items-center">
-      <div>
-        <p class="text-xl font-serif font-bold text-stone-200 mb-2">Cal Serraller</p>
-        <p class="text-sm text-stone-400">Miravet · Ribera d'Ebre, Tarragona</p>
+  <!-- PEU DE PÀGINA -->
+  <footer class="bg-stone-950 text-stone-400 py-12 border-t border-stone-800">
+    <div class="max-w-6xl mx-auto px-6 text-center md:text-left md:flex md:justify-between md:items-center">
+      <div class="mb-6 md:mb-0">
+        <p class="text-xl font-serif font-bold text-white">Cal Serraller</p>
+        <p class="text-xs text-stone-500 mt-1">Miravet, Terres de l'Ebre, Tarragona.</p>
       </div>
-      <div class="mt-6 sm:mt-0 text-sm">
-        <p>Atenció i tracte directament personalitzat</p>
-        <p class="text-amber-200/80 mt-1">© Cal Serraller - Tots els drets reservats.</p>
-      </div>
+      <p class="text-xs text-stone-500">
+        &copy; 2026 Cal Serraller. Tots els drets reservats.
+      </p>
     </div>
   </footer>
 
