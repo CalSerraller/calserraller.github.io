@@ -1,48 +1,760 @@
-<!-- SECCIÓ DE SERVEIS (Actualitzada) -->
-<!-- ... dins de la grid de serveis, localitza el bloc de Cuina Completa i substitueix-lo per aquest: -->
-<div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
-  <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v18H3V3z"/></svg>
-  </div>
-  <div>
-    <h3 class="font-serif font-bold text-stone-900 text-lg">Cuina Completa</h3>
-    <p class="text-stone-600 text-sm mt-1">Nevera, microones, fogons, <strong>cafetera Nespresso</strong>, estris i vaixella completa.</p>
-  </div>
-</div>
+<!DOCTYPE html>
 
-<!-- SECCIÓ DE RESERVA (Actualitzada amb condicions i doble canal) -->
-<section id="reserva" class="py-24 bg-stone-900 text-white">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-serif font-bold mb-6">Reserva Directa: Millor Preu Garantit</h2>
-    
-    <!-- Condicions d'estada -->
-    <div class="bg-stone-800 rounded-2xl p-8 mb-10 border border-stone-700">
-      <p class="text-stone-300 text-lg mb-8">
-        A Cal Serraller treballem sense intermediaris. Consulta'ns les teves dates per obtenir una proposta personalitzada.
-      </p>
-      <div class="grid md:grid-cols-2 gap-6 text-sm">
-        <div class="flex items-center justify-center gap-3 p-4 bg-stone-900 rounded-lg">
-          <span class="text-amber-500 font-bold">Estada mínima:</span>
-          <span class="text-stone-200">2 nits</span>
+<html lang="ca" class="scroll-smooth">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cal Serraller | Casa Rural a Miravet (Ribera d'Ebre)</title>
+
+  <meta name="description" content="Un espai per viure, sentir i gaudir com a casa. Casa rural a Miravet (Ribera d'Ebre) cuidada al detall per a una experiència inoblidable.">
+
+  
+
+  <!-- Tailwind CSS -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+
+    tailwind.config = {
+
+      theme: {
+
+        extend: {
+
+          colors: {
+
+            brand: {
+
+              50: '#fdfbf7',
+
+              100: '#f7f2e8',
+
+              800: '#8c5e34',
+
+              900: '#5c3d21',
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  </script>
+
+  
+
+  <style>
+
+    .hero-img-adjust {
+
+      object-fit: cover;
+
+      object-position: 15% center;
+
+    }
+
+    .day-busy {
+
+      background-color: #fecdd3;
+
+      color: #9f1239;
+
+      text-decoration: line-through;
+
+      cursor: not-allowed;
+
+    }
+
+    .day-free {
+
+      background-color: #ecfdf5;
+
+      color: #065f46;
+
+      font-weight: 600;
+
+    }
+
+  </style>
+
+</head>
+
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+
+
+
+  <!-- NAVEGACIÓ -->
+
+  <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-stone-200/80">
+
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+
+      <a href="#" class="text-2xl font-serif font-bold text-stone-900 tracking-tight">
+
+        Cal Serraller<span class="text-amber-800">.</span>
+
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-600">
+
+        <a href="#la-casa" class="hover:text-amber-800 transition-colors">La Casa</a>
+
+        <a href="#espais" class="hover:text-amber-800 transition-colors">Espais</a>
+
+        <a href="#serveis" class="hover:text-amber-800 transition-colors">Equipament</a>
+
+        <a href="#disponibilitat" class="hover:text-amber-800 transition-colors">Disponibilitat</a>
+
+        <a href="#reserva" class="bg-amber-800 text-white px-5 py-2.5 rounded-lg hover:bg-amber-900 transition-colors font-semibold shadow-sm">
+
+          Reserva Directa
+
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- HERO SECTION -->
+
+  <section class="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden bg-stone-100">
+
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      
+
+      <div class="lg:col-span-6 space-y-6">
+
+        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">
+
+          Allotjament Rural a Miravet
+
+        </span>
+
+        
+
+        <h1 class="text-4xl sm:text-5xl font-serif font-bold text-stone-900 leading-tight">
+
+          Un espai per viure, sentir i gaudir com a casa
+
+        </h1>
+
+        <p class="text-lg text-stone-600 leading-relaxed">
+
+          Ens impliquem en cada detall perquè la teva experiència sigui inoblidable.
+
+        </p>
+
+
+
+        <div class="pt-4 flex flex-col sm:flex-row gap-4">
+
+          <a href="#disponibilitat" class="inline-flex justify-center items-center bg-amber-800 text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-amber-900 transition-all text-center">
+
+            Consultar Disponibilitat
+
+          </a>
+
+          <a href="#espais" class="inline-flex justify-center items-center border border-stone-300 text-stone-700 px-6 py-4 rounded-xl font-semibold hover:bg-stone-200/60 transition-all text-center">
+
+            Descobrir la casa
+
+          </a>
+
         </div>
-        <div class="flex items-center justify-center gap-3 p-4 bg-stone-900 rounded-lg">
-          <span class="text-emerald-500 font-bold">Oferta especial:</span>
-          <span class="text-stone-200">Descomptes a partir de 4 nits</span>
-        </div>
+
       </div>
+
+
+
+      <!-- FOTO PRINCIPAL -->
+
+      <div class="lg:col-span-6">
+
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-stone-200">
+
+          <img 
+
+            src="cal-serraller-menjador-principal.jpg" 
+
+            alt="Menjador principal acollidor a Cal Serraller, casa rural a Miravet" 
+
+            class="w-full h-full hero-img-adjust"
+
+            fetchpriority="high"
+
+          >
+
+        </div>
+
+      </div>
+
+
+
     </div>
 
-    <!-- CTA dual: WhatsApp i Email -->
-    <div class="grid sm:grid-cols-2 gap-4">
-      <a href="https://wa.me/34600000000" class="flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 py-4 rounded-xl font-bold transition-all">
-        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-        Consultar per WhatsApp
-      </a>
-      <a href="mailto:calserraller@gmail.com" class="flex items-center justify-center gap-3 bg-stone-700 hover:bg-stone-600 py-4 rounded-xl font-bold transition-all">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        Enviar un Email
-      </a>
+  </section>
+
+
+
+  <!-- GALERIA D'ESPAIS -->
+
+  <section id="espais" class="py-24 bg-white">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      
+
+      <div class="text-center max-w-2xl mx-auto mb-16">
+
+        <h2 class="text-xs uppercase tracking-widest text-amber-800 font-semibold mb-2">Els Nostres Espais</h2>
+
+        <p class="text-3xl font-serif font-bold text-stone-900">Cuidat al detall per al teu descans</p>
+
+      </div>
+
+
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        
+
+        <!-- CUINA -->
+
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+
+          <div class="aspect-[4/3] overflow-hidden bg-stone-200">
+
+            <img 
+
+              src="cal-serraller-cuina-equipada.jpg" 
+
+              alt="Cuina equipada i espaiosa integrada al menjador de Cal Serraller a Miravet" 
+
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+
+              loading="lazy"
+
+            >
+
+          </div>
+
+          <div class="p-6">
+
+            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Cuina i Espais Comuns</h3>
+
+            <p class="text-stone-600 text-sm leading-relaxed">
+
+              Equipada amb tot el necessari per compartir àpats sense pressa, integrant la calidesa de la fusta i el confort modern.
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- DORMITORI -->
+
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+
+          <div class="aspect-[4/3] overflow-hidden bg-stone-200">
+
+            <img 
+
+              src="cal-serraller-dormitori-principal.jpg" 
+
+              alt="Habitació doble acollidora amb acabats de fusta a la Ribera d'Ebre" 
+
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+
+              loading="lazy"
+
+            >
+
+          </div>
+
+          <div class="p-6">
+
+            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Dormitoris de Descans</h3>
+
+            <p class="text-stone-600 text-sm leading-relaxed">
+
+              Habitacions silencioses i acollidores, dissenyades amb textures naturals per a un descans profund i reparador.
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- BANY -->
+
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+
+          <div class="aspect-[4/3] overflow-hidden bg-stone-200">
+
+            <img 
+
+              src="cal-serraller-bany-detalls.jpg" 
+
+              alt="Bany complet i detalls de benestar a l'allotjament rural Cal Serraller" 
+
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+
+              loading="lazy"
+
+            >
+
+          </div>
+
+          <div class="p-6">
+
+            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Benestar i Detalls</h3>
+
+            <p class="text-stone-600 text-sm leading-relaxed">
+
+              Espais funcionals i de línies netes pensats perquè no et falti de res durant la teva escapada rural.
+
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+      </div>
+
     </div>
-    <p class="mt-6 text-stone-500 text-xs">Responem personalment a totes les sol·licituds.</p>
-  </div>
-</section>
+
+  </section>
+
+
+
+  <!-- SECCIÓ DE SERVEIS I EQUIPAMENT -->
+
+  <section id="serveis" class="py-20 bg-stone-100 border-t border-stone-200">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      
+
+      <div class="text-center max-w-2xl mx-auto mb-16">
+
+        <span class="text-xs uppercase tracking-widest text-amber-800 font-semibold">Tot el que necessites</span>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Equipament i Serveis</h2>
+
+        <p class="text-stone-600 text-sm mt-2">Dissenyat per oferir-te la màxima comoditat i autonomy durant la teva estada.</p>
+
+      </div>
+
+
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        
+
+        <!-- Wi-Fi -->
+
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
+
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+
+          </div>
+
+          <div>
+
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Wi-Fi de Alta Velocitat</h3>
+
+            <p class="text-stone-600 text-sm mt-1">Connexió estable a tota la casa, ideal per teletreballar o reproduir contingut.</p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Climatització -->
+
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
+
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v18m9-9H3"/></svg>
+
+          </div>
+
+          <div>
+
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Climatització / Calefacció</h3>
+
+            <p class="text-stone-600 text-sm mt-1">Temperatura ideal durant tot l'any per garantir el teu confort a cada estada.</p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Cuina Equipada -->
+
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
+
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v18H3V3z"/></svg>
+
+          </div>
+
+          <div>
+
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Cuina Completa</h3>
+
+            <p class="text-stone-600 text-sm mt-1">Nevera, microones, fogons, cafetera, estris de cuina i vaixella completa.</p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Roba de llit i Tovalloles -->
+
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
+
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+
+          </div>
+
+          <div>
+
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Roba de Llit i Tovalloles</h3>
+
+            <p class="text-stone-600 text-sm mt-1">Jocs de llit de cotó i tovalloles incloses per a tots els hostes.</p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Bany Complet -->
+
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
+
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+
+          </div>
+
+          <div>
+
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Bany Privat</h3>
+
+            <p class="text-stone-600 text-sm mt-1">Dutxa espaiosa, assecador de cabells i detalls d'acollida.</p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- TV i Zona d'Estar -->
+
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
+
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+
+          </div>
+
+          <div>
+
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Zona d'Estar i TV</h3>
+
+            <p class="text-stone-600 text-sm mt-1">Espai de menjador i descans acollidor amb TV de pantalla plana.</p>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SECCIÓ DE DISPONIBILITAT I CALENDARI -->
+
+  <section id="disponibilitat" class="py-20 bg-white border-t border-stone-200">
+
+    <div class="max-w-4xl mx-auto px-6">
+
+      
+
+      <div class="text-center max-w-xl mx-auto mb-10">
+
+        <span class="text-xs uppercase tracking-widest text-amber-800 font-semibold">Calendari d'Ocupació</span>
+
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Consulta les dates lliures</h2>
+
+        <p class="text-stone-600 text-sm mt-2">Comprova l'estat d'ocupació actualitzat per planificar la teva estada.</p>
+
+      </div>
+
+
+
+      <!-- CALENDARI UI -->
+
+      <div class="bg-stone-50 rounded-2xl p-6 sm:p-8 shadow-md border border-stone-200/80 max-w-md mx-auto">
+
+        <div class="flex items-center justify-between mb-6">
+
+          <h3 id="calendar-month-year" class="text-lg font-serif font-bold text-stone-900"></h3>
+
+          <div class="flex space-x-2">
+
+            <span class="inline-flex items-center text-xs text-emerald-800 bg-emerald-100 px-2 py-1 rounded">● Lliure</span>
+
+            <span class="inline-flex items-center text-xs text-rose-800 bg-rose-100 px-2 py-1 rounded">● Ocupat</span>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="grid grid-cols-7 gap-2 text-center text-xs font-bold text-stone-400 mb-2">
+
+          <div>Dl</div><div>Dt</div><div>Dc</div><div>Dj</div><div>Dv</div><div>Ds</div><div>Dg</div>
+
+        </div>
+
+
+
+        <div id="calendar-days" class="grid grid-cols-7 gap-2 text-center text-sm">
+
+          <!-- Els dies es generen amb JavaScript -->
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- MOTOR DE RESERVA DIRECTA -->
+
+  <section id="reserva" class="py-20 bg-stone-900 text-white">
+
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+
+      <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Reserva Directa sense Comissions</span>
+
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold">Planifica la teva escapada a Cal Serraller</h2>
+
+      <p class="text-stone-300 max-w-xl mx-auto text-sm leading-relaxed">
+
+        Contacta directament amb nosaltres per confirmar les teves dates amb el millor preu garantit i atenció personalitzada.
+
+      </p>
+
+
+
+      <div class="pt-4">
+
+        <a 
+
+          href="https://wa.me/34600000000?text=Hola!%20M'agradaria%20consultar%20disponibilitat%20per%20a%20Cal%20Serraller." 
+
+          target="_blank" 
+
+          rel="noopener noreferrer"
+
+          class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-all"
+
+        >
+
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+
+          Sol·licitar Reserva per WhatsApp
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- PEU DE PÀGINA -->
+
+  <footer class="bg-stone-950 text-stone-400 py-12 border-t border-stone-800">
+
+    <div class="max-w-6xl mx-auto px-6 text-center md:text-left md:flex md:justify-between md:items-center">
+
+      <div class="mb-6 md:mb-0">
+
+        <p class="text-xl font-serif font-bold text-white">Cal Serraller</p>
+
+        <p class="text-xs text-stone-500 mt-1">Raval dels Canterers, Miravet, Terres de l'Ebre.</p>
+
+      </div>
+
+      <p class="text-xs text-stone-500">
+
+        &copy; 2026 Cal Serraller. Tots els drets reservats.
+
+      </p>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- SCRIPT DE GESTIÓ DEL CALENDARI -->
+
+  <script>
+
+    const busyDates = [
+
+      "2026-08-21",
+
+      "2026-08-22",
+
+      "2026-08-23",
+
+      "2026-08-28",
+
+      "2026-08-29"
+
+    ];
+
+
+
+    function renderCalendar() {
+
+      const now = new Date();
+
+      const year = now.getFullYear();
+
+      const month = now.getMonth();
+
+      
+
+      const monthNames = ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Jost", "Agost", "Setembre", "Octubre", "Novembre", "Desembre"];
+
+      document.getElementById('calendar-month-year').innerText = `${monthNames[month]} ${year}`;
+
+
+
+      const firstDay = new Date(year, month, 1).getDay();
+
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+      
+
+      const calendarDays = document.getElementById('calendar-days');
+
+      calendarDays.innerHTML = '';
+
+
+
+      let startingIndex = firstDay === 0 ? 6 : firstDay - 1;
+
+
+
+      for (let i = 0; i < startingIndex; i++) {
+
+        const emptyCell = document.createElement('div');
+
+        calendarDays.appendChild(emptyCell);
+
+      }
+
+
+
+      for (let day = 1; day <= daysInMonth; day++) {
+
+        const dayCell = document.createElement('div');
+
+        const formattedDay = day < 10 ? `0${day}` : day;
+
+        const formattedMonth = (month + 1) < 10 ? `0${month + 1}` : month + 1;
+
+        const dateString = `${year}-${formattedMonth}-${formattedDay}`;
+
+
+
+        dayCell.innerText = day;
+
+        dayCell.className = 'py-2 rounded-lg font-medium font-sans text-xs transition-all';
+
+
+
+        if (busyDates.includes(dateString)) {
+
+          dayCell.classList.add('day-busy');
+
+        } else {
+
+          dayCell.classList.add('day-free');
+
+        }
+
+
+
+        calendarDays.appendChild(dayCell);
+
+      }
+
+    }
+
+
+
+    document.addEventListener('DOMContentLoaded', renderCalendar);
+
+  </script>
+
+
+
+</body>
+
+</html> 
+
