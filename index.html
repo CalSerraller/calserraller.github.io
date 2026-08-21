@@ -6,7 +6,7 @@
   <title>Cal Serraller | Casa Rural a Miravet (Ribera d'Ebre)</title>
   <meta name="description" content="Un espai per viure, sentir i gaudir com a casa. Casa rural a Miravet (Ribera d'Ebre) cuidada al detall per a una experiència inoblidable. Reserva directa sense comissions.">
   
-  <!-- SEO Local / Schema.org Data (Invisible per a l'usuari, vital per a Google) -->
+  <!-- SEO Local / Schema.org Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,17 +50,6 @@
       object-fit: cover;
       object-position: 15% center;
     }
-    .day-busy {
-      background-color: #fecdd3;
-      color: #9f1239;
-      text-decoration: line-through;
-      cursor: not-allowed;
-    }
-    .day-free {
-      background-color: #ecfdf5;
-      color: #065f46;
-      font-weight: 600;
-    }
   </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans antialiased">
@@ -84,7 +73,7 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden bg-stone-100">
+  <section id="la-casa" class="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden bg-stone-100">
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       
       <div class="lg:col-span-6 space-y-6">
@@ -275,73 +264,78 @@
     </div>
   </section>
 
-  <!-- SECCIÓ DE DISPONIBILITAT I CALENDARI -->
+  <!-- SECCIÓ DE DISPONIBILITAT (Redissenyada per conversió directa) -->
   <section id="disponibilitat" class="py-20 bg-white border-t border-stone-200">
-    <div class="max-w-4xl mx-auto px-6">
+    <div class="max-w-3xl mx-auto px-6 text-center">
       
-      <div class="text-center max-w-xl mx-auto mb-10">
-        <span class="text-xs uppercase tracking-widest text-amber-800 font-semibold">Calendari d'Ocupació</span>
-        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Consulta les dates lliures</h2>
-        <p class="text-stone-600 text-sm mt-2">Comprova l'estat d'ocupació actualitzat per planificar la teva estada.</p>
-      </div>
+      <span class="text-xs uppercase tracking-widest text-amber-800 font-semibold">Atenció Personalitzada</span>
+      <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1 mb-4">Consulta la disponibilitat de les dates</h2>
+      <p class="text-stone-600 text-sm max-w-xl mx-auto mb-10 leading-relaxed">
+        Gestionem les reserves directament per assegurar el millor tracte i resoldre qualsevol dubte sobre la teva estada a Miravet. Digues-nos quins dies t'interessen.
+      </p>
 
-      <!-- CALENDARI UI -->
-      <div class="bg-stone-50 rounded-2xl p-6 sm:p-8 shadow-md border border-stone-200/80 max-w-md mx-auto">
-        <div class="flex items-center justify-between mb-6">
-          <h3 id="calendar-month-year" class="text-lg font-serif font-bold text-stone-900"></h3>
-          <div class="flex space-x-2">
-            <span class="inline-flex items-center text-xs text-emerald-800 bg-emerald-100 px-2 py-1 rounded">● Lliure</span>
-            <span class="inline-flex items-center text-xs text-rose-800 bg-rose-100 px-2 py-1 rounded">● Ocupat</span>
-          </div>
+      <div class="bg-stone-50 rounded-2xl p-8 shadow-sm border border-stone-200/80 max-w-lg mx-auto space-y-6">
+        <div class="flex justify-around text-xs font-semibold text-stone-600 pb-2 border-b border-stone-200">
+          <div>Estada mínima: <span class="text-stone-900 font-bold">2 nits</span></div>
+          <div>Preu garantit: <span class="text-amber-800 font-bold">Sense comissions</span></div>
         </div>
 
-        <div class="grid grid-cols-7 gap-2 text-center text-xs font-bold text-stone-400 mb-2">
-          <div>Dl</div><div>Dt</div><div>Dc</div><div>Dj</div><div>Dv</div><div>Ds</div><div>Dg</div>
-        </div>
-
-        <div id="calendar-days" class="grid grid-cols-7 gap-2 text-center text-sm">
-          <!-- Els dies es generen amb JavaScript -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="https://wa.me/34600000000?text=Hola!%20M'agradaria%20consultar%20disponibilitat%20per%20a%20Cal%20Serraller." 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl text-sm shadow-md transition-all"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            Consultar per WhatsApp
+          </a>
+          <a 
+            href="mailto:calserraller@gmail.com?subject=Consulta%20de%20Disponibilitat%20-%20Cal%20Serraller" 
+            class="inline-flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-700 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Enviar Correu
+          </a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- MOTOR DE RESERVA DIRECTA (CTA DUAL I CONDICIONS) -->
+  <!-- MOTOR DE RESERVA DIRECTA (CTA FINAL) -->
   <section id="reserva" class="py-20 bg-stone-900 text-white">
     <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
       <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Reserva Directa sense Comissions</span>
       <h2 class="text-3xl sm:text-4xl font-serif font-bold">Planifica la teva escapada a Cal Serraller</h2>
       <p class="text-stone-300 max-w-xl mx-auto text-sm leading-relaxed">
-        Contacta directament amb nosaltres per confirmar les teves dates amb el millor preu garantit i atenció personalitzada.
+        Contacta directament amb nosaltres per confirmar les teves dates amb el millor preu garantit.
       </p>
 
-      <!-- Condicions d'Estada (UX & Product Strategy) -->
       <div class="max-w-lg mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm pt-2">
-        <div class="bg-stone-800 p-4 rounded-xl border border-stone-700/60">
+        <div class="bg-stone-800 p-4 rounded-xl border border-stone-700/65">
           <span class="block text-stone-400 text-xs uppercase tracking-wider mb-1">Estada mínima</span>
           <span class="font-bold text-stone-100">2 nits</span>
         </div>
-        <div class="bg-stone-800 p-4 rounded-xl border border-stone-700/60">
+        <div class="bg-stone-800 p-4 rounded-xl border border-stone-700/65">
           <span class="block text-stone-400 text-xs uppercase tracking-wider mb-1">Avantatge</span>
           <span class="font-bold text-stone-100">Tarifa especial a partir de 4 nits</span>
         </div>
       </div>
 
-      <!-- CTA DUAL (WhatsApp + Email) -->
       <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
         <a 
-          href="https://wa.me/34600000000?text=Hola!%20M'agradaria%20consultar%20disponibilitat%20per%20a%20Cal%20Serraller." 
+          href="https://wa.me/34600000000?text=Hola!%20M'agradaria%20reservar%20a%20Cal%20Serraller." 
           target="_blank" 
           rel="noopener noreferrer"
           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-xl text-base shadow-lg transition-all"
         >
           <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-          Sol·licitar per WhatsApp
+          Reservar per WhatsApp
         </a>
 
         <a 
-          href="mailto:calserraller@gmail.com?subject=Consulta%20de%20Reserva%20-%20Cal%20Serraller" 
+          href="mailto:calserraller@gmail.com?subject=Reserva%20Cal%20Serraller" 
           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-stone-800 hover:bg-stone-700 border border-stone-700 text-stone-200 font-bold px-8 py-4 rounded-xl text-base transition-all"
         >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -363,59 +357,6 @@
       </p>
     </div>
   </footer>
-
-  <!-- SCRIPT DE GESTIÓ DEL CALENDARI -->
-  <script>
-    const busyDates = [
-      "2026-08-21",
-      "2026-08-22",
-      "2026-08-23",
-      "2026-08-28",
-      "2026-08-29"
-    ];
-
-    function renderCalendar() {
-      const now = new Date();
-      const year = now.getFullYear();
-      const month = now.getMonth();
-      
-      const monthNames = ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost", "Setembre", "Octubre", "Novembre", "Desembre"];
-      document.getElementById('calendar-month-year').innerText = `${monthNames[month]} ${year}`;
-
-      const firstDay = new Date(year, month, 1).getDay();
-      const daysInMonth = new Date(year, month + 1, 0).getDate();
-      
-      const calendarDays = document.getElementById('calendar-days');
-      calendarDays.innerHTML = '';
-
-      let startingIndex = firstDay === 0 ? 6 : firstDay - 1;
-
-      for (let i = 0; i < startingIndex; i++) {
-        const emptyCell = document.createElement('div');
-        calendarDays.appendChild(emptyCell);
-      }
-
-      for (let day = 1; day <= daysInMonth; day++) {
-        const dayCell = document.createElement('div');
-        const formattedDay = day < 10 ? `0${day}` : day;
-        const formattedMonth = (month + 1) < 10 ? `0${month + 1}` : month + 1;
-        const dateString = `${year}-${formattedMonth}-${formattedDay}`;
-
-        dayCell.innerText = day;
-        dayCell.className = 'py-2 rounded-lg font-medium font-sans text-xs transition-all';
-
-        if (busyDates.includes(dateString)) {
-          dayCell.classList.add('day-busy');
-        } else {
-          dayCell.classList.add('day-free');
-        }
-
-        calendarDays.appendChild(dayCell);
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', renderCalendar);
-  </script>
 
 </body>
 </html>
