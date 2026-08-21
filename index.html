@@ -29,7 +29,7 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Estils Personalitzats per al Carrusel CSS (Cuina / Menjador) -->
+  <!-- Estils Personalitzats per al Carrusel CSS (Espais Comuns) -->
   <style>
     @keyframes fadeSlide1 {
       0%, 45% { opacity: 1; visibility: visible; }
@@ -51,7 +51,7 @@
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans antialiased">
 
-  <!-- CAPÇALERA (MARCA MÉS GRAN I VISIBLE) -->
+  <!-- CAPÇALERA -->
   <header class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-stone-200/80 shadow-sm">
     <div class="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
       <a href="#" class="text-3xl sm:text-4xl font-serif font-extrabold text-stone-900 tracking-tight hover:opacity-90 transition-opacity">
@@ -68,9 +68,8 @@
     </div>
   </header>
 
-  <!-- HERO SECTION (SENSE MARCA DUPLICADA, FONS MIRAVET) -->
+  <!-- HERO SECTION -->
   <section id="la-casa" class="relative min-h-[85vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-stone-900">
-    <!-- Imatge de fons -->
     <div class="absolute inset-0 z-0">
       <img 
         src="miravet-riu-ebre.jpg" 
@@ -82,23 +81,18 @@
     </div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-6">
-      
-      <!-- Ubicació -->
       <span class="inline-block text-xs font-semibold uppercase tracking-widest text-amber-300 bg-amber-950/70 border border-amber-500/30 px-4 py-1.5 rounded-full backdrop-blur-sm">
         Allotjament a Miravet
       </span>
 
-      <!-- Títol Principal -->
       <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-white tracking-tight leading-tight drop-shadow-md">
         Un espai per viure, sentir i gaudir com a casa
       </h1>
 
-      <!-- Subtítol -->
       <p class="text-lg sm:text-xl text-stone-200 max-w-2xl mx-auto leading-relaxed drop-shadow">
         Ens impliquem en cada detall perquè la teva experiència sigui inoblidable.
       </p>
 
-      <!-- Botons d'Acció -->
       <div class="pt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
         <a href="#reserva" class="w-full sm:w-auto inline-flex justify-center items-center bg-amber-800 hover:bg-amber-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg transition-all text-center">
           Consultar Disponibilitat i Reservar
@@ -107,11 +101,10 @@
           Descobrir la casa
         </a>
       </div>
-
     </div>
   </section>
 
-  <!-- ESPAIS (GALERIA AMB CARRUSEL CUINA / MENJADOR) -->
+  <!-- ESPAIS (GALERIA D'ESPAIS) -->
   <section id="espais" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       
@@ -122,30 +115,30 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- TARGETA CARRUSEL: CUINA I MENJADOR -->
+        <!-- TARGETA CARRUSEL: ESPAIS COMUNS -->
         <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
           <div class="relative aspect-[4/3] overflow-hidden bg-stone-200">
             <!-- Imatge 1: Cuina -->
             <img 
               src="cal-serraller-cuina.jpg" 
-              alt="Cuina equipada de Cal Serraller a Miravet" 
+              alt="Cuina equipada dels espais comuns de Cal Serraller" 
               class="absolute inset-0 w-full h-full object-cover slide-img-1"
             >
             <!-- Imatge 2: Menjador -->
             <img 
               src="cal-serraller-menjador.jpg" 
-              alt="Menjador acollidor de Cal Serraller a Miravet" 
+              alt="Menjador acollidor dels espais comuns de Cal Serraller" 
               class="absolute inset-0 w-full h-full object-cover slide-img-2"
             >
             <!-- Etiqueta sobreposada -->
             <span class="absolute bottom-3 right-3 bg-stone-900/80 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/20 z-10 shadow-sm">
-              Cuina i Menjador
+              Espais Comuns
             </span>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Cuina i Menjador</h3>
+            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Espais Comuns</h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              Espais comuns integrats i completament equipats per compartir àpats amb tot el confort i calidesa.
+              Zones d'estar, cuina i menjador integrats i completament equipats per compartir àpats i moments de calma amb tot el confort.
             </p>
           </div>
         </article>
@@ -202,7 +195,6 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <!-- Wi-Fi -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
           <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
@@ -213,7 +205,6 @@
           </div>
         </div>
 
-        <!-- Climatització -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
           <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v18m9-9H3"/></svg>
@@ -224,7 +215,6 @@
           </div>
         </div>
 
-        <!-- Cuina Completa -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
           <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v18H3V3z"/></svg>
@@ -235,7 +225,6 @@
           </div>
         </div>
 
-        <!-- Roba de llit -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
           <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -246,7 +235,6 @@
           </div>
         </div>
 
-        <!-- Bany Privat -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
           <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
@@ -257,7 +245,6 @@
           </div>
         </div>
 
-        <!-- TV i Menjador -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
           <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -272,7 +259,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓ UNIFICADA: DISPONIBILITAT I RESERVA DIRECTA -->
+  <!-- RESERVA DIRECTA -->
   <section id="reserva" class="py-20 bg-stone-900 text-white relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
       
@@ -288,7 +275,6 @@
         Selecciona les teves dates preferides i parla directament amb nosaltres. T'oferim atenció immediata i el millor preu garantit.
       </p>
 
-      <!-- PANNELL DE SELECCIÓ DE DATES I CONTACTE -->
       <div class="bg-stone-800/90 border border-stone-700/80 p-6 sm:p-8 rounded-2xl max-w-2xl mx-auto shadow-2xl backdrop-blur-sm text-left">
         
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -307,7 +293,6 @@
           <span>Atenció: <strong class="text-amber-400">Directa i personalitzada</strong></span>
         </div>
 
-        <!-- BOTONS D'ACCIÓ -->
         <div class="pt-6 flex flex-col sm:flex-row gap-4">
           <a 
             href="https://wa.me/34600000000?text=Hola!%20M'agradaria%20consultar%20disponibilitat%20i%20reservar%20per%20a%20Cal%20Serraller." 
