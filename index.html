@@ -24,26 +24,20 @@
     "telephone": "+34600000000",
     "priceRange": "€€",
     "checkinTime": "16:00",
-    "checkoutTime": "12:00",
-    "amenityFeature": [
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Aparcament gratuït al carrer",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Equipament infantil disponible sota petició",
-        "value": true
-      }
-    ]
+    "checkoutTime": "12:00"
   }
   </script>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Estils Personalitzats pel Carrusel -->
+  <!-- Flatpickr (Calendari Desplegable) CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ca.js"></script>
+
+  <!-- Estils Personalitzats -->
   <style>
     @keyframes fadeSlide1 {
       0%, 45% { opacity: 1; visibility: visible; }
@@ -57,6 +51,23 @@
     }
     .slide-img-1 { animation: fadeSlide1 7s infinite ease-in-out; }
     .slide-img-2 { animation: fadeSlide2 7s infinite ease-in-out; }
+
+    /* Personalització Flatpickr per encaixar amb l'estètica fusta/pedra */
+    .flatpickr-calendar {
+      background: #1c1917 !important;
+      border: 1px solid #44403c !important;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5) !important;
+      border-radius: 0.75rem !important;
+    }
+    .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange,
+    .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange {
+      background: #92400e !important;
+      border-color: #92400e !important;
+    }
+    .flatpickr-day.inRange {
+      background: #451a03 !important;
+      box-shadow: -5px 0 0 #451a03, 5px 0 0 #451a03 !important;
+    }
   </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-amber-800 selection:text-white">
@@ -123,7 +134,7 @@
         <p class="text-3xl font-serif font-bold text-stone-900">Cuidat al detall per al teu descans</p>
       </div>
 
-      <!-- BARRA D'IMPACTE DE CAPACITAT I REQUISITS -->
+      <!-- BARRA D'IMPACTE DE CAPACITAT -->
       <div class="bg-stone-100 border border-stone-200/90 rounded-2xl p-6 mb-12 max-w-4xl mx-auto shadow-sm">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-stone-200">
           
@@ -157,19 +168,10 @@
       <!-- GALERIA D'ESPAIS -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- CARRUSEL: ESPAIS COMUNS -->
         <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
           <div class="relative aspect-[4/3] overflow-hidden bg-stone-200">
-            <img 
-              src="cal-serraller-cuina.jpg" 
-              alt="Cuina equipada dels espais comuns de Cal Serraller" 
-              class="absolute inset-0 w-full h-full object-cover slide-img-1"
-            >
-            <img 
-              src="cal-serraller-menjador.jpg" 
-              alt="Menjador acollidor dels espais comuns de Cal Serraller" 
-              class="absolute inset-0 w-full h-full object-cover slide-img-2"
-            >
+            <img src="cal-serraller-cuina.jpg" alt="Cuina equipada dels espais comuns" class="absolute inset-0 w-full h-full object-cover slide-img-1">
+            <img src="cal-serraller-menjador.jpg" alt="Menjador acollidor" class="absolute inset-0 w-full h-full object-cover slide-img-2">
             <span class="absolute bottom-3 right-3 bg-stone-900/80 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/20 z-10 shadow-sm">
               Espais Comuns
             </span>
@@ -182,33 +184,21 @@
           </div>
         </article>
 
-        <!-- DORMITORIS -->
         <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
           <div class="aspect-[4/3] overflow-hidden bg-stone-200">
-            <img 
-              src="cal-serraller-dormitori-principal.jpg" 
-              alt="Dormitori principal acollidor amb acabats de fusta" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            >
+            <img src="cal-serraller-dormitori-principal.jpg" alt="Dormitori principal" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
           </div>
           <div class="p-6">
             <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">3 Habitacions de Descans</h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              Habitacions silencioses i acollidores organitzades en <strong>1 llit doble</strong> i <strong>4 llits individuals</strong> per adaptar-se perfectament a famílies o grups.
+              Habitacions silencioses i acollidores organitzades en 1 llit doble i 4 llits individuals per adaptar-se perfectament a famílies o grups.
             </p>
           </div>
         </article>
 
-        <!-- BANY -->
         <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
           <div class="aspect-[4/3] overflow-hidden bg-stone-200">
-            <img 
-              src="cal-serraller-bany-detalls.jpg" 
-              alt="Bany complet i detalls de benestar a Cal Serraller" 
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            >
+            <img src="cal-serraller-bany-detalls.jpg" alt="Bany complet i detalls" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
           </div>
           <div class="p-6">
             <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Benestar i Detalls</h3>
@@ -234,14 +224,13 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- APARCAMENT (FORMAT HOMOGENI AMB LA RESTA) -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
           <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7 7 7M5 19h14"/></svg>
           </div>
           <div>
             <h3 class="font-serif font-bold text-stone-900 text-lg">Aparcament Gratuït</h3>
-            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Trobaràs aparcament gratuït al carrer (Raval dels Canterers) just davant o a pocs metres de la porta.</p>
+            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Aparcament gratuït al carrer (Raval dels Canterers) just davant o a pocs metres de la porta.</p>
           </div>
         </div>
         
@@ -275,14 +264,14 @@
           </div>
         </div>
 
-        <!-- ENTRETIENIMENT I FAMÍLIA (TEXT ARRODONIT I SENSE NEGRETA EN BRESSOL/TRONA) -->
+        <!-- ENTRETIENIMENT I FAMÍLIA (TEXT EXACTE DEMANAT) -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
           <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <div>
             <h3 class="font-serif font-bold text-stone-900 text-lg">Entreteniment i Família</h3>
-            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Un entorn pensat per a totes les edats, amb jocs de taula, llibres, patinets i bicicletes. Per a la comoditat dels més petits, també preparem trona i bressol sota petició.</p>
+            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Un entorn pensat per a totes les edats, amb jocs de taula, llibres, patinets i bicicletes. També disposem de trona i bressol sota petició.</p>
           </div>
         </div>
 
@@ -300,7 +289,7 @@
     </div>
   </section>
 
-  <!-- RESERVA DIRECTA (SELECTOR DE DATES DIRECTE I NET AMB CONTROL DE 2 NITS) -->
+  <!-- RESERVA DIRECTA AMB CALENDARI DESPLEGABLE -->
   <section id="reserva" class="py-20 bg-stone-900 text-white relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
       
@@ -316,7 +305,6 @@
         En reservar directament amb nosaltres t'estalvies les comissions de les plataformes externes i gaudeixes d'atenció personalitzada.
       </p>
 
-      <!-- BÀNNER DE BENEFICIS -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
         <div class="bg-stone-800/60 border border-stone-700/60 p-4 rounded-xl flex items-center space-x-3">
           <div class="text-amber-400 font-bold text-xl">100%</div>
@@ -334,10 +322,10 @@
         </div>
       </div>
 
-      <!-- FORMULARI NOU I NET -->
+      <!-- FORMULARI AMB CALENDARI DESPLEGABLE -->
       <div class="bg-stone-800/90 border border-stone-700/80 p-6 sm:p-8 rounded-2xl max-w-3xl mx-auto shadow-2xl backdrop-blur-sm text-left">
         
-        <!-- INTEGRACIÓ D'HORARIS -->
+        <!-- HORARIS CHECK-IN / CHECK-OUT -->
         <div class="bg-stone-900/80 border border-stone-700/60 rounded-xl p-4 mb-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
           <div class="flex items-center gap-2 text-stone-300">
             <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
@@ -350,75 +338,54 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           
-          <!-- DATA ENTRADA -->
-          <div>
-            <label for="checkin-date" class="block text-xs text-stone-400 font-medium uppercase mb-1">Entrada</label>
-            <input 
-              type="date" 
-              id="checkin-date" 
-              class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500"
-            >
+          <!-- CALENDARI DESPLEGABLE DE RANG DE DATES -->
+          <div class="md:col-span-2">
+            <label for="date-range-picker" class="block text-xs text-stone-400 font-medium uppercase mb-1">Dates d'Entrada i Sortida</label>
+            <div class="relative">
+              <input 
+                type="text" 
+                id="date-range-picker" 
+                placeholder="Fes clic per triar les dates (mín. 2 nits)" 
+                readonly
+                class="w-full bg-stone-900 border border-stone-700 rounded-lg px-10 py-3 text-stone-200 text-sm focus:outline-none focus:border-amber-500 cursor-pointer"
+              >
+              <svg class="w-5 h-5 text-amber-500 absolute left-3 top-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
           </div>
 
-          <!-- DATA SORTIDA -->
+          <!-- SELECTOR HOSTES (ADULTS I NENS INTEGRATS) -->
           <div>
-            <label for="checkout-date" class="block text-xs text-stone-400 font-medium uppercase mb-1">Sortida (mín. 2 nits)</label>
-            <input 
-              type="date" 
-              id="checkout-date" 
-              class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500"
-            >
-          </div>
-
-          <!-- SELECTOR ADULTS -->
-          <div>
-            <label for="adults" class="block text-xs text-stone-400 font-medium uppercase mb-1">Adults</label>
-            <select id="adults" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
-              <option value="1">1 adult</option>
-              <option value="2" selected>2 adults</option>
-              <option value="3">3 adults</option>
-              <option value="4">4 adults</option>
-              <option value="5">5 adults</option>
-              <option value="6">6 adults</option>
-            </select>
-          </div>
-
-          <!-- SELECTOR NENS -->
-          <div>
-            <label for="children" class="block text-xs text-stone-400 font-medium uppercase mb-1">Nens</label>
-            <select id="children" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
-              <option value="0" selected>0 nens</option>
-              <option value="1">1 nen</option>
-              <option value="2">2 nens</option>
-              <option value="3">3 nens</option>
-              <option value="4">4 nens</option>
-              <option value="5">5 nens</option>
+            <label for="guests" class="block text-xs text-stone-400 font-medium uppercase mb-1">Hostes (màx. 6)</label>
+            <select id="guests" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-3 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
+              <option value="2 adults">2 adults</option>
+              <option value="3 adults">3 adults</option>
+              <option value="4 adults">4 adults</option>
+              <option value="2 adults + 1 nen">2 adults + 1 nen</option>
+              <option value="2 adults + 2 nens">2 adults + 2 nens</option>
+              <option value="4 adults + 2 nens">4 adults + 2 nens</option>
+              <option value="6 adults">6 adults</option>
             </select>
           </div>
 
         </div>
 
-        <!-- INDICADORS D'AVÍS I ESTADA MÍNIMA -->
+        <!-- INDICADORS I AVISOS -->
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-6 border-b border-stone-700/80">
           <div class="inline-flex items-center space-x-2 bg-amber-950/60 border border-amber-500/40 px-3.5 py-2 rounded-lg">
             <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="text-sm font-bold text-amber-300">Estada mínima: 2 nits</span>
           </div>
 
-          <div id="min-nights-warning" class="hidden text-xs text-amber-400 font-semibold bg-amber-950/80 border border-amber-700 p-2 rounded-lg">
-            ⚠️ Per favor, tria almenys 2 nits d'estada.
+          <div id="min-nights-alert" class="hidden text-xs text-amber-300 font-semibold bg-amber-950 border border-amber-600 p-2 rounded-lg">
+            ⚠️ Has de triar almenys 2 nits.
           </div>
 
-          <div id="capacity-warning" class="hidden text-xs text-rose-400 font-semibold bg-rose-950/80 border border-rose-800 p-2 rounded-lg">
-            ⚠️ La capacitat màxima és de 6 persones.
-          </div>
-
-          <span class="text-xs text-stone-400">+4 nits: <strong class="text-amber-400">Descompte a partir del 10%</strong></span>
+          <span class="text-xs text-stone-400">+4 nits: <strong class="text-amber-400">Descompte directament aplicable</strong></span>
         </div>
 
-        <!-- BOTONS DE CONTACTE DIRECTES -->
+        <!-- BOTONS DE CONTACTE -->
         <div class="pt-6 flex flex-col sm:flex-row gap-4">
           <a 
             id="whatsapp-btn"
@@ -428,7 +395,7 @@
             class="flex-1 inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-4 rounded-xl text-sm shadow-lg transition-all text-center"
           >
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-            Consultar per WhatsApp
+            Consultar Disponibilitat per WhatsApp
           </a>
 
           <a 
@@ -437,7 +404,7 @@
             class="flex-1 inline-flex items-center justify-center gap-2 bg-stone-700 hover:bg-stone-600 text-white font-bold px-6 py-4 rounded-xl text-sm transition-all text-center"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            Enviar un Correu
+            Enviar Correu
           </a>
         </div>
 
@@ -458,105 +425,63 @@
     </div>
   </footer>
 
-  <!-- SCRIPT LÒGICA CRO I DATES -->
+  <!-- SCRIPT LÒGICA FLATPICKR I RESERVES -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const checkinInput = document.getElementById('checkin-date');
-      const checkoutInput = document.getElementById('checkout-date');
-      const adultsSelect = document.getElementById('adults');
-      const childrenSelect = document.getElementById('children');
-      
+      const guestsSelect = document.getElementById('guests');
       const whatsappBtn = document.getElementById('whatsapp-btn');
       const emailBtn = document.getElementById('email-btn');
-
-      const capacityWarning = document.getElementById('capacity-warning');
-      const minNightsWarning = document.getElementById('min-nights-warning');
+      const alertMinNights = document.getElementById('min-nights-alert');
 
       const phone = "34600000000"; 
       const email = "calserraller@gmail.com";
 
-      // Fixem data mínima com "avui"
-      const today = new Date().toISOString().split('T')[0];
-      checkinInput.min = today;
+      let selectedDatesText = "";
 
-      // Gestió de dates i validació de 2 nits d'estada
-      checkinInput.addEventListener('change', () => {
-        if (checkinInput.value) {
-          const checkinDate = new Date(checkinInput.value);
-          // La data de sortida ha de ser almenys 2 dies després
-          const minCheckout = new Date(checkinDate);
-          minCheckout.setDate(minCheckout.getDate() + 2);
-          
-          const minCheckoutStr = minCheckout.toISOString().split('T')[0];
-          checkoutInput.min = minCheckoutStr;
+      // Configuració del Calendari Desplegable Flatpickr
+      flatpickr("#date-range-picker", {
+        mode: "range",
+        minDate: "today",
+        dateFormat: "d/m/Y",
+        locale: flatpickr.l10ns.ca,
+        onChange: function(selectedDates, dateStr, instance) {
+          if (selectedDates.length === 2) {
+            const startDate = selectedDates[0];
+            const endDate = selectedDates[1];
+            
+            // Càlcul de la diferència de nits
+            const diffTime = Math.abs(endDate - startDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-          if (!checkoutInput.value || new Date(checkoutInput.value) < minCheckout) {
-            checkoutInput.value = minCheckoutStr;
-          }
-        }
-        updateLinks();
-      });
-
-      checkoutInput.addEventListener('change', () => {
-        if (checkinInput.value && checkoutInput.value) {
-          const checkinDate = new Date(checkinInput.value);
-          const checkoutDate = new Date(checkoutInput.value);
-          const diffTime = checkoutDate - checkinDate;
-          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-          if (diffDays < 2) {
-            minNightsWarning.classList.remove('hidden');
+            if (diffDays < 2) {
+              alertMinNights.classList.remove('hidden');
+              selectedDatesText = "";
+            } else {
+              alertMinNights.classList.add('hidden');
+              selectedDatesText = `del ${flatpickr.formatDate(startDate, "d/m/Y")} al ${flatpickr.formatDate(endDate, "d/m/Y")}`;
+            }
           } else {
-            minNightsWarning.classList.add('hidden');
+            alertMinNights.classList.add('hidden');
+            selectedDatesText = "";
           }
+          updateLinks();
         }
-        updateLinks();
       });
 
-      adultsSelect.addEventListener('change', updateLinks);
-      childrenSelect.addEventListener('change', updateLinks);
-
-      function formatDateCA(dateString) {
-        if (!dateString) return "";
-        const parts = dateString.split("-");
-        return `${parts[2]}/${parts[1]}/${parts[0]}`;
-      }
+      guestsSelect.addEventListener('change', updateLinks);
 
       function updateLinks() {
-        const adults = parseInt(adultsSelect.value, 10);
-        const children = parseInt(childrenSelect.value, 10);
-        const totalGuests = adults + children;
-
-        // Control Capacitat
-        if (totalGuests > 6) {
-          capacityWarning.classList.remove('hidden');
-        } else {
-          capacityWarning.classList.add('hidden');
-        }
-
-        // Format del text d'hostes
-        let guestText = `${adults} adult${adults > 1 ? 's' : ''}`;
-        if (children > 0) {
-          guestText += ` i ${children} nen${children > 1 ? 's' : ''}`;
-        }
-
-        // Format del text de dates
-        let datesText = "";
-        if (checkinInput.value && checkoutInput.value) {
-          const checkinFormatted = formatDateCA(checkinInput.value);
-          const checkoutFormatted = formatDateCA(checkoutInput.value);
-          datesText = `del ${checkinFormatted} al ${checkoutFormatted}`;
-        }
-
+        const guests = guestsSelect.value;
         let textMsg = "";
-        if (datesText) {
-          textMsg = `Hola! M'agradaria consultar disponibilitat ${datesText} per a ${guestText} a Cal Serraller.`;
+
+        if (selectedDatesText) {
+          textMsg = `Hola! M'agradaria consultar disponibilitat ${selectedDatesText} per a ${guests} a Cal Serraller.`;
         } else {
-          textMsg = `Hola! M'agradaria consultar disponibilitat per a ${guestText} a Cal Serraller.`;
+          textMsg = `Hola! M'agradaria consultar disponibilitat per a ${guests} a Cal Serraller.`;
         }
 
         whatsappBtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(textMsg)}`;
-        emailBtn.href = `mailto:${email}?subject=${encodeURIComponent('Consulta de Reserva - Cal Serraller (' + guestText + ')')}&body=${encodeURIComponent(textMsg)}`;
+        emailBtn.href = `mailto:${email}?subject=${encodeURIComponent('Consulta de Reserva - Cal Serraller (' + guests + ')')}&body=${encodeURIComponent(textMsg)}`;
       }
 
       updateLinks();
