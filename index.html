@@ -30,6 +30,11 @@
         "@type": "LocationFeatureSpecification",
         "name": "Aparcament gratuït al carrer",
         "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Bressol i trona sota petició",
+        "value": true
       }
     ]
   }
@@ -38,7 +43,11 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Estils Personalitzats per al Carrusel CSS (Espais Comuns) -->
+  <!-- Flatpickr CSS per al Calendari Visual -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_orange.css">
+
+  <!-- Estils Personalitzats pel Calendari i Carrusel -->
   <style>
     @keyframes fadeSlide1 {
       0%, 45% { opacity: 1; visibility: visible; }
@@ -50,11 +59,43 @@
       50%, 95% { opacity: 1; visibility: hidden; }
       100% { opacity: 0; visibility: hidden; }
     }
-    .slide-img-1 {
-      animation: fadeSlide1 7s infinite ease-in-out;
+    .slide-img-1 { animation: fadeSlide1 7s infinite ease-in-out; }
+    .slide-img-2 { animation: fadeSlide2 7s infinite ease-in-out; }
+
+    /* Personalització Flatpickr per integrar amb el disseny */
+    .flatpickr-calendar {
+      background: #1c1917 !important; /* stone-900 */
+      border: 1px solid #44403c !important; /* stone-700 */
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+      border-radius: 0.75rem !important;
+      font-family: inherit !important;
     }
-    .slide-img-2 {
-      animation: fadeSlide2 7s infinite ease-in-out;
+    .flatpickr-months .flatpickr-month,
+    .flatpickr-months .flatpickr-prev-month,
+    .flatpickr-months .flatpickr-next-month {
+      color: #f5f5f4 !important;
+      fill: #f5f5f4 !important;
+    }
+    .flatpickr-day {
+      color: #d6d3d1 !important;
+    }
+    .flatpickr-day.flatpickr-disabled, .flatpickr-day.flatpickr-disabled:hover {
+      color: #57534e !important;
+    }
+    .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange,
+    .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange,
+    .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus,
+    .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover {
+      background: #92400e !important; /* amber-800 */
+      border-color: #92400e !important;
+    }
+    .flatpickr-day.inRange {
+      background: #451a03 !important; /* amber-950 */
+      border-color: #451a03 !important;
+      box-shadow: -5px 0 0 #451a03, 5px 0 0 #451a03 !important;
+    }
+    span.flatpickr-weekday {
+      color: #a8a29e !important;
     }
   </style>
 </head>
@@ -221,7 +262,7 @@
     </div>
   </section>
 
-  <!-- EQUIPAMENT I SERVEIS (INCLOU APARCAMENT AMB EMBLEMA VISUAL DESTACAT) -->
+  <!-- EQUIPAMENT I SERVEIS (FORMAT HOMOGENI AMB APARCAMENT I PETICIÓ INFANTIL) -->
   <section id="serveis" class="py-20 bg-stone-100 border-t border-stone-200">
     <div class="max-w-6xl mx-auto px-6">
       
@@ -233,71 +274,65 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- CARD DESTACADA: APARCAMENT GRATUÏT -->
-        <div class="bg-amber-900/5 border border-amber-800/30 p-6 rounded-2xl shadow-sm flex items-start space-x-4 relative overflow-hidden sm:col-span-2 lg:col-span-1">
-          <div class="p-3 bg-amber-800 text-white rounded-xl shadow-sm">
+        <!-- APARCAMENT (FORMAT HOMOGENI AMB LA RESTA) -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7 7 7M5 19h14"/></svg>
           </div>
           <div>
-            <div class="flex items-center gap-2">
-              <h3 class="font-serif font-bold text-stone-900 text-lg">Aparcament Gratuït</h3>
-              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-200">
-                Fàcil Accés
-              </span>
-            </div>
-            <p class="text-stone-600 text-sm mt-1 leading-relaxed">
-              Trobaràs aparcament gratuït al carrer (Raval dels Canterers) just davant o a pocs metres de la porta.
-            </p>
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Aparcament Gratuït</h3>
+            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Trobaràs aparcament gratuït al carrer (Raval dels Canterers) just davant o a pocs metres de la porta.</p>
           </div>
         </div>
         
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
-          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
           </div>
           <div>
             <h3 class="font-serif font-bold text-stone-900 text-lg">Wi-Fi d'Alta Velocitat</h3>
-            <p class="text-stone-600 text-sm mt-1">Connexió estable a tota la casa per treballar o relaxar-te.</p>
+            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Connexió estable a tota la casa per treballar o relaxar-te.</p>
           </div>
         </div>
 
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
-          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v18m9-9H3"/></svg>
           </div>
           <div>
             <h3 class="font-serif font-bold text-stone-900 text-lg">Climatització / Calefacció</h3>
-            <p class="text-stone-600 text-sm mt-1">Aire condicionat i calefacció per a un confort ideal durant tot l'any.</p>
+            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Aire condicionat i calefacció per a un confort ideal durant tot l'any.</p>
           </div>
         </div>
 
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
-          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v18H3V3z"/></svg>
           </div>
           <div>
             <h3 class="font-serif font-bold text-stone-900 text-lg">Cuina Completa</h3>
-            <p class="text-stone-600 text-sm mt-1">Cuina completa amb tot el necessari i cafetera de càpsules Nespresso.</p>
+            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Cuina equipada amb tot el necessari i cafetera de càpsules Nespresso.</p>
           </div>
         </div>
 
+        <!-- AMENITIES FAMILIARS (TRONA I BRESSOL) -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
-          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <div>
-            <h3 class="font-serif font-bold text-stone-900 text-lg">Entreteniment familiar</h3>
-            <p class="text-stone-600 text-sm mt-1">Jocs, llibres, patinets i bicicletes preparats per gaudir en família.</p>
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Entreteniment i Família</h3>
+            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Jocs, llibres, patinets i bicicletes. Disposem de <strong>trona i bressol (sota petició)</strong>.</p>
           </div>
         </div>
 
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
-          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
+          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
           </div>
           <div>
             <h3 class="font-serif font-bold text-stone-900 text-lg">Roba de Llit i Tovalloles</h3>
-            <p class="text-stone-600 text-sm mt-1">Jocs de llit de cotó i tovalloles incloses per a tots els hostes.</p>
+            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Jocs de llit de cotó i tovalloles incloses per a tots els hostes.</p>
           </div>
         </div>
 
@@ -305,7 +340,7 @@
     </div>
   </section>
 
-  <!-- RESERVA DIRECTA (AMB SELECCIÓ ADULTS/NENS I HORARIS INTEGRATS) -->
+  <!-- RESERVA DIRECTA (AMB CALENDARI DATES I MÍNIM 2 NITS AUTOMÀTIC) -->
   <section id="reserva" class="py-20 bg-stone-900 text-white relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
       
@@ -339,10 +374,10 @@
         </div>
       </div>
 
-      <!-- FORMULARI DE CONSULTA I RESERVA -->
+      <!-- FORMULARI DE CONSULTA I RESERVA AMB CALENDARI -->
       <div class="bg-stone-800/90 border border-stone-700/80 p-6 sm:p-8 rounded-2xl max-w-3xl mx-auto shadow-2xl backdrop-blur-sm text-left">
         
-        <!-- INTEGRACIÓ D'HORARIS CLEAR & VISIBLE DINS EL MÒDUL DE RESERVA -->
+        <!-- INTEGRACIÓ D'HORARIS -->
         <div class="bg-stone-900/80 border border-stone-700/60 rounded-xl p-4 mb-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
           <div class="flex items-center gap-2 text-stone-300">
             <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
@@ -355,15 +390,23 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-          <div>
-            <label for="checkin" class="block text-xs text-stone-400 font-medium uppercase mb-1">Entrada</label>
-            <input type="date" id="checkin" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+          <!-- SELECTOR CALENDARI DATES RANG (MINIM 2 NITS CONTROLAT) -->
+          <div class="md:col-span-1">
+            <label for="date-range" class="block text-xs text-stone-400 font-medium uppercase mb-1">Dates d'Estada (Clica per obrir calendari)</label>
+            <div class="relative">
+              <input 
+                type="text" 
+                id="date-range" 
+                placeholder="Selecciona dates..." 
+                readonly
+                class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500 cursor-pointer"
+              >
+              <svg class="w-4 h-4 text-amber-400 absolute right-3 top-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
           </div>
-          <div>
-            <label for="checkout" class="block text-xs text-stone-400 font-medium uppercase mb-1">Sortida</label>
-            <input type="date" id="checkout" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
-          </div>
+
+          <!-- SELECCIÓ ADULTS -->
           <div>
             <label for="adults" class="block text-xs text-stone-400 font-medium uppercase mb-1">Adults</label>
             <select id="adults" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
@@ -375,6 +418,8 @@
               <option value="6">6 adults</option>
             </select>
           </div>
+
+          <!-- SELECCIÓ NENS -->
           <div>
             <label for="children" class="block text-xs text-stone-400 font-medium uppercase mb-1">Nens</label>
             <select id="children" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
@@ -386,6 +431,14 @@
               <option value="5">5 nens</option>
             </select>
           </div>
+        </div>
+
+        <!-- PETICIÓ BRESSOL / TRONA -->
+        <div class="mb-4 pt-2">
+          <label class="inline-flex items-center text-xs text-stone-300 cursor-pointer">
+            <input type="checkbox" id="need-baby-kit" class="rounded bg-stone-900 border-stone-700 text-amber-800 focus:ring-amber-500 w-4 h-4">
+            <span class="ml-2">Sol·licitar **Bressol i/o Trona** sense cost addicional</span>
+          </label>
         </div>
 
         <!-- REQUERIMENT D'ESTADA I ALERTA CAPACITAT -->
@@ -404,18 +457,18 @@
         <div class="pt-6 flex flex-col sm:flex-row gap-4">
           <a 
             id="whatsapp-btn"
-            href="https://wa.me/34600000000?text=Hola!%20M'agradaria%20consultar%20disponibilitat%20per%20a%202%20adults%20a%20Cal%20Serraller." 
+            href="#" 
             target="_blank" 
             rel="noopener noreferrer"
             class="flex-1 inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-4 rounded-xl text-sm shadow-lg transition-all text-center"
           >
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
             Consultar per WhatsApp
           </a>
 
           <a 
             id="email-btn"
-            href="mailto:calserraller@gmail.com?subject=Consulta%20de%20Reserva%20-%20Cal%20Serraller" 
+            href="#" 
             class="flex-1 inline-flex items-center justify-center gap-2 bg-stone-700 hover:bg-stone-600 text-white font-bold px-6 py-4 rounded-xl text-sm transition-all text-center"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -440,77 +493,98 @@
     </div>
   </footer>
 
-  <!-- SCRIPT LÒGICA CRO: CÀLCUL AUTOMÀTIC D'HOSTES (ADULTS/NENS) I DATES -->
+  <!-- SCRIPT DE FLATPICKR (CALENDARI VISUAL I CATALÀ) -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/ca.js"></script>
+
+  <!-- SCRIPT LÒGICA CRO: INTEGRACIÓ CALENDARI I MISSATGERIA -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const checkinInput = document.getElementById('checkin');
-      const checkoutInput = document.getElementById('checkout');
       const adultsSelect = document.getElementById('adults');
       const childrenSelect = document.getElementById('children');
+      const babyKitCheckbox = document.getElementById('need-baby-kit');
       const whatsappBtn = document.getElementById('whatsapp-btn');
       const emailBtn = document.getElementById('email-btn');
       const capacityWarning = document.getElementById('capacity-warning');
 
-      const phone = "34600000000"; // Canviar pel telèfon real amb prefix 34
+      const phone = "34600000000"; 
       const email = "calserraller@gmail.com";
 
-      // Configura data mínima
-      const today = new Date().toISOString().split('T')[0];
-      checkinInput.min = today;
+      let selectedDates = [];
 
-      checkinInput.addEventListener('change', () => {
-        if (checkinInput.value) {
-          const checkinDate = new Date(checkinInput.value);
-          const minCheckoutDate = new Date(checkinDate);
-          minCheckoutDate.setDate(minCheckoutDate.getDate() + 2); // 2 nits d'estada mínima
-          
-          const formattedMinCheckout = minCheckoutDate.toISOString().split('T')[0];
-          checkoutInput.min = formattedMinCheckout;
-          
-          if (!checkoutInput.value || checkoutInput.value < formattedMinCheckout) {
-            checkoutInput.value = formattedMinCheckout;
+      // Inicialització del Calendari Visual Flatpickr
+      const fp = flatpickr("#date-range", {
+        mode: "range",
+        locale: "ca",
+        dateFormat: "d/m/Y",
+        minDate: "today",
+        showMonths: window.innerWidth > 640 ? 2 : 1, // 2 mesos a PC, 1 a mòbil
+        onChange: function(dates) {
+          if (dates.length === 2) {
+            // Validació de mínim 2 nits d'estada
+            const checkin = dates[0];
+            const checkout = dates[1];
+            const diffDays = Math.ceil((checkout - checkin) / (1000 * 60 * 60 * 24));
+
+            if (diffDays < 2) {
+              alert("L'estada mínima és de 2 nits.");
+              fp.clear();
+              selectedDates = [];
+            } else {
+              selectedDates = dates;
+            }
+          } else {
+            selectedDates = dates;
           }
-
           updateLinks();
         }
       });
 
-      checkoutInput.addEventListener('change', updateLinks);
       adultsSelect.addEventListener('change', updateLinks);
       childrenSelect.addEventListener('change', updateLinks);
+      babyKitCheckbox.addEventListener('change', updateLinks);
 
       function updateLinks() {
-        const checkin = checkinInput.value;
-        const checkout = checkoutInput.value;
         const adults = parseInt(adultsSelect.value, 10);
         const children = parseInt(childrenSelect.value, 10);
+        const needBabyKit = babyKitCheckbox.checked;
         const totalGuests = adults + children;
 
-        // Validació de capacitat màxima (6 persones)
+        // Alerta Capacitat
         if (totalGuests > 6) {
           capacityWarning.classList.remove('hidden');
         } else {
           capacityWarning.classList.add('hidden');
         }
 
-        // Construcció del text detallat
+        // Format del text d'hostes
         let guestText = `${adults} adult${adults > 1 ? 's' : ''}`;
         if (children > 0) {
           guestText += ` i ${children} nen${children > 1 ? 's' : ''}`;
         }
 
+        // Petició infantil adicional
+        let babyText = needBabyKit ? " (Necessitarem Bressol/Trona)" : "";
+
+        // Text de les dates
+        let datesText = "";
+        if (selectedDates.length === 2) {
+          const checkinStr = fp.formatDate(selectedDates[0], "d/m/Y");
+          const checkoutStr = fp.formatDate(selectedDates[1], "d/m/Y");
+          datesText = `del ${checkinStr} al ${checkoutStr}`;
+        }
+
         let textMsg = "";
-        if (checkin && checkout) {
-          textMsg = `Hola! M'agradaria consultar disponibilitat del ${checkin} al ${checkout} per a ${guestText} a Cal Serraller.`;
+        if (datesText) {
+          textMsg = `Hola! M'agradaria consultar disponibilitat ${datesText} per a ${guestText}${babyText} a Cal Serraller.`;
         } else {
-          textMsg = `Hola! M'agradaria consultar disponibilitat per a ${guestText} a Cal Serraller.`;
+          textMsg = `Hola! M'agradaria consultar disponibilitat per a ${guestText}${babyText} a Cal Serraller.`;
         }
 
         whatsappBtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(textMsg)}`;
         emailBtn.href = `mailto:${email}?subject=${encodeURIComponent('Consulta de Reserva - Cal Serraller (' + guestText + ')')}&body=${encodeURIComponent(textMsg)}`;
       }
 
-      // Execució inicial
       updateLinks();
     });
   </script>
