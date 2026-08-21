@@ -24,7 +24,7 @@
     "telephone": "+34600000000",
     "priceRange": "€€",
     "checkinTime": "16:00",
-    "checkoutTime": "11:00",
+    "checkoutTime": "12:00",
     "amenityFeature": [
       {
         "@type": "LocationFeatureSpecification",
@@ -47,7 +47,7 @@
     }
     @keyframes fadeSlide2 {
       0%, 45% { opacity: 0; visibility: hidden; }
-      50%, 95% { opacity: 1; visibility: visible; }
+      50%, 95% { opacity: 1; visibility: hidden; }
       100% { opacity: 0; visibility: hidden; }
     }
     .slide-img-1 {
@@ -69,8 +69,7 @@
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-600">
         <a href="#la-casa" class="hover:text-amber-800 transition-colors">La Casa</a>
         <a href="#espais" class="hover:text-amber-800 transition-colors">Espais i Capacitat</a>
-        <a href="#serveis" class="hover:text-amber-800 transition-colors">Equipament</a>
-        <a href="#informacio" class="hover:text-amber-800 transition-colors">Informació Pràctica</a>
+        <a href="#serveis" class="hover:text-amber-800 transition-colors">Equipament i Serveis</a>
         <a href="#reserva" class="bg-amber-800 text-white px-6 py-3 rounded-lg hover:bg-amber-900 transition-colors font-semibold shadow-sm">
           Reserva Directa
         </a>
@@ -78,7 +77,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION (INSPIRACIONAL I NET) -->
+  <!-- HERO SECTION -->
   <section id="la-casa" class="relative min-h-[85vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-stone-900">
     <div class="absolute inset-0 z-0">
       <img 
@@ -114,7 +113,7 @@
     </div>
   </section>
 
-  <!-- ESPAIS I CAPACITAT (MODEL BOOKING PER A VALIDACIÓ RÀPIDA) -->
+  <!-- ESPAIS I CAPACITAT -->
   <section id="espais" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       
@@ -222,7 +221,7 @@
     </div>
   </section>
 
-  <!-- EQUIPAMENT I SERVEIS -->
+  <!-- EQUIPAMENT I SERVEIS (INCLOU APARCAMENT AMB EMBLEMA VISUAL DESTACAT) -->
   <section id="serveis" class="py-20 bg-stone-100 border-t border-stone-200">
     <div class="max-w-6xl mx-auto px-6">
       
@@ -233,6 +232,24 @@
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- CARD DESTACADA: APARCAMENT GRATUÏT -->
+        <div class="bg-amber-900/5 border border-amber-800/30 p-6 rounded-2xl shadow-sm flex items-start space-x-4 relative overflow-hidden sm:col-span-2 lg:col-span-1">
+          <div class="p-3 bg-amber-800 text-white rounded-xl shadow-sm">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7 7 7M5 19h14"/></svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-serif font-bold text-stone-900 text-lg">Aparcament Gratuït</h3>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-200">
+                Fàcil Accés
+              </span>
+            </div>
+            <p class="text-stone-600 text-sm mt-1 leading-relaxed">
+              Trobaràs aparcament gratuït al carrer (Raval dels Canterers) just davant o a pocs metres de la porta.
+            </p>
+          </div>
+        </div>
         
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
           <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
@@ -284,113 +301,11 @@
           </div>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
-          <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-          </div>
-          <div>
-            <h3 class="font-serif font-bold text-stone-900 text-lg">Bany Privat</h3>
-            <p class="text-stone-600 text-sm mt-1">Dutxa espaiosa, assecador de cabells i detalls d'acollida.</p>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓ NOVA: INFORMACIÓ PRÀCTICA, HORARIS I CONDICIONS (FAQ & TRANSPARÈNCIA) -->
-  <section id="informacio" class="py-20 bg-white border-t border-stone-200">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs uppercase tracking-widest text-amber-800 font-semibold">Transparència i Claredat</span>
-        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Informació Pràctica i Normes</h2>
-        <p class="text-stone-600 text-sm mt-2">Tot el que necessites saber per preparar la teva arribada amb tranquil·litat.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- CARD 1: HORARIS I ARRIBADA -->
-        <div class="bg-stone-50 border border-stone-200/90 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-800/30 transition-colors">
-          <div>
-            <div class="w-12 h-12 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center mb-4">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <h3 class="text-xl font-serif font-bold text-stone-900 mb-3">Horaris d'Entrada i Eixida</h3>
-            <ul class="space-y-2 text-sm text-stone-600">
-              <li class="flex justify-between border-b border-stone-200/60 pb-2">
-                <span>Check-in (Entrada):</span>
-                <strong class="text-stone-900">A partir de les 16:00h</strong>
-              </li>
-              <li class="flex justify-between pt-1">
-                <span>Check-out (Sortida):</span>
-                <strong class="text-stone-900">Fins a les 11:00h</strong>
-              </li>
-            </ul>
-          </div>
-          <p class="text-xs text-stone-500 mt-6 bg-stone-200/50 p-3 rounded-lg">
-            * Consulta'ns prèviament per a opcions de late check-out o check-in anticipat segons disponibilitat.
-          </p>
-        </div>
-
-        <!-- CARD 2: APARCAMENT AMB EMBLEMA VISUAL DESTACAT -->
-        <div class="bg-amber-900/5 border border-amber-800/20 rounded-2xl p-6 flex flex-col justify-between shadow-sm relative overflow-hidden">
-          <div class="absolute -right-4 -top-4 w-24 h-24 bg-amber-800/10 rounded-full blur-2xl"></div>
-          <div>
-            <div class="w-12 h-12 bg-amber-800 text-white rounded-xl flex items-center justify-center mb-4 shadow-sm">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7 7 7M5 19h14"/></svg>
-            </div>
-            <div class="flex items-center gap-2 mb-2">
-              <h3 class="text-xl font-serif font-bold text-stone-900">Aparcament Gratuït</h3>
-              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-200">
-                Molt Fàcil
-              </span>
-            </div>
-            <p class="text-sm text-stone-600 leading-relaxed mt-2">
-              L'allotjament es troba al <strong>Raval dels Canterers</strong>. Trobaràs espai d'<strong>aparcament gratuït al carrer</strong> just davant o a molt pocs metres de la porta de la casa.
-            </p>
-          </div>
-          <div class="mt-6 pt-4 border-t border-amber-800/10 text-xs text-amber-900 font-medium flex items-center gap-2">
-            <svg class="w-4 h-4 text-amber-800 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            Sense problemes d'accés ni costos addicionals.
-          </div>
-        </div>
-
-        <!-- CARD 3: NORMES I CONDICIONS -->
-        <div class="bg-stone-50 border border-stone-200/90 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-800/30 transition-colors">
-          <div>
-            <div class="w-12 h-12 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center mb-4">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            </div>
-            <h3 class="text-xl font-serif font-bold text-stone-900 mb-3">Normes de la Casa</h3>
-            <ul class="space-y-2.5 text-sm text-stone-600">
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-800"></span>
-                <span><strong>Mascotes:</strong> No admeses (consultar casos)</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-800"></span>
-                <span><strong>Festes:</strong> Prohibides les festes o esdeveniments</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-800"></span>
-                <span><strong>Fumar:</strong> Prohibit a l'interior de la casa</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-800"></span>
-                <span><strong>Silenci:</strong> Respecte al descans (23:00h - 08:00h)</span>
-              </li>
-            </ul>
-          </div>
-          <div class="mt-6 pt-3 border-t border-stone-200/60 text-xs text-stone-500">
-            Garantim un entorn net i tranquil per a tots els nostres hostes.
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- RESERVA DIRECTA (NET, ENFOCAT A L'ACCIÓ I A L'ESTALVI DE COMISSIONS) -->
+  <!-- RESERVA DIRECTA (AMB SELECCIÓ ADULTS/NENS I HORARIS INTEGRATS) -->
   <section id="reserva" class="py-20 bg-stone-900 text-white relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
       
@@ -406,7 +321,7 @@
         En reservar directament amb nosaltres t'estalvies les comissions de les plataformes externes i gaudeixes d'atenció personalitzada.
       </p>
 
-      <!-- BÀNNER DE BENEFICIS DE RESERVA DIRECTA -->
+      <!-- BÀNNER DE BENEFICIS -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
         <div class="bg-stone-800/60 border border-stone-700/60 p-4 rounded-xl flex items-center space-x-3">
           <div class="text-amber-400 font-bold text-xl">100%</div>
@@ -424,36 +339,63 @@
         </div>
       </div>
 
-      <!-- FORMULARI NET DE CONSULTA DE DATES I HOSTES -->
-      <div class="bg-stone-800/90 border border-stone-700/80 p-6 sm:p-8 rounded-2xl max-w-2xl mx-auto shadow-2xl backdrop-blur-sm text-left">
+      <!-- FORMULARI DE CONSULTA I RESERVA -->
+      <div class="bg-stone-800/90 border border-stone-700/80 p-6 sm:p-8 rounded-2xl max-w-3xl mx-auto shadow-2xl backdrop-blur-sm text-left">
         
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <!-- INTEGRACIÓ D'HORARIS CLEAR & VISIBLE DINS EL MÒDUL DE RESERVA -->
+        <div class="bg-stone-900/80 border border-stone-700/60 rounded-xl p-4 mb-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+          <div class="flex items-center gap-2 text-stone-300">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
+            <span><strong>Check-in (Entrada):</strong> A partir de les 16:00h</span>
+          </div>
+          <div class="hidden sm:block h-4 w-px bg-stone-700"></div>
+          <div class="flex items-center gap-2 text-stone-300">
+            <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+            <span><strong>Check-out (Sortida):</strong> Fins a les 12:00h</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           <div>
-            <label for="checkin" class="block text-xs text-stone-400 font-medium uppercase mb-1">Data d'Entrada</label>
+            <label for="checkin" class="block text-xs text-stone-400 font-medium uppercase mb-1">Entrada</label>
             <input type="date" id="checkin" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
           </div>
           <div>
-            <label for="checkout" class="block text-xs text-stone-400 font-medium uppercase mb-1">Data de Sortida</label>
+            <label for="checkout" class="block text-xs text-stone-400 font-medium uppercase mb-1">Sortida</label>
             <input type="date" id="checkout" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
           </div>
           <div>
-            <label for="guests" class="block text-xs text-stone-400 font-medium uppercase mb-1">Hostes</label>
-            <select id="guests" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
-              <option value="1 persona">1 persona</option>
-              <option value="2 persones">2 persones</option>
-              <option value="3 persones">3 persones</option>
-              <option value="4 persones">4 persones</option>
-              <option value="5 persones">5 persones</option>
-              <option value="6 persones" selected>6 persones (Màx)</option>
+            <label for="adults" class="block text-xs text-stone-400 font-medium uppercase mb-1">Adults</label>
+            <select id="adults" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
+              <option value="1">1 adult</option>
+              <option value="2" selected>2 adults</option>
+              <option value="3">3 adults</option>
+              <option value="4">4 adults</option>
+              <option value="5">5 adults</option>
+              <option value="6">6 adults</option>
+            </select>
+          </div>
+          <div>
+            <label for="children" class="block text-xs text-stone-400 font-medium uppercase mb-1">Nens</label>
+            <select id="children" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
+              <option value="0" selected>0 nens</option>
+              <option value="1">1 nen</option>
+              <option value="2">2 nens</option>
+              <option value="3">3 nens</option>
+              <option value="4">4 nens</option>
+              <option value="5">5 nens</option>
             </select>
           </div>
         </div>
 
-        <!-- ESTADA MÍNIMA DESTACADA -->
+        <!-- REQUERIMENT D'ESTADA I ALERTA CAPACITAT -->
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pb-6 border-b border-stone-700/80">
           <div class="inline-flex items-center space-x-2 bg-amber-950/60 border border-amber-500/40 px-3.5 py-2 rounded-lg">
             <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="text-sm font-bold text-amber-300">Estada mínima: 2 nits</span>
+          </div>
+          <div id="capacity-warning" class="hidden text-xs text-rose-400 font-semibold bg-rose-950/80 border border-rose-800 p-2 rounded-lg">
+            ⚠️ La capacitat màxima de la casa és de 6 persones.
           </div>
           <span class="text-xs text-stone-400">+4 nits: <strong class="text-amber-400">Descompte a partir del 10%</strong></span>
         </div>
@@ -462,7 +404,7 @@
         <div class="pt-6 flex flex-col sm:flex-row gap-4">
           <a 
             id="whatsapp-btn"
-            href="https://wa.me/34600000000?text=Hola!%20M'agradaria%20consultar%20disponibilitat%20i%20reservar%20per%20a%206%20persones%20a%20Cal%20Serraller." 
+            href="https://wa.me/34600000000?text=Hola!%20M'agradaria%20consultar%20disponibilitat%20per%20a%202%20adults%20a%20Cal%20Serraller." 
             target="_blank" 
             rel="noopener noreferrer"
             class="flex-1 inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-4 rounded-xl text-sm shadow-lg transition-all text-center"
@@ -498,33 +440,31 @@
     </div>
   </footer>
 
-  <!-- SCRIPT LÒGICA CRO: DATES I SELECCIÓ D'HOSTES AUTOMÀTICA -->
+  <!-- SCRIPT LÒGICA CRO: CÀLCUL AUTOMÀTIC D'HOSTES (ADULTS/NENS) I DATES -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const checkinInput = document.getElementById('checkin');
       const checkoutInput = document.getElementById('checkout');
-      const guestsSelect = document.getElementById('guests');
+      const adultsSelect = document.getElementById('adults');
+      const childrenSelect = document.getElementById('children');
       const whatsappBtn = document.getElementById('whatsapp-btn');
       const emailBtn = document.getElementById('email-btn');
+      const capacityWarning = document.getElementById('capacity-warning');
 
       const phone = "34600000000"; // Canviar pel telèfon real amb prefix 34
       const email = "calserraller@gmail.com";
 
-      // Configura la data mínima inicial (avui)
+      // Configura data mínima
       const today = new Date().toISOString().split('T')[0];
       checkinInput.min = today;
 
-      // Event listeners per actualitzar els links en temps real
       checkinInput.addEventListener('change', () => {
         if (checkinInput.value) {
           const checkinDate = new Date(checkinInput.value);
-          
-          // Afegir 2 dies automàticament per assegurar l'estada mínima
           const minCheckoutDate = new Date(checkinDate);
-          minCheckoutDate.setDate(minCheckoutDate.getDate() + 2);
+          minCheckoutDate.setDate(minCheckoutDate.getDate() + 2); // 2 nits d'estada mínima
           
           const formattedMinCheckout = minCheckoutDate.toISOString().split('T')[0];
-          
           checkoutInput.min = formattedMinCheckout;
           
           if (!checkoutInput.value || checkoutInput.value < formattedMinCheckout) {
@@ -536,23 +476,38 @@
       });
 
       checkoutInput.addEventListener('change', updateLinks);
-      guestsSelect.addEventListener('change', updateLinks);
+      adultsSelect.addEventListener('change', updateLinks);
+      childrenSelect.addEventListener('change', updateLinks);
 
       function updateLinks() {
         const checkin = checkinInput.value;
         const checkout = checkoutInput.value;
-        const guests = guestsSelect.value;
+        const adults = parseInt(adultsSelect.value, 10);
+        const children = parseInt(childrenSelect.value, 10);
+        const totalGuests = adults + children;
+
+        // Validació de capacitat màxima (6 persones)
+        if (totalGuests > 6) {
+          capacityWarning.classList.remove('hidden');
+        } else {
+          capacityWarning.classList.add('hidden');
+        }
+
+        // Construcció del text detallat
+        let guestText = `${adults} adult${adults > 1 ? 's' : ''}`;
+        if (children > 0) {
+          guestText += ` i ${children} nen${children > 1 ? 's' : ''}`;
+        }
 
         let textMsg = "";
-
         if (checkin && checkout) {
-          textMsg = `Hola! M'agradaria consultar disponibilitat del ${checkin} al ${checkout} per a ${guests} a Cal Serraller.`;
+          textMsg = `Hola! M'agradaria consultar disponibilitat del ${checkin} al ${checkout} per a ${guestText} a Cal Serraller.`;
         } else {
-          textMsg = `Hola! M'agradaria consultar disponibilitat per a ${guests} a Cal Serraller.`;
+          textMsg = `Hola! M'agradaria consultar disponibilitat per a ${guestText} a Cal Serraller.`;
         }
 
         whatsappBtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(textMsg)}`;
-        emailBtn.href = `mailto:${email}?subject=${encodeURIComponent('Consulta de Reserva - Cal Serraller (' + guests + ')')}&body=${encodeURIComponent(textMsg)}`;
+        emailBtn.href = `mailto:${email}?subject=${encodeURIComponent('Consulta de Reserva - Cal Serraller (' + guestText + ')')}&body=${encodeURIComponent(textMsg)}`;
       }
 
       // Execució inicial
