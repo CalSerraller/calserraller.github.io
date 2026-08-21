@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cal Serraller | Casa Rural a Miravet (Ribera d'Ebre)</title>
-  <meta name="description" content="Un espai per viure, sentir i gaudir com a casa. Casa rural a Miravet (Ribera d'Ebre) cuidada al detall per a una experiència inoblidable. Reserva directa sense comissions.">
+  <meta name="description" content="Un espai per viure, sentir i gaudir com a casa. Allotjament a Miravet (Ribera d'Ebre) cuidat al detall per a una experiència inoblidable. Reserva directa sense comissions.">
   
   <!-- SEO Local / Schema.org Data -->
   <script type="application/ld+json">
@@ -12,7 +12,7 @@
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "name": "Cal Serraller",
-    "description": "Casa rural a Miravet (Ribera d'Ebre) cuidada al detall per a una experiència inoblidable.",
+    "description": "Allotjament a Miravet (Ribera d'Ebre) cuidat al detall per a una experiència inoblidable.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Raval dels Canterers",
@@ -44,13 +44,6 @@
       }
     }
   </script>
-  
-  <style>
-    .hero-img-adjust {
-      object-fit: cover;
-      object-position: 15% center;
-    }
-  </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans antialiased">
 
@@ -72,44 +65,45 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="la-casa" class="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden bg-stone-100">
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <!-- HERO SECTION AMB FONS DE MIRAVET I EL RIU -->
+  <section id="la-casa" class="relative min-h-[90vh] flex items-center justify-center pt-24 pb-20 overflow-hidden bg-stone-900">
+    <!-- Imatge de fons de Miravet i el riu amb capa fosca de contrast -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="miravet-riu-ebre.jpg" 
+        alt="Vista panoràmica de Miravet i el riu Ebre" 
+        class="w-full h-full object-cover object-center opacity-50 scale-105"
+        fetchpriority="high"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-900/40 to-stone-900/30"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-8">
+      <span class="inline-block text-xs font-semibold uppercase tracking-widest text-amber-300 bg-amber-950/60 border border-amber-500/30 px-4 py-1.5 rounded-full backdrop-blur-sm">
+        Allotjament a Miravet
+      </span>
       
-      <div class="lg:col-span-6 space-y-6">
-        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">
-          Allotjament Rural a Miravet
-        </span>
-        
-        <h1 class="text-4xl sm:text-5xl font-serif font-bold text-stone-900 leading-tight">
-          Un espai per viure, sentir i gaudir com a casa
-        </h1>
-        <p class="text-lg text-stone-600 leading-relaxed">
-          Ens impliquem en cada detall perquè la teva experiència a la Ribera d'Ebre sigui inoblidable.
-        </p>
+      <!-- CAL SERRALLER MÉS GRAN I IMPACTANT -->
+      <h1 class="text-5xl sm:text-7xl lg:text-8xl font-serif font-bold text-white tracking-tight leading-none drop-shadow-md">
+        CAL SERRALLER
+      </h1>
 
-        <div class="pt-4 flex flex-col sm:flex-row gap-4">
-          <a href="#disponibilitat" class="inline-flex justify-center items-center bg-amber-800 text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-amber-900 transition-all text-center">
-            Consultar Disponibilitat
-          </a>
-          <a href="#espais" class="inline-flex justify-center items-center border border-stone-300 text-stone-700 px-6 py-4 rounded-xl font-semibold hover:bg-stone-200/60 transition-all text-center">
-            Descobrir la casa
-          </a>
-        </div>
+      <p class="text-xl sm:text-2xl font-serif text-stone-200 italic max-w-2xl mx-auto drop-shadow">
+        "Un espai per viure, sentir i gaudir com a casa"
+      </p>
+
+      <p class="text-stone-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+        Cuidat al detall per a una escapada inoblidable a la Ribera d'Ebre.
+      </p>
+
+      <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="#disponibilitat" class="w-full sm:w-auto inline-flex justify-center items-center bg-amber-800 hover:bg-amber-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg transition-all text-center">
+          Consultar Disponibilitat
+        </a>
+        <a href="#espais" class="w-full sm:w-auto inline-flex justify-center items-center bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transition-all text-center">
+          Descobrir la casa
+        </a>
       </div>
-
-      <!-- FOTO PRINCIPAL -->
-      <div class="lg:col-span-6">
-        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border border-stone-200">
-          <img 
-            src="cal-serraller-menjador-principal.jpg" 
-            alt="Menjador principal acollidor a Cal Serraller, casa rural a Miravet" 
-            class="w-full h-full hero-img-adjust"
-            fetchpriority="high"
-          >
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -264,7 +258,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓ DE DISPONIBILITAT (Redissenyada per conversió directa) -->
+  <!-- SECCIÓ DE DISPONIBILITAT -->
   <section id="disponibilitat" class="py-20 bg-white border-t border-stone-200">
     <div class="max-w-3xl mx-auto px-6 text-center">
       
@@ -303,7 +297,7 @@
     </div>
   </section>
 
-  <!-- MOTOR DE RESERVA DIRECTA (CTA FINAL) -->
+  <!-- MOTOR DE RESERVA DIRECTA -->
   <section id="reserva" class="py-20 bg-stone-900 text-white">
     <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
       <span class="text-xs uppercase tracking-widest text-amber-400 font-semibold">Reserva Directa sense Comissions</span>
