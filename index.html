@@ -33,7 +33,7 @@
       },
       {
         "@type": "LocationFeatureSpecification",
-        "name": "Bressol i trona sota petició",
+        "name": "Equipament infantil disponible sota petició",
         "value": true
       }
     ]
@@ -43,11 +43,7 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Flatpickr CSS per al Calendari Visual -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_orange.css">
-
-  <!-- Estils Personalitzats pel Calendari i Carrusel -->
+  <!-- Estils Personalitzats pel Carrusel -->
   <style>
     @keyframes fadeSlide1 {
       0%, 45% { opacity: 1; visibility: visible; }
@@ -61,42 +57,6 @@
     }
     .slide-img-1 { animation: fadeSlide1 7s infinite ease-in-out; }
     .slide-img-2 { animation: fadeSlide2 7s infinite ease-in-out; }
-
-    /* Personalització Flatpickr per integrar amb el disseny */
-    .flatpickr-calendar {
-      background: #1c1917 !important; /* stone-900 */
-      border: 1px solid #44403c !important; /* stone-700 */
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
-      border-radius: 0.75rem !important;
-      font-family: inherit !important;
-    }
-    .flatpickr-months .flatpickr-month,
-    .flatpickr-months .flatpickr-prev-month,
-    .flatpickr-months .flatpickr-next-month {
-      color: #f5f5f4 !important;
-      fill: #f5f5f4 !important;
-    }
-    .flatpickr-day {
-      color: #d6d3d1 !important;
-    }
-    .flatpickr-day.flatpickr-disabled, .flatpickr-day.flatpickr-disabled:hover {
-      color: #57534e !important;
-    }
-    .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange,
-    .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange,
-    .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus,
-    .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover {
-      background: #92400e !important; /* amber-800 */
-      border-color: #92400e !important;
-    }
-    .flatpickr-day.inRange {
-      background: #451a03 !important; /* amber-950 */
-      border-color: #451a03 !important;
-      box-shadow: -5px 0 0 #451a03, 5px 0 0 #451a03 !important;
-    }
-    span.flatpickr-weekday {
-      color: #a8a29e !important;
-    }
   </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-amber-800 selection:text-white">
@@ -262,7 +222,7 @@
     </div>
   </section>
 
-  <!-- EQUIPAMENT I SERVEIS (FORMAT HOMOGENI AMB APARCAMENT I PETICIÓ INFANTIL) -->
+  <!-- EQUIPAMENT I SERVEIS -->
   <section id="serveis" class="py-20 bg-stone-100 border-t border-stone-200">
     <div class="max-w-6xl mx-auto px-6">
       
@@ -315,14 +275,14 @@
           </div>
         </div>
 
-        <!-- AMENITIES FAMILIARS (TRONA I BRESSOL) -->
+        <!-- ENTRETIENIMENT I FAMÍLIA (TEXT ARRODONIT I SENSE NEGRETA EN BRESSOL/TRONA) -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
           <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <div>
             <h3 class="font-serif font-bold text-stone-900 text-lg">Entreteniment i Família</h3>
-            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Jocs, llibres, patinets i bicicletes. Disposem de <strong>trona i bressol (sota petició)</strong>.</p>
+            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Un entorn pensat per a totes les edats, amb jocs de taula, llibres, patinets i bicicletes. Per a la comoditat dels més petits, també preparem trona i bressol sota petició.</p>
           </div>
         </div>
 
@@ -340,7 +300,7 @@
     </div>
   </section>
 
-  <!-- RESERVA DIRECTA (AMB CALENDARI DATES I MÍNIM 2 NITS AUTOMÀTIC) -->
+  <!-- RESERVA DIRECTA (SELECTOR DE DATES DIRECTE I NET AMB CONTROL DE 2 NITS) -->
   <section id="reserva" class="py-20 bg-stone-900 text-white relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
       
@@ -374,7 +334,7 @@
         </div>
       </div>
 
-      <!-- FORMULARI DE CONSULTA I RESERVA AMB CALENDARI -->
+      <!-- FORMULARI NOU I NET -->
       <div class="bg-stone-800/90 border border-stone-700/80 p-6 sm:p-8 rounded-2xl max-w-3xl mx-auto shadow-2xl backdrop-blur-sm text-left">
         
         <!-- INTEGRACIÓ D'HORARIS -->
@@ -390,23 +350,29 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-          <!-- SELECTOR CALENDARI DATES RANG (MINIM 2 NITS CONTROLAT) -->
-          <div class="md:col-span-1">
-            <label for="date-range" class="block text-xs text-stone-400 font-medium uppercase mb-1">Dates d'Estada (Clica per obrir calendari)</label>
-            <div class="relative">
-              <input 
-                type="text" 
-                id="date-range" 
-                placeholder="Selecciona dates..." 
-                readonly
-                class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500 cursor-pointer"
-              >
-              <svg class="w-4 h-4 text-amber-400 absolute right-3 top-3 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          
+          <!-- DATA ENTRADA -->
+          <div>
+            <label for="checkin-date" class="block text-xs text-stone-400 font-medium uppercase mb-1">Entrada</label>
+            <input 
+              type="date" 
+              id="checkin-date" 
+              class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500"
+            >
           </div>
 
-          <!-- SELECCIÓ ADULTS -->
+          <!-- DATA SORTIDA -->
+          <div>
+            <label for="checkout-date" class="block text-xs text-stone-400 font-medium uppercase mb-1">Sortida (mín. 2 nits)</label>
+            <input 
+              type="date" 
+              id="checkout-date" 
+              class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500"
+            >
+          </div>
+
+          <!-- SELECTOR ADULTS -->
           <div>
             <label for="adults" class="block text-xs text-stone-400 font-medium uppercase mb-1">Adults</label>
             <select id="adults" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
@@ -419,7 +385,7 @@
             </select>
           </div>
 
-          <!-- SELECCIÓ NENS -->
+          <!-- SELECTOR NENS -->
           <div>
             <label for="children" class="block text-xs text-stone-400 font-medium uppercase mb-1">Nens</label>
             <select id="children" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-2.5 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
@@ -431,25 +397,24 @@
               <option value="5">5 nens</option>
             </select>
           </div>
+
         </div>
 
-        <!-- PETICIÓ BRESSOL / TRONA -->
-        <div class="mb-4 pt-2">
-          <label class="inline-flex items-center text-xs text-stone-300 cursor-pointer">
-            <input type="checkbox" id="need-baby-kit" class="rounded bg-stone-900 border-stone-700 text-amber-800 focus:ring-amber-500 w-4 h-4">
-            <span class="ml-2">Sol·licitar **Bressol i/o Trona** sense cost addicional</span>
-          </label>
-        </div>
-
-        <!-- REQUERIMENT D'ESTADA I ALERTA CAPACITAT -->
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pb-6 border-b border-stone-700/80">
+        <!-- INDICADORS D'AVÍS I ESTADA MÍNIMA -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-6 border-b border-stone-700/80">
           <div class="inline-flex items-center space-x-2 bg-amber-950/60 border border-amber-500/40 px-3.5 py-2 rounded-lg">
             <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="text-sm font-bold text-amber-300">Estada mínima: 2 nits</span>
           </div>
-          <div id="capacity-warning" class="hidden text-xs text-rose-400 font-semibold bg-rose-950/80 border border-rose-800 p-2 rounded-lg">
-            ⚠️ La capacitat màxima de la casa és de 6 persones.
+
+          <div id="min-nights-warning" class="hidden text-xs text-amber-400 font-semibold bg-amber-950/80 border border-amber-700 p-2 rounded-lg">
+            ⚠️ Per favor, tria almenys 2 nits d'estada.
           </div>
+
+          <div id="capacity-warning" class="hidden text-xs text-rose-400 font-semibold bg-rose-950/80 border border-rose-800 p-2 rounded-lg">
+            ⚠️ La capacitat màxima és de 6 persones.
+          </div>
+
           <span class="text-xs text-stone-400">+4 nits: <strong class="text-amber-400">Descompte a partir del 10%</strong></span>
         </div>
 
@@ -493,64 +458,76 @@
     </div>
   </footer>
 
-  <!-- SCRIPT DE FLATPICKR (CALENDARI VISUAL I CATALÀ) -->
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://npmcdn.com/flatpickr/dist/l10n/ca.js"></script>
-
-  <!-- SCRIPT LÒGICA CRO: INTEGRACIÓ CALENDARI I MISSATGERIA -->
+  <!-- SCRIPT LÒGICA CRO I DATES -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      const checkinInput = document.getElementById('checkin-date');
+      const checkoutInput = document.getElementById('checkout-date');
       const adultsSelect = document.getElementById('adults');
       const childrenSelect = document.getElementById('children');
-      const babyKitCheckbox = document.getElementById('need-baby-kit');
+      
       const whatsappBtn = document.getElementById('whatsapp-btn');
       const emailBtn = document.getElementById('email-btn');
+
       const capacityWarning = document.getElementById('capacity-warning');
+      const minNightsWarning = document.getElementById('min-nights-warning');
 
       const phone = "34600000000"; 
       const email = "calserraller@gmail.com";
 
-      let selectedDates = [];
+      // Fixem data mínima com "avui"
+      const today = new Date().toISOString().split('T')[0];
+      checkinInput.min = today;
 
-      // Inicialització del Calendari Visual Flatpickr
-      const fp = flatpickr("#date-range", {
-        mode: "range",
-        locale: "ca",
-        dateFormat: "d/m/Y",
-        minDate: "today",
-        showMonths: window.innerWidth > 640 ? 2 : 1, // 2 mesos a PC, 1 a mòbil
-        onChange: function(dates) {
-          if (dates.length === 2) {
-            // Validació de mínim 2 nits d'estada
-            const checkin = dates[0];
-            const checkout = dates[1];
-            const diffDays = Math.ceil((checkout - checkin) / (1000 * 60 * 60 * 24));
+      // Gestió de dates i validació de 2 nits d'estada
+      checkinInput.addEventListener('change', () => {
+        if (checkinInput.value) {
+          const checkinDate = new Date(checkinInput.value);
+          // La data de sortida ha de ser almenys 2 dies després
+          const minCheckout = new Date(checkinDate);
+          minCheckout.setDate(minCheckout.getDate() + 2);
+          
+          const minCheckoutStr = minCheckout.toISOString().split('T')[0];
+          checkoutInput.min = minCheckoutStr;
 
-            if (diffDays < 2) {
-              alert("L'estada mínima és de 2 nits.");
-              fp.clear();
-              selectedDates = [];
-            } else {
-              selectedDates = dates;
-            }
-          } else {
-            selectedDates = dates;
+          if (!checkoutInput.value || new Date(checkoutInput.value) < minCheckout) {
+            checkoutInput.value = minCheckoutStr;
           }
-          updateLinks();
         }
+        updateLinks();
+      });
+
+      checkoutInput.addEventListener('change', () => {
+        if (checkinInput.value && checkoutInput.value) {
+          const checkinDate = new Date(checkinInput.value);
+          const checkoutDate = new Date(checkoutInput.value);
+          const diffTime = checkoutDate - checkinDate;
+          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+          if (diffDays < 2) {
+            minNightsWarning.classList.remove('hidden');
+          } else {
+            minNightsWarning.classList.add('hidden');
+          }
+        }
+        updateLinks();
       });
 
       adultsSelect.addEventListener('change', updateLinks);
       childrenSelect.addEventListener('change', updateLinks);
-      babyKitCheckbox.addEventListener('change', updateLinks);
+
+      function formatDateCA(dateString) {
+        if (!dateString) return "";
+        const parts = dateString.split("-");
+        return `${parts[2]}/${parts[1]}/${parts[0]}`;
+      }
 
       function updateLinks() {
         const adults = parseInt(adultsSelect.value, 10);
         const children = parseInt(childrenSelect.value, 10);
-        const needBabyKit = babyKitCheckbox.checked;
         const totalGuests = adults + children;
 
-        // Alerta Capacitat
+        // Control Capacitat
         if (totalGuests > 6) {
           capacityWarning.classList.remove('hidden');
         } else {
@@ -563,22 +540,19 @@
           guestText += ` i ${children} nen${children > 1 ? 's' : ''}`;
         }
 
-        // Petició infantil adicional
-        let babyText = needBabyKit ? " (Necessitarem Bressol/Trona)" : "";
-
-        // Text de les dates
+        // Format del text de dates
         let datesText = "";
-        if (selectedDates.length === 2) {
-          const checkinStr = fp.formatDate(selectedDates[0], "d/m/Y");
-          const checkoutStr = fp.formatDate(selectedDates[1], "d/m/Y");
-          datesText = `del ${checkinStr} al ${checkoutStr}`;
+        if (checkinInput.value && checkoutInput.value) {
+          const checkinFormatted = formatDateCA(checkinInput.value);
+          const checkoutFormatted = formatDateCA(checkoutInput.value);
+          datesText = `del ${checkinFormatted} al ${checkoutFormatted}`;
         }
 
         let textMsg = "";
         if (datesText) {
-          textMsg = `Hola! M'agradaria consultar disponibilitat ${datesText} per a ${guestText}${babyText} a Cal Serraller.`;
+          textMsg = `Hola! M'agradaria consultar disponibilitat ${datesText} per a ${guestText} a Cal Serraller.`;
         } else {
-          textMsg = `Hola! M'agradaria consultar disponibilitat per a ${guestText}${babyText} a Cal Serraller.`;
+          textMsg = `Hola! M'agradaria consultar disponibilitat per a ${guestText} a Cal Serraller.`;
         }
 
         whatsappBtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(textMsg)}`;
