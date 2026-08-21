@@ -12,7 +12,7 @@
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "name": "Cal Serraller",
-    "description": "Allotjament rural a Miravet (Ribera d'Ebre) per a 6 persones, cuidat al detall per a una experiència inoblidable.",
+    "description": "Allotjament rural a Miravet (Ribera d'Ebre) amb capacitat màxima per a 6 persones, cuidat al detall.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Raval dels Canterers",
@@ -59,7 +59,7 @@
       </a>
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-600">
         <a href="#la-casa" class="hover:text-amber-800 transition-colors">La Casa</a>
-        <a href="#espais" class="hover:text-amber-800 transition-colors">Espais</a>
+        <a href="#espais" class="hover:text-amber-800 transition-colors">Espais i Capacitat</a>
         <a href="#serveis" class="hover:text-amber-800 transition-colors">Equipament</a>
         <a href="#reserva" class="bg-amber-800 text-white px-6 py-3 rounded-lg hover:bg-amber-900 transition-colors font-semibold shadow-sm">
           Reserva Directa
@@ -68,7 +68,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION (INSPIRACIONAL I NET) -->
   <section id="la-casa" class="relative min-h-[85vh] flex items-center justify-center pt-32 pb-20 overflow-hidden bg-stone-900">
     <div class="absolute inset-0 z-0">
       <img 
@@ -93,19 +93,7 @@
         Ens impliquem en cada detall perquè la teva experiència sigui inoblidable.
       </p>
 
-      <!-- RESUM DE CAPACITAT EN EL HERO -->
-      <div class="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-6 bg-stone-900/80 border border-stone-700/60 px-5 py-2.5 rounded-2xl backdrop-blur-md text-xs sm:text-sm text-stone-200">
-        <span class="flex items-center gap-1.5 font-semibold text-amber-400">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-          Fins a 6 Persones
-        </span>
-        <span class="text-stone-500">•</span>
-        <span>3 Habitacions</span>
-        <span class="text-stone-500">•</span>
-        <span>1 Llit Doble + 4 Llits Individuals</span>
-      </div>
-
-      <div class="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+      <div class="pt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
         <a href="#reserva" class="w-full sm:w-auto inline-flex justify-center items-center bg-amber-800 hover:bg-amber-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg transition-all text-center">
           Consultar Disponibilitat i Reservar
         </a>
@@ -116,15 +104,47 @@
     </div>
   </section>
 
-  <!-- ESPAIS (GALERIA D'ESPAIS) -->
+  <!-- ESPAIS I CAPACITAT (MODEL BOOKING PER A VALIDACIÓ RÀPIDA) -->
   <section id="espais" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       
-      <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="text-center max-w-2xl mx-auto mb-12">
         <h2 class="text-xs uppercase tracking-widest text-amber-800 font-semibold mb-2">Els Nostres Espais</h2>
         <p class="text-3xl font-serif font-bold text-stone-900">Cuidat al detall per al teu descans</p>
       </div>
 
+      <!-- BARRA D'IMPACTE DE CAPACITAT I REQUISITS (ESTIL BOOKING) -->
+      <div class="bg-stone-100 border border-stone-200/90 rounded-2xl p-6 mb-12 max-w-4xl mx-auto shadow-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-stone-200">
+          
+          <div class="pt-2 sm:pt-0 flex flex-col items-center">
+            <span class="text-stone-500 text-xs uppercase tracking-wider font-medium mb-1">Capacitat</span>
+            <span class="text-lg font-serif font-bold text-stone-900 flex items-center gap-2">
+              <svg class="w-5 h-5 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              Capacitat màxima: 6 persones
+            </span>
+          </div>
+
+          <div class="pt-4 sm:pt-0 flex flex-col items-center">
+            <span class="text-stone-500 text-xs uppercase tracking-wider font-medium mb-1">Distribució</span>
+            <span class="text-lg font-serif font-bold text-stone-900 flex items-center gap-2">
+              <svg class="w-5 h-5 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              3 Habitacions
+            </span>
+          </div>
+
+          <div class="pt-4 sm:pt-0 flex flex-col items-center">
+            <span class="text-stone-500 text-xs uppercase tracking-wider font-medium mb-1">Configuració de llits</span>
+            <span class="text-sm font-semibold text-stone-800 flex items-center gap-1.5 mt-1">
+              <svg class="w-5 h-5 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              1 Llit Doble + 4 Llits Individuals
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GALERIA D'ESPAIS I DESGLOSSAMENT D'HABITACIONS -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- TARGETA CARRUSEL: ESPAIS COMUNS -->
@@ -163,9 +183,9 @@
             >
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">3 Dormitoris de Descans</h3>
+            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">3 Habitacions de Descans</h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              Distribuïts per garantir el màxim confort: <strong>1 llit doble</strong> i <strong>4 llits individuals</strong> especialment preparats per a grups o famílies.
+              Habitacions silencioses i acollidores organitzades en <strong>1 llit doble</strong> i <strong>4 llits individuals</strong> per adaptar-se perfectament a famílies o grups.
             </p>
           </div>
         </article>
@@ -268,7 +288,7 @@
     </div>
   </section>
 
-  <!-- RESERVA DIRECTA -->
+  <!-- RESERVA DIRECTA (NET, ENFOCAT A L'ACCIÓ I A L'ESTALVI DE COMISSIONS) -->
   <section id="reserva" class="py-20 bg-stone-900 text-white relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
       
@@ -302,20 +322,9 @@
         </div>
       </div>
 
-      <!-- FORMULARI DE CONSULTA DE DATES AMB CAPACITAT I ESTADA MÍNIMA DESTACADA -->
+      <!-- FORMULARI NET DE CONSULTA DE DATES -->
       <div class="bg-stone-800/90 border border-stone-700/80 p-6 sm:p-8 rounded-2xl max-w-2xl mx-auto shadow-2xl backdrop-blur-sm text-left">
         
-        <!-- DETALL DE CAPACITAT DINS DEL QUADRE DE RESERVA -->
-        <div class="mb-6 p-4 bg-stone-900/90 rounded-xl border border-stone-700/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs sm:text-sm">
-          <div class="flex items-center space-x-2">
-            <svg class="w-5 h-5 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-            <span class="text-stone-300">Capacitat: <strong class="text-white font-semibold">Fins a 6 persones</strong></span>
-          </div>
-          <div class="text-stone-400 text-xs">
-            3 habitacions (1 llit doble, 4 llits ind.)
-          </div>
-        </div>
-
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           <div>
             <label for="checkin" class="block text-xs text-stone-400 font-medium uppercase mb-1">Data d'Entrada</label>
@@ -336,7 +345,7 @@
           <span class="text-xs text-stone-400">+4 nits: <strong class="text-amber-400">Descompte a partir del 10%</strong></span>
         </div>
 
-        <!-- BOTONS DE CONTACTE -->
+        <!-- BOTONS DE CONTACTE DIRECTES -->
         <div class="pt-6 flex flex-col sm:flex-row gap-4">
           <a 
             id="whatsapp-btn"
@@ -376,7 +385,7 @@
     </div>
   </footer>
 
-  <!-- SCRIPT AMB AUTOMATITZACIÓ DE DATES (+2 DIES MÍNIM) -->
+  <!-- SCRIPT PER A LA LÒGICA DE DATES AUTOMÀTIQUES (+2 DIES MÍNIM) -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const checkinInput = document.getElementById('checkin');
@@ -391,21 +400,21 @@
       const today = new Date().toISOString().split('T')[0];
       checkinInput.min = today;
 
-      // Quan es canvia la data d'entrada
+      // Quan es tria la data d'entrada
       checkinInput.addEventListener('change', () => {
         if (checkinInput.value) {
           const checkinDate = new Date(checkinInput.value);
           
-          // Afegir 2 dies automàticament
+          // Afegir 2 dies automàticament per complir l'estada mínima
           const minCheckoutDate = new Date(checkinDate);
           minCheckoutDate.setDate(minCheckoutDate.getDate() + 2);
           
           const formattedMinCheckout = minCheckoutDate.toISOString().split('T')[0];
           
-          // Establir la data mínima de sortida (+2 dies)
+          // Establir el mínim del selector de sortida
           checkoutInput.min = formattedMinCheckout;
           
-          // Si la data de sortida actual és buida o menor a la data d'entrada + 2 dies, s'assigna automàticament
+          // Si la sortida està buida o és menor al mínim permès, s'actualitza a +2 dies
           if (!checkoutInput.value || checkoutInput.value < formattedMinCheckout) {
             checkoutInput.value = formattedMinCheckout;
           }
