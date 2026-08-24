@@ -37,7 +37,7 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ca.js"></script>
 
-  <!-- Estils Personalitzats -->
+  <!-- Estils Personalitzats i Animació Corregida -->
   <style>
     @keyframes fadeSlide1 {
       0%, 45% { opacity: 1; visibility: visible; }
@@ -46,13 +46,13 @@
     }
     @keyframes fadeSlide2 {
       0%, 45% { opacity: 0; visibility: hidden; }
-      50%, 95% { opacity: 1; visibility: hidden; }
+      50%, 95% { opacity: 1; visibility: visible; }
       100% { opacity: 0; visibility: hidden; }
     }
     .slide-img-1 { animation: fadeSlide1 7s infinite ease-in-out; }
     .slide-img-2 { animation: fadeSlide2 7s infinite ease-in-out; }
 
-    /* Personalització Flatpickr per encaixar amb l'estètica fusta/pedra */
+    /* Personalització Flatpickr per a l'estètica fusta/pedra */
     .flatpickr-calendar {
       background: #1c1917 !important;
       border: 1px solid #44403c !important;
@@ -264,7 +264,6 @@
           </div>
         </div>
 
-        <!-- ENTRETIENIMENT I FAMÍLIA (TEXT EXACTE DEMANAT) -->
         <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm flex items-start space-x-4">
           <div class="p-3 bg-amber-100/60 text-amber-800 rounded-xl flex-shrink-0">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -355,7 +354,7 @@
             </div>
           </div>
 
-          <!-- SELECTOR HOSTES (ADULTS I NENS INTEGRATS) -->
+          <!-- SELECTOR HOSTES -->
           <div>
             <label for="guests" class="block text-xs text-stone-400 font-medium uppercase mb-1">Hostes (màx. 6)</label>
             <select id="guests" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-3 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
