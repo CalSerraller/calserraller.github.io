@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cal Serraller | Allotjament Rural a Miravet (Ribera d'Ebre)</title>
-  <meta name="description" content="Un espai per viure, sentir i gaudir com a casa. Allotjament rural a Miravet per a fins a 6 persones. Reserva directa al millor preu sense comissions.">
+  <meta name="description" content="Un espai per viure, sentir i gaudir com a casa. Allotjament rural a Miravet per a fins a 6 persones amb 3 habitacions, espais comuns i baixos. Reserva directa al millor preu.">
   
   <!-- SEO Local / Schema.org Data -->
   <script type="application/ld+json">
@@ -37,7 +37,7 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ca.js"></script>
 
-  <!-- Estils Personalitzats i Animació Corregida -->
+  <!-- Estils Personalitzats i Animació CSS de les galeries -->
   <style>
     @keyframes fadeSlide1 {
       0%, 45% { opacity: 1; visibility: visible; }
@@ -80,8 +80,8 @@
       </a>
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-600">
         <a href="#la-casa" class="hover:text-amber-800 transition-colors">La Casa</a>
-        <a href="#espais" class="hover:text-amber-800 transition-colors">Espais i Capacitat</a>
-        <a href="#serveis" class="hover:text-amber-800 transition-colors">Equipament i Serveis</a>
+        <a href="#espais" class="hover:text-amber-800 transition-colors">Espais i Galeria</a>
+        <a href="#serveis" class="hover:text-amber-800 transition-colors">Equipament</a>
         <a href="#reserva" class="bg-amber-800 text-white px-6 py-3 rounded-lg hover:bg-amber-900 transition-colors font-semibold shadow-sm">
           Reserva Directa
         </a>
@@ -119,30 +119,30 @@
           Consultar Disponibilitat i Reservar
         </a>
         <a href="#espais" class="w-full sm:w-auto inline-flex justify-center items-center bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transition-all text-center">
-          Descobrir la casa
+          Explorar les Habitacions
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ESPAIS I CAPACITAT -->
+  <!-- ESPAIS I CAPACITAT (GALERIA COMPLETA) -->
   <section id="espais" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-12">
         <h2 class="text-xs uppercase tracking-widest text-amber-800 font-semibold mb-2">Els Nostres Espais</h2>
-        <p class="text-3xl font-serif font-bold text-stone-900">Cuidat al detall per al teu descans</p>
+        <p class="text-3xl font-serif font-bold text-stone-900">Coneix tots els racons de Cal Serraller</p>
       </div>
 
       <!-- BARRA D'IMPACTE DE CAPACITAT -->
-      <div class="bg-stone-100 border border-stone-200/90 rounded-2xl p-6 mb-12 max-w-4xl mx-auto shadow-sm">
+      <div class="bg-stone-100 border border-stone-200/90 rounded-2xl p-6 mb-16 max-w-4xl mx-auto shadow-sm">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center divide-y sm:divide-y-0 sm:divide-x divide-stone-200">
           
           <div class="pt-2 sm:pt-0 flex flex-col items-center">
             <span class="text-stone-500 text-xs uppercase tracking-wider font-medium mb-1">Capacitat</span>
             <span class="text-lg font-serif font-bold text-stone-900 flex items-center gap-2">
               <svg class="w-5 h-5 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-              Capacitat màxima: 6 persones
+              Màxim 6 persones
             </span>
           </div>
 
@@ -150,7 +150,7 @@
             <span class="text-stone-500 text-xs uppercase tracking-wider font-medium mb-1">Distribució</span>
             <span class="text-lg font-serif font-bold text-stone-900 flex items-center gap-2">
               <svg class="w-5 h-5 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-              3 Habitacions
+              3 Habitacions + Baixos + Banys
             </span>
           </div>
 
@@ -165,50 +165,138 @@
         </div>
       </div>
 
-      <!-- GALERIA D'ESPAIS -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- BLOC 1: DORMITORIS (HABITACIONS) -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center gap-3 border-b border-stone-200 pb-3">
+          <svg class="w-6 h-6 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Les 3 Habitacions de Descans
+        </h3>
         
-        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
-          <div class="relative aspect-[4/3] overflow-hidden bg-stone-200">
-            <img src="cal-serraller-cuina.jpg" alt="Cuina equipada dels espais comuns" class="absolute inset-0 w-full h-full object-cover slide-img-1">
-            <img src="cal-serraller-menjador.jpg" alt="Menjador acollidor" class="absolute inset-0 w-full h-full object-cover slide-img-2">
-            <span class="absolute bottom-3 right-3 bg-stone-900/80 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/20 z-10 shadow-sm">
-              Espais Comuns
-            </span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Espais Comuns</h3>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              Zones d'estar, cuina i menjador integrats i completament equipats per compartir àpats i moments de calma amb tot el confort.
-            </p>
-          </div>
-        </article>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Habitació 1 (Principal) -->
+          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+            <div class="aspect-[4/3] overflow-hidden bg-stone-200">
+              <img src="cal-serraller-dormitori-principal.jpg" alt="Dormitori principal de Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Habitació 1</span>
+              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Dormitori Principal</h4>
+              <p class="text-stone-600 text-sm leading-relaxed">
+                Espaiós i acollidor, equipat amb llit doble de gran confort, il·luminació càlida i armaris amplis.
+              </p>
+            </div>
+          </article>
 
-        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
-          <div class="aspect-[4/3] overflow-hidden bg-stone-200">
-            <img src="cal-serraller-dormitori-principal.jpg" alt="Dormitori principal" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">3 Habitacions de Descans</h3>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              Habitacions silencioses i acollidores organitzades en 1 llit doble i 4 llits individuals per adaptar-se perfectament a famílies o grups.
-            </p>
-          </div>
-        </article>
+          <!-- Habitació 2 -->
+          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+            <div class="aspect-[4/3] overflow-hidden bg-stone-200">
+              <img src="cal-serraller-habitacio-2.jpg" alt="Segona habitació de Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Habitació 2</span>
+              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Segon Dormitori</h4>
+              <p class="text-stone-600 text-sm leading-relaxed">
+                Segona habitació equipada amb llits individuals, ideal per a nens, familiars o amics amb total tranquil·litat.
+              </p>
+            </div>
+          </article>
 
-        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
-          <div class="aspect-[4/3] overflow-hidden bg-stone-200">
-            <img src="cal-serraller-bany-detalls.jpg" alt="Bany complet i detalls" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-serif font-bold text-stone-900 mb-2">Benestar i Detalls</h3>
-            <p class="text-stone-600 text-sm leading-relaxed">
-              Espais funcionals i de línies netes pensats perquè no et falti de res durant la teva escapada.
-            </p>
-          </div>
-        </article>
+          <!-- Habitació 3 -->
+          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+            <div class="aspect-[4/3] overflow-hidden bg-stone-200">
+              <img src="cal-serraller-habitacio-3.jpg" alt="Tercera habitació de Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <div class="p-6">
+              <span class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Habitació 3</span>
+              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Tercer Dormitori</h4>
+              <p class="text-stone-600 text-sm leading-relaxed">
+                Tercera habitació lluminosa i ventilada que completa la capacitat total per a 6 persones.
+              </p>
+            </div>
+          </article>
 
+        </div>
       </div>
+
+      <!-- BLOC 2: ESPAIS COMUNS I BAIXOS -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center gap-3 border-b border-stone-200 pb-3">
+          <svg class="w-6 h-6 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          Zones d'Estar, Cuina i Baixos
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Cuina i Menjador (Slider) -->
+          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+            <div class="relative aspect-[16/9] sm:aspect-[4/3] overflow-hidden bg-stone-200">
+              <img src="cal-serraller-cuina.jpg" alt="Cuina equipada" class="absolute inset-0 w-full h-full object-cover slide-img-1">
+              <img src="cal-serraller-menjador.jpg" alt="Menjador acollidor" class="absolute inset-0 w-full h-full object-cover slide-img-2">
+              <span class="absolute bottom-3 right-3 bg-stone-900/80 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/20 z-10 shadow-sm">
+                Cuina i Menjador
+              </span>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Cuina i Menjador Integrats</h4>
+              <p class="text-stone-600 text-sm leading-relaxed">
+                Espai cuina completament equipat (cafetera, electrodomèstics, estris) connectat amb la taula de menjador per compartir àpats en família.
+              </p>
+            </div>
+          </article>
+
+          <!-- Baixos -->
+          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+            <div class="aspect-[16/9] sm:aspect-[4/3] overflow-hidden bg-stone-200">
+              <img src="cal-serraller-baixos.jpg" alt="Zona de baixos de Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Els Baixos de la Casa</h4>
+              <p class="text-stone-600 text-sm leading-relaxed">
+                Espai funcional als baixos de la casa, ideal per guardar bicicletes, equipatge de senderisme o gaudir d'un entorn fresc i autèntic.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- BLOC 3: BANYS -->
+      <div>
+        <h3 class="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center gap-3 border-b border-stone-200 pb-3">
+          <svg class="w-6 h-6 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          Banys i Confort
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+            <div class="aspect-[16/9] sm:aspect-[4/3] overflow-hidden bg-stone-200">
+              <img src="cal-serraller-bany-detalls.jpg" alt="Bany principal i detalls" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Bany Principal</h4>
+              <p class="text-stone-600 text-sm leading-relaxed">
+                Equipat amb dutxa, tovalloles de cotó de qualitat, assecador de cabells i detalls de benestar.
+              </p>
+            </div>
+          </article>
+
+          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+            <div class="aspect-[16/9] sm:aspect-[4/3] overflow-hidden bg-stone-200">
+              <img src="cal-serraller-bany-2.jpg" alt="Segon bany o lavabo de Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Espais de Bany Addicionals</h4>
+              <p class="text-stone-600 text-sm leading-relaxed">
+                Instal·lacions modernes i netes per cobrir amb comoditat les necessitats de tot el grup.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
