@@ -31,28 +31,14 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Flatpickr (Calendari Desplegable) CSS & JS -->
+  <!-- Flatpickr CSS & JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ca.js"></script>
 
-  <!-- Estils Personalitzats i Animació CSS de les galeries -->
   <style>
-    @keyframes fadeSlide1 {
-      0%, 45% { opacity: 1; visibility: visible; }
-      50%, 95% { opacity: 0; visibility: hidden; }
-      100% { opacity: 1; visibility: visible; }
-    }
-    @keyframes fadeSlide2 {
-      0%, 45% { opacity: 0; visibility: hidden; }
-      50%, 95% { opacity: 1; visibility: visible; }
-      100% { opacity: 0; visibility: hidden; }
-    }
-    .slide-img-1 { animation: fadeSlide1 7s infinite ease-in-out; }
-    .slide-img-2 { animation: fadeSlide2 7s infinite ease-in-out; }
-
-    /* Personalització Flatpickr per a l'estètica fusta/pedra */
+    /* Estils Flatpickr */
     .flatpickr-calendar {
       background: #1c1917 !important;
       border: 1px solid #44403c !important;
@@ -125,13 +111,13 @@
     </div>
   </section>
 
-  <!-- ESPAIS I CAPACITAT (GALERIA COMPLETA) -->
+  <!-- ESPAIS I CAPACITAT (GALERIES AMB SLIDERS PER APARTAT) -->
   <section id="espais" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       
       <div class="text-center max-w-2xl mx-auto mb-12">
         <h2 class="text-xs uppercase tracking-widest text-amber-800 font-semibold mb-2">Els Nostres Espais</h2>
-        <p class="text-3xl font-serif font-bold text-stone-900">Coneix tots els racons de Cal Serraller</p>
+        <p class="text-3xl font-serif font-bold text-stone-900">Descobreix Cal Serraller per apartats</p>
       </div>
 
       <!-- BARRA D'IMPACTE DE CAPACITAT -->
@@ -165,136 +151,128 @@
         </div>
       </div>
 
-      <!-- BLOC 1: DORMITORIS (HABITACIONS) -->
-      <div class="mb-16">
-        <h3 class="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center gap-3 border-b border-stone-200 pb-3">
-          <svg class="w-6 h-6 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-          Les 3 Habitacions de Descans
-        </h3>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- Habitació 1 (Principal) -->
-          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
-            <div class="aspect-[4/3] overflow-hidden bg-stone-200">
-              <img src="cal-serraller-dormitori-principal.jpg" alt="Dormitori principal de Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-            </div>
-            <div class="p-6">
-              <span class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Habitació 1</span>
-              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Dormitori Principal</h4>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                Espaiós i acollidor, equipat amb llit doble de gran confort, il·luminació càlida i armaris amplis.
-              </p>
-            </div>
-          </article>
+      <!-- SECCIONS DE GALERIA INDIVIDUALS -->
+      <div class="space-y-16">
 
-          <!-- Habitació 2 -->
-          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
-            <div class="aspect-[4/3] overflow-hidden bg-stone-200">
-              <img src="cal-serraller-habitacio-2.jpg" alt="Segona habitació de Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+        <!-- 1. ESPAIS COMUNS -->
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-0">
+          <div class="lg:col-span-7 relative group aspect-[4/3] sm:aspect-[16/10] bg-stone-900">
+            <!-- Carousel Container -->
+            <div id="slider-comuns" class="w-full h-full relative overflow-hidden">
+              <img src="cal-serraller-facana-pati.jpg" alt="Façana i pati d'entrada de Cal Serraller" class="slide-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+              <img src="cal-serraller-baixos.jpg" alt="Baixos de la casa" class="slide-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+              <img src="cal-serraller-cuina.jpg" alt="Cuina de Cal Serraller" class="slide-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+              <img src="cal-serraller-menjador.jpg" alt="Menjador acollidor" class="slide-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
             </div>
-            <div class="p-6">
-              <span class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Habitació 2</span>
-              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Segon Dormitori</h4>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                Segona habitació equipada amb llits individuals, ideal per a nens, familiars o amics amb total tranquil·litat.
-              </p>
-            </div>
-          </article>
 
-          <!-- Habitació 3 -->
-          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
-            <div class="aspect-[4/3] overflow-hidden bg-stone-200">
-              <img src="cal-serraller-habitacio-3.jpg" alt="Tercera habitació de Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-            </div>
-            <div class="p-6">
-              <span class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Habitació 3</span>
-              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Tercer Dormitori</h4>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                Tercera habitació lluminosa i ventilada que completa la capacitat total per a 6 persones.
-              </p>
-            </div>
-          </article>
+            <!-- Botons navegació -->
+            <button onclick="prevSlide('slider-comuns')" class="absolute left-3 top-1/2 -translate-y-1/2 bg-stone-900/60 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-all">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button onclick="nextSlide('slider-comuns')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-stone-900/60 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-all">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
 
-        </div>
-      </div>
-
-      <!-- BLOC 2: ESPAIS COMUNS I BAIXOS -->
-      <div class="mb-16">
-        <h3 class="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center gap-3 border-b border-stone-200 pb-3">
-          <svg class="w-6 h-6 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-          Zones d'Estar, Cuina i Baixos
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <!-- Cuina i Menjador (Slider) -->
-          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
-            <div class="relative aspect-[16/9] sm:aspect-[4/3] overflow-hidden bg-stone-200">
-              <img src="cal-serraller-cuina.jpg" alt="Cuina equipada" class="absolute inset-0 w-full h-full object-cover slide-img-1">
-              <img src="cal-serraller-menjador.jpg" alt="Menjador acollidor" class="absolute inset-0 w-full h-full object-cover slide-img-2">
-              <span class="absolute bottom-3 right-3 bg-stone-900/80 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/20 z-10 shadow-sm">
-                Cuina i Menjador
-              </span>
+            <!-- Indicadors -->
+            <div class="dots-container absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+              <span onclick="setSlide('slider-comuns', 0)" class="dot w-2.5 h-2.5 rounded-full bg-white opacity-100 cursor-pointer"></span>
+              <span onclick="setSlide('slider-comuns', 1)" class="dot w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer"></span>
+              <span onclick="setSlide('slider-comuns', 2)" class="dot w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer"></span>
+              <span onclick="setSlide('slider-comuns', 3)" class="dot w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer"></span>
             </div>
-            <div class="p-6">
-              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Cuina i Menjador Integrats</h4>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                Espai cuina completament equipat (cafetera, electrodomèstics, estris) connectat amb la taula de menjador per compartir àpats en família.
-              </p>
-            </div>
-          </article>
+          </div>
 
-          <!-- Baixos -->
-          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
-            <div class="aspect-[16/9] sm:aspect-[4/3] overflow-hidden bg-stone-200">
-              <img src="cal-serraller-baixos.jpg" alt="Zona de baixos de Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-            </div>
-            <div class="p-6">
-              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Els Baixos de la Casa</h4>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                Espai funcional als baixos de la casa, ideal per guardar bicicletes, equipatge de senderisme o gaudir d'un entorn fresc i autèntic.
-              </p>
-            </div>
-          </article>
+          <div class="lg:col-span-5 p-8 flex flex-col justify-center space-y-4">
+            <span class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Espais Comuns & Entorn</span>
+            <h3 class="text-2xl font-serif font-bold text-stone-900">Façana, Pati, Cuina, Menjador i Baixos</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Gaudeix d'uns espais pensats per a la convivència: un pati d'entrada acollidor, la zona tradicional dels baixos, una cuina totalment equipada i un menjador amplis per compartir moments únics.
+            </p>
+            <ul class="text-xs text-stone-500 space-y-1.5 pt-2">
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Entorn d'accés privat amb pati d'entrada</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Baixos funcionals per a bicicletes o equipatge</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Cuina i menjador integrats</li>
+            </ul>
+          </div>
+        </article>
 
-        </div>
-      </div>
-
-      <!-- BLOC 3: BANYS -->
-      <div>
-        <h3 class="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center gap-3 border-b border-stone-200 pb-3">
-          <svg class="w-6 h-6 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-          Banys i Confort
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
-            <div class="aspect-[16/9] sm:aspect-[4/3] overflow-hidden bg-stone-200">
-              <img src="cal-serraller-bany-detalls.jpg" alt="Bany principal i detalls" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+        <!-- 2. HABITACIONS -->
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-0">
+          <div class="lg:col-span-7 relative group aspect-[4/3] sm:aspect-[16/10] bg-stone-900">
+            <!-- Carousel Container -->
+            <div id="slider-habitacions" class="w-full h-full relative overflow-hidden">
+              <img src="cal-serraller-dormitori-principal.jpg" alt="Dormitori principal de Cal Serraller" class="slide-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+              <img src="cal-serraller-habitacio-2.jpg" alt="Segona habitació de Cal Serraller" class="slide-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+              <img src="cal-serraller-habitacio-3.jpg" alt="Tercera habitació de Cal Serraller" class="slide-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
             </div>
-            <div class="p-6">
-              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Bany Principal</h4>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                Equipat amb dutxa, tovalloles de cotó de qualitat, assecador de cabells i detalls de benestar.
-              </p>
-            </div>
-          </article>
 
-          <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
-            <div class="aspect-[16/9] sm:aspect-[4/3] overflow-hidden bg-stone-200">
-              <img src="cal-serraller-bany-2.jpg" alt="Segon bany o lavabo de Cal Serraller" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
-            </div>
-            <div class="p-6">
-              <h4 class="text-xl font-serif font-bold text-stone-900 mb-2">Espais de Bany Addicionals</h4>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                Instal·lacions modernes i netes per cobrir amb comoditat les necessitats de tot el grup.
-              </p>
-            </div>
-          </article>
+            <!-- Botons navegació -->
+            <button onclick="prevSlide('slider-habitacions')" class="absolute left-3 top-1/2 -translate-y-1/2 bg-stone-900/60 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-all">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button onclick="nextSlide('slider-habitacions')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-stone-900/60 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-all">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
 
-        </div>
+            <!-- Indicadors -->
+            <div class="dots-container absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+              <span onclick="setSlide('slider-habitacions', 0)" class="dot w-2.5 h-2.5 rounded-full bg-white opacity-100 cursor-pointer"></span>
+              <span onclick="setSlide('slider-habitacions', 1)" class="dot w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer"></span>
+              <span onclick="setSlide('slider-habitacions', 2)" class="dot w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer"></span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 p-8 flex flex-col justify-center space-y-4">
+            <span class="text-xs font-semibold text-amber-800 uppercase tracking-wider">ZONES DE DESCANSI</span>
+            <h3 class="text-2xl font-serif font-bold text-stone-900">Les 3 Habitacions</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Disposem de 3 habitacions lluminoses, acollidores i dissenyades per garantir un descans reparador. Ideal per a grups de fins a 6 persones o famílies.
+            </p>
+            <ul class="text-xs text-stone-500 space-y-1.5 pt-2">
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Dormitori principal amb llit doble</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> 2 habitacions addicionals amb llits individuals</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Roba de llit de cotó de qualitat inclosa</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 3. BANYS -->
+        <article class="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-0">
+          <div class="lg:col-span-7 relative group aspect-[4/3] sm:aspect-[16/10] bg-stone-900">
+            <!-- Carousel Container -->
+            <div id="slider-banys" class="w-full h-full relative overflow-hidden">
+              <img src="cal-serraller-bany-detalls.jpg" alt="Bany principal i detalls de Cal Serraller" class="slide-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+              <img src="cal-serraller-bany-2.jpg" alt="Segon bany o instal·lacions de bany" class="slide-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+            </div>
+
+            <!-- Botons navegació -->
+            <button onclick="prevSlide('slider-banys')" class="absolute left-3 top-1/2 -translate-y-1/2 bg-stone-900/60 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-all">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button onclick="nextSlide('slider-banys')" class="absolute right-3 top-1/2 -translate-y-1/2 bg-stone-900/60 hover:bg-stone-900 text-white p-2 rounded-full backdrop-blur-sm transition-all">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- Indicadors -->
+            <div class="dots-container absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+              <span onclick="setSlide('slider-banys', 0)" class="dot w-2.5 h-2.5 rounded-full bg-white opacity-100 cursor-pointer"></span>
+              <span onclick="setSlide('slider-banys', 1)" class="dot w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer"></span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 p-8 flex flex-col justify-center space-y-4">
+            <span class="text-xs font-semibold text-amber-800 uppercase tracking-wider">HIGIENE I BENESTAR</span>
+            <h3 class="text-2xl font-serif font-bold text-stone-900">Banys Complets</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Instal·lacions modernes i impecables equipades amb dutxa, tovalloles, assecador de cabells i tots els detalls necessaris per al màxim confort.
+            </p>
+            <ul class="text-xs text-stone-500 space-y-1.5 pt-2">
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Jocs de tovalloles inclosos</li>
+              <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Assecador de cabells i productes d'acollida</li>
+            </ul>
+          </div>
+        </article>
+
       </div>
 
     </div>
@@ -358,7 +336,7 @@
           </div>
           <div>
             <h3 class="font-serif font-bold text-stone-900 text-lg">Entreteniment i Família</h3>
-            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Un entorn pensat per a totes les edats, amb jocs de taula, llibres, patinets i bicicletes. També disposem de trona i bressol sota petició.</p>
+            <p class="text-stone-600 text-sm mt-1 leading-relaxed">Jocs de taula, llibres, patinets i bicicletes. Disposem de trona i bressol sota petició.</p>
           </div>
         </div>
 
@@ -412,7 +390,6 @@
       <!-- FORMULARI AMB CALENDARI DESPLEGABLE -->
       <div class="bg-stone-800/90 border border-stone-700/80 p-6 sm:p-8 rounded-2xl max-w-3xl mx-auto shadow-2xl backdrop-blur-sm text-left">
         
-        <!-- HORARIS CHECK-IN / CHECK-OUT -->
         <div class="bg-stone-900/80 border border-stone-700/60 rounded-xl p-4 mb-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
           <div class="flex items-center gap-2 text-stone-300">
             <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
@@ -426,8 +403,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          
-          <!-- CALENDARI DESPLEGABLE DE RANG DE DATES -->
           <div class="md:col-span-2">
             <label for="date-range-picker" class="block text-xs text-stone-400 font-medium uppercase mb-1">Dates d'Entrada i Sortida</label>
             <div class="relative">
@@ -442,7 +417,6 @@
             </div>
           </div>
 
-          <!-- SELECTOR HOSTES -->
           <div>
             <label for="guests" class="block text-xs text-stone-400 font-medium uppercase mb-1">Hostes (màx. 6)</label>
             <select id="guests" class="w-full bg-stone-900 border border-stone-700 rounded-lg px-3 py-3 text-stone-200 text-sm focus:outline-none focus:border-amber-500">
@@ -455,10 +429,8 @@
               <option value="6 adults">6 adults</option>
             </select>
           </div>
-
         </div>
 
-        <!-- INDICADORS I AVISOS -->
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-6 border-b border-stone-700/80">
           <div class="inline-flex items-center space-x-2 bg-amber-950/60 border border-amber-500/40 px-3.5 py-2 rounded-lg">
             <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -472,7 +444,6 @@
           <span class="text-xs text-stone-400">+4 nits: <strong class="text-amber-400">Descompte directament aplicable</strong></span>
         </div>
 
-        <!-- BOTONS DE CONTACTE -->
         <div class="pt-6 flex flex-col sm:flex-row gap-4">
           <a 
             id="whatsapp-btn"
@@ -512,9 +483,85 @@
     </div>
   </footer>
 
-  <!-- SCRIPT LÒGICA FLATPICKR I RESERVES -->
+  <!-- LÒGICA JAVASCRIPT: CAROUSELS I FORMULARI -->
   <script>
+    // Systema de Sliders per Categoria
+    const slidersState = {};
+
+    function initSlider(containerId) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      
+      const images = container.querySelectorAll('.slide-item');
+      const dots = container.parentElement.querySelectorAll('.dot');
+      
+      slidersState[containerId] = {
+        currentIndex: 0,
+        total: images.length,
+        images: images,
+        dots: dots
+      };
+
+      // Autoplay cada 5 segons
+      setInterval(() => {
+        nextSlide(containerId);
+      }, 5000);
+    }
+
+    function renderSlider(containerId) {
+      const state = slidersState[containerId];
+      if (!state) return;
+
+      state.images.forEach((img, idx) => {
+        if (idx === state.currentIndex) {
+          img.classList.remove('opacity-0');
+          img.classList.add('opacity-100');
+        } else {
+          img.classList.remove('opacity-100');
+          img.classList.add('opacity-0');
+        }
+      });
+
+      state.dots.forEach((dot, idx) => {
+        if (idx === state.currentIndex) {
+          dot.classList.remove('opacity-50');
+          dot.classList.add('opacity-100');
+        } else {
+          dot.classList.remove('opacity-100');
+          dot.classList.add('opacity-50');
+        }
+      });
+    }
+
+    function nextSlide(containerId) {
+      const state = slidersState[containerId];
+      if (!state) return;
+      state.currentIndex = (state.currentIndex + 1) % state.total;
+      renderSlider(containerId);
+    }
+
+    function prevSlide(containerId) {
+      const state = slidersState[containerId];
+      if (!state) return;
+      state.currentIndex = (state.currentIndex - 1 + state.total) % state.total;
+      renderSlider(containerId);
+    }
+
+    function setSlide(containerId, index) {
+      const state = slidersState[containerId];
+      if (!state) return;
+      state.currentIndex = index;
+      renderSlider(containerId);
+    }
+
+    // Inicialització al carregar el document
     document.addEventListener('DOMContentLoaded', () => {
+      // Inicialitzar sliders
+      initSlider('slider-comuns');
+      initSlider('slider-habitacions');
+      initSlider('slider-banys');
+
+      // Configuració de Flatpickr i form de reserves
       const guestsSelect = document.getElementById('guests');
       const whatsappBtn = document.getElementById('whatsapp-btn');
       const emailBtn = document.getElementById('email-btn');
@@ -525,7 +572,6 @@
 
       let selectedDatesText = "";
 
-      // Configuració del Calendari Desplegable Flatpickr
       flatpickr("#date-range-picker", {
         mode: "range",
         minDate: "today",
@@ -536,7 +582,6 @@
             const startDate = selectedDates[0];
             const endDate = selectedDates[1];
             
-            // Càlcul de la diferència de nits
             const diffTime = Math.abs(endDate - startDate);
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
