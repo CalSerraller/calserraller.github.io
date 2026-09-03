@@ -156,7 +156,7 @@
             <span class="text-stone-500 text-xs uppercase tracking-wider font-medium mb-1">Distribució</span>
             <span class="text-lg font-serif font-bold text-stone-900 flex items-center gap-2">
               <svg class="w-5 h-5 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-              3 Habitacions + Baixos + Banys
+              3 Habitacions
             </span>
           </div>
 
@@ -203,7 +203,7 @@
           <div class="lg:col-span-5 p-8 flex flex-col justify-center space-y-4">
             <h3 class="text-3xl font-serif font-bold text-stone-900">Espais comuns</h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              Gaudeix de zones amples, lluminoses i pensades per a la convivència i el descans en grup. Els baixos acullen una gran sala diàfana ideal per a reunions, jocs o moments de relax. La cuina i el menjador s'integren en un sol espai obert, ampli i completament equipat, perfecte per compartir àpats sense presses. A més, l'allotjament disposa d'un pati privat d'accés a l'entrada que aporta intimitat i un caràcter autèntic des del primer moment.
+              Gaudeix de zones amples, lluminoses i pensades per a la convivència i el descans en grup. Els baixos acullen una gran sala diàfana ideal per a reunions, jocs o moments de relax. La cuina i el menjador s'integren en un sol espai obert, ampli i completament equipat, perfecte per compartir àpats sense presses. A més, l'allotjament disposa d'un pati privat d'accés a l'entrada.
             </p>
           </div>
         </article>
@@ -235,7 +235,7 @@
           <div class="lg:col-span-5 p-8 flex flex-col justify-center space-y-4">
             <h3 class="text-3xl font-serif font-bold text-stone-900">Les habitacions</h3>
             <p class="text-stone-600 text-sm leading-relaxed">
-              Dormitoris acollidors i tranquils, dissenyats per garantir el màxim confort i un descans reparador en un entorn tranquil i acollidor.
+              Dormitoris acollidors i tranquils, dissenyats per garantir el màxim confort i unes nits de descans i tranquil·litat.
             </p>
           </div>
         </article>
@@ -380,25 +380,22 @@
               <span class="text-white text-sm font-semibold">El riu Ebre</span>
             </div>
           </div>
-          <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-sm flex items-end">
-            <div class="p-5">
-              <div class="text-amber-800 mb-2">🏰</div>
-              <h3 class="font-serif font-bold text-stone-900">Castell de Miravet</h3>
-              <p class="text-xs text-stone-500 mt-1">Història i vistes sobre el riu</p>
+          <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-200 shadow-sm">
+            <img src="castell-miravet.jpg" alt="Castell de Miravet" class="w-full h-full object-cover">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-stone-950/80 to-transparent p-4 pt-10">
+              <span class="text-white text-sm font-semibold">Castell de Miravet</span>
             </div>
           </div>
-          <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-sm flex items-end">
-            <div class="p-5">
-              <div class="text-amber-800 mb-2">⌂</div>
-              <h3 class="font-serif font-bold text-stone-900">El poble de Miravet</h3>
-              <p class="text-xs text-stone-500 mt-1">Carrers, façanes i racons amb encant</p>
+          <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-200 shadow-sm">
+            <img src="poble-miravet.jpg" alt="Poble de Miravet" class="w-full h-full object-cover">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-stone-950/80 to-transparent p-4 pt-10">
+              <span class="text-white text-sm font-semibold">El poble de Miravet</span>
             </div>
           </div>
-          <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-sm flex items-end">
-            <div class="p-5">
-              <div class="text-amber-800 mb-2">◌</div>
-              <h3 class="font-serif font-bold text-stone-900">Terres de l'Ebre</h3>
-              <p class="text-xs text-stone-500 mt-1">Paisatge, natura i activitats</p>
+          <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-stone-200 shadow-sm">
+            <img src="terres-ebre.jpg" alt="Paisatge de les Terres de l'Ebre" class="w-full h-full object-cover">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-stone-950/80 to-transparent p-4 pt-10">
+              <span class="text-white text-sm font-semibold">Terres de l'Ebre</span>
             </div>
           </div>
         </div>
@@ -603,11 +600,14 @@
         else prevSlide(containerId, false);
       }, { passive: true });
 
-      images.forEach((img) => {
-        img.addEventListener('click', () => {
-          pauseAutoPlay(containerId);
-          openLightbox(img);
-        });
+      container.addEventListener('click', (event) => {
+        // The visible/current slide is the one that opens in the lightbox.
+        // This avoids hidden slides capturing the click.
+        if (event.target.closest('button, .dot')) return;
+        const state = slidersState[containerId];
+        if (!state) return;
+        pauseAutoPlay(containerId);
+        openLightbox(state.images[state.currentIndex]);
       });
     }
 
@@ -627,11 +627,11 @@
 
       state.images.forEach((img, idx) => {
         if (idx === state.currentIndex) {
-          img.classList.remove('opacity-0');
+          img.classList.remove('opacity-0', 'pointer-events-none');
           img.classList.add('opacity-100');
         } else {
           img.classList.remove('opacity-100');
-          img.classList.add('opacity-0');
+          img.classList.add('opacity-0', 'pointer-events-none');
         }
       });
 
