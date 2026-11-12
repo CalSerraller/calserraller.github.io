@@ -43,7 +43,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
-body { background: var(--fons); color: var(--text); font-family: var(--font); font-size: 1rem; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--fons); color: var(--text); font-family: var(--font); font-size: 1rem; line-height: 1.55; -webkit-font-smoothing: antialiased; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--fons); }
 img { max-width: 100%; height: auto; display: block; }
 [hidden] { display: none !important; }
@@ -135,13 +135,14 @@ body:has(.hero) .cap:not(.petit) .idiomes summary:hover, body:has(.hero) .cap:no
 body:has(.hero) .cap:not(.petit) .menu-mobil > summary { background: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.6); }
 body:has(.hero) .cap:not(.petit) .menu-mobil > summary svg { stroke: #fff; }
 body:has(.hero) .hero { margin-top: calc(-1 * var(--cap-h, 74px)); padding-top: 0; }
-body:has(.hero) .hero-marc { padding-left: max(12px, env(safe-area-inset-left, 0px)); padding-right: max(12px, env(safe-area-inset-right, 0px)); }
+body:has(.hero) .hero-marc { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
 body:has(.hero) .hero-marc > .hero-foto { max-width: none; border-radius: 0 0 28px 28px; }
 body:has(.hero) .hero-foto { min-height: clamp(34rem, 86vh, 52rem); }
 body:has(.hero) .hero-foto::before { content: ""; position: absolute; inset: 0 0 auto; height: 40%; z-index: 1; background: linear-gradient(to bottom, rgba(10, 14, 12, 0.5), rgba(10, 14, 12, 0)); pointer-events: none; }
 body:has(.hero) .hero-barra { max-width: var(--ample); margin-inline: auto; }
 body:has(.hero) .segell { top: calc(var(--cap-h, 74px) + 0.3rem); }
-@media (max-width: 480px) { body:has(.hero) .hero-marc { padding-left: max(8px, env(safe-area-inset-left, 0px)); padding-right: max(8px, env(safe-area-inset-right, 0px)); } body:has(.hero) .hero-marc > .hero-foto { border-radius: 0 0 22px 22px; } }
+/* Mòbil: la foto del hero ocupa tota l'amplada, sense cap marge (ni a dalt ni als costats) */
+@media (max-width: 760px) { body:has(.hero) .hero-marc { padding-left: 0; padding-right: 0; } body:has(.hero) .hero-marc > .hero-foto { border-radius: 0 0 22px 22px; } }
 @media (max-width: 370px) { body:has(.hero) .marca { font-size: 1.05rem; } body:has(.hero) .cap .nav .pill { padding-inline: 0.75rem; } body:has(.hero) .cap-wa, body:has(.hero) .menu-mobil > summary { width: 34px; height: 34px; } }
 .avis a { color: var(--accent-fort); font-weight: 600; margin-left: 0.4rem; }
 /* En baixar: capçalera amb marge lateral i cantonades de baix arrodonides (totes les pàgines) */
@@ -673,6 +674,64 @@ body.pop-obert .amunt { display: none; }
 .guia .index { background: var(--riu-suau); border-radius: var(--radi); padding: 1rem 1.2rem; }
 .guia .index a { color: var(--riu); }
 .guia .index a { text-decoration: none; }
+.molles ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; font-size: 0.9rem; color: var(--text-2); }
+.molles li + li::before { content: "›"; margin-right: 0.5rem; color: var(--text-2); }
+.molles a { color: var(--riu); text-decoration: none; }
+.molles a:hover { text-decoration: underline; }
+.guia .mes-guia a { display: inline-block; color: var(--riu); font-weight: 600; text-decoration: none; padding: 0.55rem 0.9rem; border-radius: 12px; background: var(--riu-suau); }
+.guia .mes-guia a::after { content: " →"; }
+.guia .planifica { font-size: 0.95rem; }
+.guia .planifica a { color: var(--riu); font-weight: 600; }
+.guia .preguntes h2 { margin-bottom: 0.5rem; }
+.continua { margin-top: 1rem; }
+.continua h2 { font-size: 1.15rem; margin: 0 0 0.6rem; }
+.guia .continua ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.continua a { display: inline-block; padding: 0.5rem 0.85rem; border: 1px solid var(--linia); border-radius: 12px; color: var(--text); text-decoration: none; font-size: 0.95rem; background: #fff; }
+.continua a:hover { border-color: var(--riu); color: var(--riu); }
+.mes-faq { margin-top: 1rem; }
+/* «Què fer a Miravet»: quadrícula de targetes, filtres i panell */
+.guia-hub .dins { max-width: var(--ample); }
+.guia-hub .entradeta, .guia-hub .planifica { max-width: 48rem; }
+.filtres { display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.25rem 0 0.5rem; scrollbar-width: none; position: sticky; top: calc(var(--cap-h, 64px) + 0.25rem); z-index: 5; background: var(--fons); }
+.filtres::-webkit-scrollbar { display: none; }
+.filtre { flex: none; font: inherit; font-size: 0.95rem; padding: 0.55rem 0.95rem; border-radius: 12px; border: 1px solid var(--linia); background: #fff; color: var(--text); cursor: pointer; }
+.filtre[aria-pressed="true"] { background: var(--riu); border-color: var(--riu); color: #fff; }
+.cat-bloc h2 { margin: 1.25rem 0 0.75rem; }
+.guia .graella { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem 0.75rem; }
+@media (min-width: 761px) { .guia .graella { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem 1.1rem; } }
+@media (min-width: 1100px) { .guia .graella { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.graella li { position: relative; }
+.ancora { position: absolute; top: -6rem; }
+.targeta { display: grid; gap: 0.3rem; text-decoration: none; color: var(--text); }
+.targeta img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; transition: transform .25s ease; }
+.targeta:hover img { transform: scale(1.02); }
+.t-titol { font-weight: 700; line-height: 1.25; margin-top: 0.2rem; }
+.t-linia { font-size: 0.88rem; color: var(--text-2); line-height: 1.35; }
+dialog.fitxa { padding: 0; border: 0; background: transparent; max-width: none; max-height: none; width: 100%; margin: auto auto 0; overflow: visible; transition: transform .2s ease; }
+dialog.fitxa::backdrop { background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.fitxa-in { position: relative; background: #fff; border-radius: 22px 22px 0 0; box-shadow: 0 -10px 40px rgba(0,0,0,.18); max-height: 88vh; overflow-y: auto; padding: 0.6rem 1rem calc(1.25rem + env(safe-area-inset-bottom, 0px)); }
+dialog.fitxa[open] .fitxa-in { animation: fitxa-puja .28s ease-out; }
+dialog.fitxa.surt .fitxa-in { animation: fitxa-baixa .22s ease-in forwards; }
+@keyframes fitxa-puja { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes fitxa-baixa { to { transform: translateY(100%); } }
+.fitxa-nansa { width: 44px; height: 5px; border-radius: 3px; background: #d6d6d2; margin: 0 auto 0.6rem; }
+.fitxa-tanca { position: absolute; top: 0.6rem; right: 0.7rem; width: 2.25rem; height: 2.25rem; border-radius: 12px; border: 1px solid var(--linia); background: #fff; font-size: 1.4rem; line-height: 1; cursor: pointer; color: var(--text); }
+.fitxa-in > img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px; margin-top: 2.2rem; }
+.fitxa-text { display: grid; gap: 0.5rem; padding-top: 0.9rem; }
+.fitxa-text h3 { font-family: var(--serif); font-weight: 400; font-size: 1.6rem; margin: 0; line-height: 1.15; }
+.fitxa-text p { margin: 0; color: #3a3a3a; }
+.fitxa-text .boto { justify-self: start; margin-top: 0.4rem; }
+html.amb-fitxa { overflow: hidden; }
+@media (min-width: 761px) {
+  dialog.fitxa { width: min(560px, calc(100% - 2rem)); margin: auto; }
+  .fitxa-in { border-radius: 22px; box-shadow: 0 20px 60px rgba(0,0,0,.2); padding: 1rem 1.25rem 1.5rem; }
+  .fitxa-nansa { display: none; }
+  dialog.fitxa[open] .fitxa-in { animation: fitxa-apareix .2s ease-out; }
+  dialog.fitxa.surt .fitxa-in { animation: fitxa-desapareix .2s ease-in forwards; }
+  @keyframes fitxa-apareix { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  @keyframes fitxa-desapareix { to { opacity: 0; transform: translateY(12px); } }
+}
+.mes-faq a { color: var(--riu); font-weight: 600; }
 .guia .index a:hover { text-decoration: underline; }
 .guia .crida-guia { background: var(--riu-suau); border-radius: 24px; padding: 1.5rem; display: grid; gap: 0.75rem; justify-items: start; margin-top: 1.5rem; }
 .guia .crida-guia .boto { width: auto; padding-inline: 1.4rem; }
@@ -789,8 +848,7 @@ body.pop-obert .amunt { display: none; }
         <li><a href="/pt/#serveis">Comodidades</a></li>
         <li><a href="/pt/#opinions">Opiniões</a></li>
         <li><a href="/pt/#ubicacio">Localização</a></li>
-        <li><a href="/pt/#preguntes">Perguntas frequentes</a></li>
-        <li class="peu-guia"><a href="/pt/o-que-fazer-em-miravet/" data-guia>O que fazer em Miravet</a></li>
+        <li><a href="/pt/como-chegar-a-miravet/" data-pag="arribar">Como chegar a Miravet</a></li><li><a href="/pt/perguntas-frequentes/" data-pag="faq">Perguntas frequentes</a></li><li><a href="/pt/escapadinha-a-miravet/" data-pag="escapada">Escapadinha a Miravet</a></li><li><a href="/pt/casa-rural-com-cao-miravet/" data-pag="gos">Casa rural com cão em Miravet</a></li><li class="peu-guia"><a href="/pt/o-que-fazer-em-miravet/" data-guia>O que fazer em Miravet</a></li>
       </ul>
     </div>
     <div class="peu-informacio">
@@ -856,7 +914,7 @@ body.pop-obert .amunt { display: none; }
 <button type="button" class="amunt" aria-label="Voltar ao topo" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <a class="wa-flotant" id="btn-wa-flotant" href="https://wa.me/34678902862" target="_blank" rel="noopener" aria-label="Escreva-nos pelo WhatsApp"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg><span>Escreva-nos</span></a>
 
-<script>(()=>{const c=document.querySelector('.cap');if(!c)return;const mh=()=>document.documentElement.style.setProperty('--cap-h',c.offsetHeight+'px');mh();addEventListener('resize',mh);const f=()=>c.classList.toggle('petit',scrollY>10);addEventListener('scroll',f,{passive:true});f();const pn=document.querySelector('.menu-mobil-panell');if(pn&&!pn.children.length){document.querySelectorAll('.nav a:not(.pill)').forEach(a=>pn.appendChild(a.cloneNode(true)));const i=document.querySelector('.cap .idiomes-menu');if(i){const ac=i.querySelector('a[aria-current]');const d=document.createElement('details');d.className='menu-idiomes';d.innerHTML='<summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span></span><svg class="fletxa" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="menu-idiomes-llista"></div>';d.querySelector('summary span').textContent=ac?ac.textContent:'';const ll=d.querySelector('.menu-idiomes-llista');i.querySelectorAll('a').forEach(a=>ll.appendChild(a.cloneNode(true)));pn.appendChild(d);}pn.addEventListener('click',e=>{if(e.target.closest('a'))pn.parentElement.open=false});document.addEventListener('click',e=>{const m=pn.parentElement;if(m.open&&!m.contains(e.target))m.open=false});}})();</script>
+<script>(()=>{const c=document.querySelector('.cap');if(!c)return;const mh=()=>document.documentElement.style.setProperty('--cap-h',c.offsetHeight+'px');mh();addEventListener('resize',mh);const f=()=>c.classList.toggle('petit',scrollY>10);addEventListener('scroll',f,{passive:true});f();const pn=document.querySelector('.menu-mobil-panell');if(pn&&!pn.children.length){document.querySelectorAll('.nav a:not(.pill)').forEach(a=>pn.appendChild(a.cloneNode(true)));const i=document.querySelector('.cap .idiomes-menu');if(i){const ac=i.querySelector('a[aria-current]');const d=document.createElement('details');d.className='menu-idiomes';d.innerHTML='<summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span></span><svg class="fletxa" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="menu-idiomes-llista"></div>';d.querySelector('summary span').textContent=ac?ac.textContent:'';const ll=d.querySelector('.menu-idiomes-llista');i.querySelectorAll('a').forEach(a=>ll.appendChild(a.cloneNode(true)));pn.appendChild(d);}pn.addEventListener('click',e=>{if(e.target.closest('a'))pn.parentElement.open=false});document.addEventListener('click',e=>{const m=pn.parentElement;if(m.open&&!m.contains(e.target))m.open=false});}})();</script><script>(()=>{const cap=document.querySelector('.cap'),hero=document.querySelector('.hero'),foto=hero&&hero.querySelector('.hero-foto');if(!cap||!foto)return;const mesura=()=>{const era=cap.classList.contains('petit');if(era){cap.style.transition='none';cap.firstElementChild.style.transition='none';cap.classList.remove('petit');}document.documentElement.style.setProperty('--cap-h',cap.offsetHeight+'px');if(getComputedStyle(cap).position==='sticky'){const ant=cap.previousElementSibling;const ini=ant?ant.getBoundingClientRect().bottom+scrollY:0;const ara=parseFloat(getComputedStyle(hero).marginTop)||0;const dif=foto.getBoundingClientRect().top+scrollY-ini;if(Math.abs(dif)>0.5)hero.style.marginTop=(ara-dif)+'px';}if(era){cap.classList.add('petit');requestAnimationFrame(()=>{cap.style.transition='';cap.firstElementChild.style.transition='';});}};mesura();addEventListener('resize',mesura);addEventListener('load',mesura);if(document.fonts)document.fonts.ready.then(mesura);})();</script>
   </body>
   </html>
   

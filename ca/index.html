@@ -93,7 +93,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
-body { background: var(--fons); color: var(--text); font-family: var(--font); font-size: 1rem; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--fons); color: var(--text); font-family: var(--font); font-size: 1rem; line-height: 1.55; -webkit-font-smoothing: antialiased; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--fons); }
 img { max-width: 100%; height: auto; display: block; }
 [hidden] { display: none !important; }
@@ -185,13 +185,14 @@ body:has(.hero) .cap:not(.petit) .idiomes summary:hover, body:has(.hero) .cap:no
 body:has(.hero) .cap:not(.petit) .menu-mobil > summary { background: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.6); }
 body:has(.hero) .cap:not(.petit) .menu-mobil > summary svg { stroke: #fff; }
 body:has(.hero) .hero { margin-top: calc(-1 * var(--cap-h, 74px)); padding-top: 0; }
-body:has(.hero) .hero-marc { padding-left: max(12px, env(safe-area-inset-left, 0px)); padding-right: max(12px, env(safe-area-inset-right, 0px)); }
+body:has(.hero) .hero-marc { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
 body:has(.hero) .hero-marc > .hero-foto { max-width: none; border-radius: 0 0 28px 28px; }
 body:has(.hero) .hero-foto { min-height: clamp(34rem, 86vh, 52rem); }
 body:has(.hero) .hero-foto::before { content: ""; position: absolute; inset: 0 0 auto; height: 40%; z-index: 1; background: linear-gradient(to bottom, rgba(10, 14, 12, 0.5), rgba(10, 14, 12, 0)); pointer-events: none; }
 body:has(.hero) .hero-barra { max-width: var(--ample); margin-inline: auto; }
 body:has(.hero) .segell { top: calc(var(--cap-h, 74px) + 0.3rem); }
-@media (max-width: 480px) { body:has(.hero) .hero-marc { padding-left: max(8px, env(safe-area-inset-left, 0px)); padding-right: max(8px, env(safe-area-inset-right, 0px)); } body:has(.hero) .hero-marc > .hero-foto { border-radius: 0 0 22px 22px; } }
+/* Mòbil: la foto del hero ocupa tota l'amplada, sense cap marge (ni a dalt ni als costats) */
+@media (max-width: 760px) { body:has(.hero) .hero-marc { padding-left: 0; padding-right: 0; } body:has(.hero) .hero-marc > .hero-foto { border-radius: 0 0 22px 22px; } }
 @media (max-width: 370px) { body:has(.hero) .marca { font-size: 1.05rem; } body:has(.hero) .cap .nav .pill { padding-inline: 0.75rem; } body:has(.hero) .cap-wa, body:has(.hero) .menu-mobil > summary { width: 34px; height: 34px; } }
 .avis a { color: var(--accent-fort); font-weight: 600; margin-left: 0.4rem; }
 /* En baixar: capçalera amb marge lateral i cantonades de baix arrodonides (totes les pàgines) */
@@ -723,6 +724,64 @@ body.pop-obert .amunt { display: none; }
 .guia .index { background: var(--riu-suau); border-radius: var(--radi); padding: 1rem 1.2rem; }
 .guia .index a { color: var(--riu); }
 .guia .index a { text-decoration: none; }
+.molles ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; font-size: 0.9rem; color: var(--text-2); }
+.molles li + li::before { content: "›"; margin-right: 0.5rem; color: var(--text-2); }
+.molles a { color: var(--riu); text-decoration: none; }
+.molles a:hover { text-decoration: underline; }
+.guia .mes-guia a { display: inline-block; color: var(--riu); font-weight: 600; text-decoration: none; padding: 0.55rem 0.9rem; border-radius: 12px; background: var(--riu-suau); }
+.guia .mes-guia a::after { content: " →"; }
+.guia .planifica { font-size: 0.95rem; }
+.guia .planifica a { color: var(--riu); font-weight: 600; }
+.guia .preguntes h2 { margin-bottom: 0.5rem; }
+.continua { margin-top: 1rem; }
+.continua h2 { font-size: 1.15rem; margin: 0 0 0.6rem; }
+.guia .continua ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.continua a { display: inline-block; padding: 0.5rem 0.85rem; border: 1px solid var(--linia); border-radius: 12px; color: var(--text); text-decoration: none; font-size: 0.95rem; background: #fff; }
+.continua a:hover { border-color: var(--riu); color: var(--riu); }
+.mes-faq { margin-top: 1rem; }
+/* «Què fer a Miravet»: quadrícula de targetes, filtres i panell */
+.guia-hub .dins { max-width: var(--ample); }
+.guia-hub .entradeta, .guia-hub .planifica { max-width: 48rem; }
+.filtres { display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.25rem 0 0.5rem; scrollbar-width: none; position: sticky; top: calc(var(--cap-h, 64px) + 0.25rem); z-index: 5; background: var(--fons); }
+.filtres::-webkit-scrollbar { display: none; }
+.filtre { flex: none; font: inherit; font-size: 0.95rem; padding: 0.55rem 0.95rem; border-radius: 12px; border: 1px solid var(--linia); background: #fff; color: var(--text); cursor: pointer; }
+.filtre[aria-pressed="true"] { background: var(--riu); border-color: var(--riu); color: #fff; }
+.cat-bloc h2 { margin: 1.25rem 0 0.75rem; }
+.guia .graella { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem 0.75rem; }
+@media (min-width: 761px) { .guia .graella { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem 1.1rem; } }
+@media (min-width: 1100px) { .guia .graella { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.graella li { position: relative; }
+.ancora { position: absolute; top: -6rem; }
+.targeta { display: grid; gap: 0.3rem; text-decoration: none; color: var(--text); }
+.targeta img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; transition: transform .25s ease; }
+.targeta:hover img { transform: scale(1.02); }
+.t-titol { font-weight: 700; line-height: 1.25; margin-top: 0.2rem; }
+.t-linia { font-size: 0.88rem; color: var(--text-2); line-height: 1.35; }
+dialog.fitxa { padding: 0; border: 0; background: transparent; max-width: none; max-height: none; width: 100%; margin: auto auto 0; overflow: visible; transition: transform .2s ease; }
+dialog.fitxa::backdrop { background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.fitxa-in { position: relative; background: #fff; border-radius: 22px 22px 0 0; box-shadow: 0 -10px 40px rgba(0,0,0,.18); max-height: 88vh; overflow-y: auto; padding: 0.6rem 1rem calc(1.25rem + env(safe-area-inset-bottom, 0px)); }
+dialog.fitxa[open] .fitxa-in { animation: fitxa-puja .28s ease-out; }
+dialog.fitxa.surt .fitxa-in { animation: fitxa-baixa .22s ease-in forwards; }
+@keyframes fitxa-puja { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes fitxa-baixa { to { transform: translateY(100%); } }
+.fitxa-nansa { width: 44px; height: 5px; border-radius: 3px; background: #d6d6d2; margin: 0 auto 0.6rem; }
+.fitxa-tanca { position: absolute; top: 0.6rem; right: 0.7rem; width: 2.25rem; height: 2.25rem; border-radius: 12px; border: 1px solid var(--linia); background: #fff; font-size: 1.4rem; line-height: 1; cursor: pointer; color: var(--text); }
+.fitxa-in > img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px; margin-top: 2.2rem; }
+.fitxa-text { display: grid; gap: 0.5rem; padding-top: 0.9rem; }
+.fitxa-text h3 { font-family: var(--serif); font-weight: 400; font-size: 1.6rem; margin: 0; line-height: 1.15; }
+.fitxa-text p { margin: 0; color: #3a3a3a; }
+.fitxa-text .boto { justify-self: start; margin-top: 0.4rem; }
+html.amb-fitxa { overflow: hidden; }
+@media (min-width: 761px) {
+  dialog.fitxa { width: min(560px, calc(100% - 2rem)); margin: auto; }
+  .fitxa-in { border-radius: 22px; box-shadow: 0 20px 60px rgba(0,0,0,.2); padding: 1rem 1.25rem 1.5rem; }
+  .fitxa-nansa { display: none; }
+  dialog.fitxa[open] .fitxa-in { animation: fitxa-apareix .2s ease-out; }
+  dialog.fitxa.surt .fitxa-in { animation: fitxa-desapareix .2s ease-in forwards; }
+  @keyframes fitxa-apareix { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  @keyframes fitxa-desapareix { to { opacity: 0; transform: translateY(12px); } }
+}
+.mes-faq a { color: var(--riu); font-weight: 600; }
 .guia .index a:hover { text-decoration: underline; }
 .guia .crida-guia { background: var(--riu-suau); border-radius: 24px; padding: 1.5rem; display: grid; gap: 0.75rem; justify-items: start; margin-top: 1.5rem; }
 .guia .crida-guia .boto { width: auto; padding-inline: 1.4rem; }
@@ -1171,6 +1230,7 @@ Para repetir.</p></blockquote><button type="button" class="mes-text" data-mes="L
             <details><summary>Es pot teletreballar des de la casa?</summary><p>Sí. Hi ha Wi-Fi d'alta velocitat a tota la casa i una zona de treball.</p></details>
             <details><summary>La roba de llit i les tovalloles estan incloses?</summary><p>Sí, jocs de llit de cotó i tovalloles per a tots els hostes.</p></details>
           </div>
+          <p class="mes-faq"><a href="/ca/preguntes-frequents/" data-pag="faq">Totes les preguntes freqüents</a></p>
         </div>
 </div></section>
 
@@ -1200,8 +1260,7 @@ Para repetir.</p></blockquote><button type="button" class="mes-text" data-mes="L
         <li><a href="#serveis">Serveis</a></li>
         <li><a href="#opinions">Opinions</a></li>
         <li><a href="#ubicacio">Ubicació</a></li>
-        <li><a href="#preguntes">Preguntes freqüents</a></li>
-        <li class="peu-guia"><a href="/ca/que-fer-a-miravet/" data-guia>Què fer a Miravet</a></li>
+        <li><a href="/ca/com-arribar-a-miravet/" data-pag="arribar">Com arribar a Miravet</a></li><li><a href="/ca/preguntes-frequents/" data-pag="faq">Preguntes freqüents</a></li><li><a href="/ca/escapada-a-miravet/" data-pag="escapada">Escapada a Miravet</a></li><li><a href="/ca/casa-rural-amb-gos-miravet/" data-pag="gos">Casa rural amb gos a Miravet</a></li><li class="peu-guia"><a href="/ca/que-fer-a-miravet/" data-guia>Què fer a Miravet</a></li>
       </ul>
     </div>
     <div class="peu-informacio">
@@ -1317,7 +1376,7 @@ Para repetir.</p></blockquote><button type="button" class="mes-text" data-mes="L
 (function () {
   // Textos de la interfície (el script de construcció els substitueix per idioma)
   const T = /*T*/{
-    fotos: ['Sala i menjador amb bigues de fusta', 'Cuina oberta amb illa', 'Baixos diàfans amb terra de toves', 'Façana i pati d\'accés', 'Habitació 1: llit doble', 'Habitació 2', 'Habitació 3', 'Bany principal', 'Segon bany', 'Pati privat a l\\'entrada', 'Barbacoa', 'Safareig amb rentadora i assecadora', 'Menjador i escala', 'Llit de ferro antic i tauleta de marbre', 'Sala d\'estar oberta al menjador', 'Sala d\'estar amb sofà', 'Cuina amb illa', 'Pica de la cuina', 'Fruitera de vidre a la cuina', 'Habitació doble', 'Habitació doble amb tovalloles', 'Habitació doble i calaixera', 'Habitació doble amb finestra', 'Habitació amb llit niu i joguines', 'Calaixera i quadres a l\'habitació', 'Segon bany amb dutxa', 'Lavabo del bany principal', 'Safareig amb plantes', 'Pati amb la barbacoa', 'Planta baixa diàfana', 'Prestatgeria amb terrissa de Miravet', 'Taula de fusta i cuina oberta', 'Escala de fusta amb rajola hidràulica', 'Àmfores i paret de pedra als baixos', 'Detall del segon bany', 'Vistes de Miravet', 'Miravet i el riu Ebre', 'Castell de Miravet', 'Nucli antic de Miravet', 'Terres de l\'Ebre', 'Miravet des del riu Ebre', 'Miravet i el castell sobre l\'Ebre'],
+    fotos: ['Sala i menjador amb bigues de fusta', 'Cuina oberta amb illa', 'Baixos diàfans amb terra de toves', 'Façana i pati d\'accés', 'Habitació 1: llit doble', 'Habitació 2', 'Habitació 3', 'Bany principal', 'Segon bany', 'Pati privat a l\'entrada', 'Barbacoa', 'Safareig amb rentadora i assecadora', 'Menjador i escala', 'Llit de ferro antic i tauleta de marbre', 'Sala d\'estar oberta al menjador', 'Sala d\'estar amb sofà', 'Cuina amb illa', 'Pica de la cuina', 'Fruitera de vidre a la cuina', 'Habitació doble', 'Habitació doble amb tovalloles', 'Habitació doble i calaixera', 'Habitació doble amb finestra', 'Habitació amb llit niu i joguines', 'Calaixera i quadres a l\'habitació', 'Segon bany amb dutxa', 'Lavabo del bany principal', 'Safareig amb plantes', 'Pati amb la barbacoa', 'Planta baixa diàfana', 'Prestatgeria amb terrissa de Miravet', 'Taula de fusta i cuina oberta', 'Escala de fusta amb rajola hidràulica', 'Àmfores i paret de pedra als baixos', 'Detall del segon bany', 'Vistes de Miravet', 'Miravet i el riu Ebre', 'Castell de Miravet', 'Nucli antic de Miravet', 'Terres de l\'Ebre', 'Miravet des del riu Ebre', 'Miravet i el castell sobre l\'Ebre'],
     mesos: ['gener', 'febrer', 'març', 'abril', 'maig', 'juny', 'juliol', 'agost', 'setembre', 'octubre', 'novembre', 'desembre'],
     mesosCurts: ['gen.', 'febr.', 'març', 'abr.', 'maig', 'juny', 'jul.', 'ag.', 'set.', 'oct.', 'nov.', 'des.'],
     ds: ['dl', 'dt', 'dc', 'dj', 'dv', 'ds', 'dg'],
