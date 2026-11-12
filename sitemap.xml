@@ -1,9 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://calserraller.com/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://calserraller.com/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://calserraller.com/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calserraller.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calserraller.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://calserraller.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calserraller.com/"/>
+  </url>
+  <url>
+    <loc>https://calserraller.com/ca/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://calserraller.com/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://calserraller.com/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calserraller.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calserraller.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://calserraller.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calserraller.com/"/>
+  </url>
+  <url>
+    <loc>https://calserraller.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://calserraller.com/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://calserraller.com/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calserraller.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calserraller.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://calserraller.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calserraller.com/"/>
+  </url>
+  <url>
+    <loc>https://calserraller.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://calserraller.com/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://calserraller.com/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calserraller.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calserraller.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://calserraller.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calserraller.com/"/>
+  </url>
+  <url>
+    <loc>https://calserraller.com/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://calserraller.com/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://calserraller.com/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calserraller.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calserraller.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://calserraller.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://calserraller.com/"/>
+  </url>
+  <url>
+    <loc>https://calserraller.com/que-hacer-en-miravet/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://calserraller.com/que-hacer-en-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://calserraller.com/ca/que-fer-a-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calserraller.com/en/things-to-do-in-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calserraller.com/fr/que-faire-a-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://calserraller.com/pt/o-que-fazer-em-miravet/"/>
+  </url>
+  <url>
+    <loc>https://calserraller.com/ca/que-fer-a-miravet/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://calserraller.com/que-hacer-en-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://calserraller.com/ca/que-fer-a-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calserraller.com/en/things-to-do-in-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calserraller.com/fr/que-faire-a-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://calserraller.com/pt/o-que-fazer-em-miravet/"/>
+  </url>
+  <url>
+    <loc>https://calserraller.com/en/things-to-do-in-miravet/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://calserraller.com/que-hacer-en-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://calserraller.com/ca/que-fer-a-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calserraller.com/en/things-to-do-in-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calserraller.com/fr/que-faire-a-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://calserraller.com/pt/o-que-fazer-em-miravet/"/>
+  </url>
+  <url>
+    <loc>https://calserraller.com/fr/que-faire-a-miravet/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://calserraller.com/que-hacer-en-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://calserraller.com/ca/que-fer-a-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calserraller.com/en/things-to-do-in-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calserraller.com/fr/que-faire-a-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://calserraller.com/pt/o-que-fazer-em-miravet/"/>
+  </url>
+  <url>
+    <loc>https://calserraller.com/pt/o-que-fazer-em-miravet/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://calserraller.com/que-hacer-en-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://calserraller.com/ca/que-fer-a-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://calserraller.com/en/things-to-do-in-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://calserraller.com/fr/que-faire-a-miravet/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://calserraller.com/pt/o-que-fazer-em-miravet/"/>
   </url>
 </urlset>
