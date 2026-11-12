@@ -772,7 +772,7 @@ body.pop-obert .amunt { display: none; }
 <h3>Conservação e direitos</h3>
 <p>Guardamos as conversas enquanto dura o pedido ou a reserva e, depois, apenas o tempo exigido por lei. Pode pedir o acesso, a retificação ou o apagamento dos seus dados, ou opor-se à sua utilização, escrevendo para calserraller@gmail.com ou pelo WhatsApp. Se considerar que não foram bem tratados, pode reclamar junto da Agência Espanhola de Proteção de Dados (AEPD).</p>
 <h2>Cookies</h2>
-<p>Este site não instala cookies de análise nem de publicidade. Todos os ficheiros, incluindo os tipos de letra, são servidos a partir deste mesmo site: ao abri-lo não é feita nenhuma ligação a serviços de terceiros.</p>
+<p>Se aceitar no aviso, este site usa o Google Analytics 4 (Google Ireland Limited) para contar visitas, saber que secções são consultadas e quando alguém carrega no botão de WhatsApp. Os cookies de análise (_ga e _ga_*) duram no máximo 13 meses, o endereço IP não é guardado, os dados são conservados 14 meses e não são usados para publicidade. Se não aceitar, não é carregado nada da Google. Pode mudar a sua decisão quando quiser na política de cookies, com ligação no rodapé. Os restantes ficheiros, incluindo os tipos de letra, são servidos a partir deste mesmo site.</p>
 <p><a href="/pt/">Voltar ao início</a></p>
   </article></main>
   
@@ -820,12 +820,45 @@ body.pop-obert .amunt { display: none; }
     <span>© 2026 Cal Serraller · Site oficial</span>
     <span>Registo turístico HUTTE-077394</span>
     <a href="/pt/condicoes-de-reserva/" data-cond>Condições de reserva</a>
-    
+    <a href="/pt/politica-de-cookies/" data-cookies>Política de cookies</a>
     <a href="/pt/aviso-legal/" data-legal>Aviso legal</a>
     <details class="idiomes idiomes-peu"><summary aria-label="Idioma: Português"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>Português</span></summary><div class="idiomes-menu"><a href="/aviso-legal/" hreflang="es-ES" lang="es">Español</a><a href="/ca/avis-legal/" hreflang="ca" lang="ca">Català</a><a href="/en/legal-notice/" hreflang="en" lang="en">English</a><a href="/fr/mentions-legales/" hreflang="fr" lang="fr">Français</a><a href="/pt/aviso-legal/" hreflang="pt-PT" lang="pt" aria-current="page">Português</a></div></details>
   </div>
 </footer>
-
+<div class="galetes" id="galetes" role="dialog" aria-live="polite" aria-label="Cookies" hidden>
+  <p>Usamos cookies de análise (Google Analytics) para saber quantas pessoas visitam o site e melhorá-lo. Só são ativados se os aceitar. <a href="/pt/politica-de-cookies/">Mais informações</a></p>
+  <div class="galetes-botons"><button type="button" class="boto galetes-no" data-galetes="no">Recusar</button><button type="button" class="boto galetes-si" data-galetes="si">Aceitar</button></div>
+</div>
+<script>
+(() => {
+  const ID = "G-BFS27KNCS3", CLAU = "cs-galetes", b = document.getElementById("galetes");
+  let estat = null; try { estat = localStorage.getItem(CLAU); } catch (e) {}
+  const carrega = () => {
+    if (!ID || window.gtag) return;
+    window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date()); gtag("config", ID, { anonymize_ip: true, allow_google_signals: false, allow_ad_personalization_signals: false, cookie_expires: 33696000 });
+    const s = document.createElement("script"); s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + ID; document.head.appendChild(s);
+  };
+  if (estat === "si") carrega(); else if (estat !== "no") b.hidden = false;
+  b.addEventListener("click", e => {
+    const v = e.target.closest("[data-galetes]"); if (!v) return;
+    estat = v.dataset.galetes; try { localStorage.setItem(CLAU, estat); } catch (e) {}
+    b.hidden = true; if (estat === "si") carrega();
+  });
+  // «Configurar les galetes»: obre l'avís (també si ja era obert), el destaca i marca l'opció triada
+  document.querySelectorAll("[data-obre-galetes]").forEach(a => a.addEventListener("click", e => {
+    e.preventDefault(); b.hidden = false;
+    b.querySelectorAll("[data-galetes]").forEach(x => x.classList.toggle("triat", x.dataset.galetes === estat));
+    b.classList.remove("destaca"); void b.offsetWidth; b.classList.add("destaca");
+    (b.querySelector(".triat") || b.querySelector(".galetes-si")).focus({ preventScroll: true });
+  }));
+  // Clics a WhatsApp, només si s'ha acceptat
+  document.addEventListener("click", e => {
+    const a = e.target.closest('a[href*="wa.me"]');
+    if (a && window.gtag) gtag("event", "whatsapp_click", { link_url: a.href.split("?")[0] });
+  });
+})();
+</script>
 
 <div class="barra-mobil">
   <div><strong>Reserva direta</strong><a href="/pt/#reserva" style="color:var(--text-2)">Escolher datas e hóspedes</a></div>

@@ -926,12 +926,45 @@ body.pop-obert .amunt { display: none; }
     <span>© 2026 Cal Serraller · Official website</span>
     <span>Tourist licence HUTTE-077394</span>
     <a href="/en/booking-conditions/" data-cond>Booking conditions</a>
-    
+    <a href="/en/cookie-policy/" data-cookies>Cookie policy</a>
     <a href="/en/legal-notice/" data-legal>Legal notice</a>
     <details class="idiomes idiomes-peu"><summary aria-label="Language: English"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>English</span></summary><div class="idiomes-menu"><a href="/que-hacer-en-miravet/" hreflang="es-ES" lang="es">Español</a><a href="/ca/que-fer-a-miravet/" hreflang="ca" lang="ca">Català</a><a href="/en/things-to-do-in-miravet/" hreflang="en" lang="en" aria-current="page">English</a><a href="/fr/que-faire-a-miravet/" hreflang="fr" lang="fr">Français</a><a href="/pt/o-que-fazer-em-miravet/" hreflang="pt-PT" lang="pt">Português</a></div></details>
   </div>
 </footer>
-
+<div class="galetes" id="galetes" role="dialog" aria-live="polite" aria-label="Cookies" hidden>
+  <p>We use analytics cookies (Google Analytics) to see how many people visit the website and improve it. They are only set if you accept. <a href="/en/cookie-policy/">More information</a></p>
+  <div class="galetes-botons"><button type="button" class="boto galetes-no" data-galetes="no">Reject</button><button type="button" class="boto galetes-si" data-galetes="si">Accept</button></div>
+</div>
+<script>
+(() => {
+  const ID = "G-BFS27KNCS3", CLAU = "cs-galetes", b = document.getElementById("galetes");
+  let estat = null; try { estat = localStorage.getItem(CLAU); } catch (e) {}
+  const carrega = () => {
+    if (!ID || window.gtag) return;
+    window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date()); gtag("config", ID, { anonymize_ip: true, allow_google_signals: false, allow_ad_personalization_signals: false, cookie_expires: 33696000 });
+    const s = document.createElement("script"); s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + ID; document.head.appendChild(s);
+  };
+  if (estat === "si") carrega(); else if (estat !== "no") b.hidden = false;
+  b.addEventListener("click", e => {
+    const v = e.target.closest("[data-galetes]"); if (!v) return;
+    estat = v.dataset.galetes; try { localStorage.setItem(CLAU, estat); } catch (e) {}
+    b.hidden = true; if (estat === "si") carrega();
+  });
+  // «Configurar les galetes»: obre l'avís (també si ja era obert), el destaca i marca l'opció triada
+  document.querySelectorAll("[data-obre-galetes]").forEach(a => a.addEventListener("click", e => {
+    e.preventDefault(); b.hidden = false;
+    b.querySelectorAll("[data-galetes]").forEach(x => x.classList.toggle("triat", x.dataset.galetes === estat));
+    b.classList.remove("destaca"); void b.offsetWidth; b.classList.add("destaca");
+    (b.querySelector(".triat") || b.querySelector(".galetes-si")).focus({ preventScroll: true });
+  }));
+  // Clics a WhatsApp, només si s'ha acceptat
+  document.addEventListener("click", e => {
+    const a = e.target.closest('a[href*="wa.me"]');
+    if (a && window.gtag) gtag("event", "whatsapp_click", { link_url: a.href.split("?")[0] });
+  });
+})();
+</script>
 
 <div class="barra-mobil">
   <div><strong>Book direct</strong><a href="/en/#reserva" style="color:var(--text-2)">Choose dates and guests</a></div>

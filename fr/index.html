@@ -1219,12 +1219,45 @@ Para repetir.</p></blockquote><button type="button" class="mes-text" data-mes="L
     <span>© 2026 Cal Serraller · Site officiel</span>
     <span>Numéro d'enregistrement HUTTE-077394</span>
     <a href="/fr/conditions-de-reservation/" data-cond>Conditions de réservation</a>
-    
+    <a href="/fr/politique-cookies/" data-cookies>Politique de cookies</a>
     <a href="/fr/mentions-legales/" data-legal>Mentions légales</a>
     <details class="idiomes idiomes-peu"><summary aria-label="Langue: Français"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>Français</span></summary><div class="idiomes-menu"><a href="/" hreflang="es-ES" lang="es">Español</a><a href="/ca/" hreflang="ca" lang="ca">Català</a><a href="/en/" hreflang="en" lang="en">English</a><a href="/fr/" hreflang="fr" lang="fr" aria-current="page">Français</a><a href="/pt/" hreflang="pt-PT" lang="pt">Português</a></div></details>
   </div>
 </footer>
-
+<div class="galetes" id="galetes" role="dialog" aria-live="polite" aria-label="Cookies" hidden>
+  <p>Nous utilisons des cookies de mesure d'audience (Google Analytics) pour savoir combien de personnes visitent le site et l'améliorer. Ils ne sont activés que si vous les acceptez. <a href="/fr/politique-cookies/">En savoir plus</a></p>
+  <div class="galetes-botons"><button type="button" class="boto galetes-no" data-galetes="no">Refuser</button><button type="button" class="boto galetes-si" data-galetes="si">Accepter</button></div>
+</div>
+<script>
+(() => {
+  const ID = "G-BFS27KNCS3", CLAU = "cs-galetes", b = document.getElementById("galetes");
+  let estat = null; try { estat = localStorage.getItem(CLAU); } catch (e) {}
+  const carrega = () => {
+    if (!ID || window.gtag) return;
+    window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date()); gtag("config", ID, { anonymize_ip: true, allow_google_signals: false, allow_ad_personalization_signals: false, cookie_expires: 33696000 });
+    const s = document.createElement("script"); s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + ID; document.head.appendChild(s);
+  };
+  if (estat === "si") carrega(); else if (estat !== "no") b.hidden = false;
+  b.addEventListener("click", e => {
+    const v = e.target.closest("[data-galetes]"); if (!v) return;
+    estat = v.dataset.galetes; try { localStorage.setItem(CLAU, estat); } catch (e) {}
+    b.hidden = true; if (estat === "si") carrega();
+  });
+  // «Configurar les galetes»: obre l'avís (també si ja era obert), el destaca i marca l'opció triada
+  document.querySelectorAll("[data-obre-galetes]").forEach(a => a.addEventListener("click", e => {
+    e.preventDefault(); b.hidden = false;
+    b.querySelectorAll("[data-galetes]").forEach(x => x.classList.toggle("triat", x.dataset.galetes === estat));
+    b.classList.remove("destaca"); void b.offsetWidth; b.classList.add("destaca");
+    (b.querySelector(".triat") || b.querySelector(".galetes-si")).focus({ preventScroll: true });
+  }));
+  // Clics a WhatsApp, només si s'ha acceptat
+  document.addEventListener("click", e => {
+    const a = e.target.closest('a[href*="wa.me"]');
+    if (a && window.gtag) gtag("event", "whatsapp_click", { link_url: a.href.split("?")[0] });
+  });
+})();
+</script>
 
 <div class="barra-mobil">
   <div><strong>Réserver en direct</strong><a href="#reserva" style="color:var(--text-2)">Choisir dates et voyageurs</a></div>
