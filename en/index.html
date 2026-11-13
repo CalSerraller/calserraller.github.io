@@ -758,7 +758,7 @@ body.pop-obert .amunt { display: none; }
 /* «Què fer a Miravet»: quadrícula de targetes, filtres i panell */
 .guia-hub .dins { max-width: var(--ample); }
 .guia-hub .entradeta, .guia-hub .planifica { max-width: 48rem; }
-.filtres { display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.25rem 0 0.5rem; scrollbar-width: none; position: sticky; top: calc(var(--cap-h, 64px) + 0.25rem); z-index: 5; background: var(--fons); }
+.filtres { display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.5rem 0; scrollbar-width: none; position: sticky; top: var(--cap-s, 64px); z-index: 5; background: var(--fons); }
 .filtres::-webkit-scrollbar { display: none; }
 .filtre { flex: none; font: inherit; font-size: 0.95rem; padding: 0.55rem 0.95rem; border-radius: 12px; border: 1px solid var(--linia); background: #fff; color: var(--text); cursor: pointer; }
 .filtre[aria-pressed="true"] { background: var(--riu); border-color: var(--riu); color: #fff; }
@@ -1642,6 +1642,8 @@ Para repetir.</p></blockquote><button type="button" class="mes-text" data-mes="R
   // Alçada de la capçalera, per encaixar la càpsula del menú dins la foto del hero
   (() => {
     const cap = document.querySelector('.cap');
+    // Alçada real de la capçalera (també quan es compacta en baixar): les barres enganxades s'hi posen just a sota
+    if ('ResizeObserver' in window) new ResizeObserver(() => document.documentElement.style.setProperty('--cap-s', cap.getBoundingClientRect().height + 'px')).observe(cap);
     const hero = document.querySelector('.hero'), foto = hero && hero.querySelector('.hero-foto');
     const mesura = () => {
       // Mesura sempre la capçalera com és a dalt de tot (no la compacta), encara que la pàgina estigui desplaçada
