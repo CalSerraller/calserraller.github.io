@@ -762,6 +762,15 @@ html.amb-fitxa { overflow: hidden; }
   @keyframes fitxa-desapareix { to { opacity: 0; transform: translateY(12px); } }
 }
 .mes-faq a { color: var(--riu); font-weight: 600; }
+.lloc-foto { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; margin-top: 2.2rem; border-radius: 16px; overflow: hidden; }
+.lloc-foto img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.fitxa-in > .lloc-foto { margin-top: 2.2rem; }
+.lloc-casa { font-size: 0.92rem; color: var(--text-2) !important; }
+.lloc-botons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.4rem; }
+.lloc-botons .boto { margin-top: 0; }
+.ubicacio button { transition: transform .2s ease; }
+.ubicacio button:hover { transform: scale(1.02); }
+
 .guia .index a:hover { text-decoration: underline; }
 .guia .crida-guia { background: var(--riu-suau); border-radius: 24px; padding: 1.5rem; display: grid; gap: 0.75rem; justify-items: start; margin-top: 1.5rem; }
 .guia .crida-guia .boto { width: auto; padding-inline: 1.4rem; }
